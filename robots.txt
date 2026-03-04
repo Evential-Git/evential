@@ -1,0 +1,23 @@
+# robots.txt for https://evential.co/
+
+User-agent: *
+Allow: /
+
+# Block common private/system paths (adjust if needed)
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /login/
+Disallow: /signup/
+Disallow: /account/
+Disallow: /api/
+Disallow: /internal/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /dev/
+
+# Prevent indexing of search result pages (if applicable)
+Disallow: /*?q=
+Disallow: /*?search=
+
+# Sitemap
+Sitemap: https://evential.co/sitemap.xml
