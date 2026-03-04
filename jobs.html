@@ -137,7 +137,6 @@
     @media(max-width:768px){
       .job-content{grid-template-columns:1fr;gap:1.5rem}
       .job-header{flex-direction:column}
-      nav{padding:0 5%}
       section{padding:60px 5%}
     }
     @media(max-width:600px){
@@ -145,12 +144,13 @@
       .hero{padding:100px 5% 60px}
       .btn-row{flex-direction:column;width:100%}
       .btn-primary,.btn-ghost{width:100%;justify-content:center;text-align:center}
+      .job-apply-btn,.job-apply-link{width:100%;justify-content:center;text-align:center}
     }
   </style>
 </head>
 <body>
 
-<nav>
+<nav id="main-nav">
   <a href="/" class="nav-logo">
     EVENTIAL<span class="nav-pulse"></span>
   </a>
