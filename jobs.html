@@ -1,1 +1,429 @@
-give me one sec
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Careers at Evential — Join the Team</title>
+  <meta name="description" content="Join Evential as a Founding Engineer. We're hiring AI/ML, Embedded Systems, and Full-Stack engineers at Purdue University." />
+  <meta name="keywords" content="careers, jobs, founding engineer, AI, embedded systems, full-stack, startup jobs" />
+  <meta property="og:title" content="Careers at Evential" />
+  <meta property="og:description" content="Join our founding team and help build the future of event intelligence." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://evential.co/jobs" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600;700;800;900&family=Merriweather+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.1/dist/umd/lucide.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --primary:#3D516B;--primary-dark:#2a3a4d;--primary-light:#4f6882;
+      --secondary:#ACC5E1;--accent-gold:#C6831E;--accent-purple:#603D6A;
+      --accent-navy:#3D406A;--accent-rose:#6A3D5A;--accent-red:#8E181A;
+      --green:#2eb87a;--red-alert:#e05a5c;
+      --bg-dark:#0c1420;--bg-mid:#101c2c;--bg-card:#152236;
+      --text-primary:#eef2f7;--text-secondary:#8aaac8;--text-muted:#526d88;
+      --border:rgba(172,197,225,0.11);--border-strong:rgba(172,197,225,0.2);
+      --glow:rgba(172,197,225,0.05);
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Merriweather Sans',sans-serif;background:var(--bg-dark);color:var(--text-primary);line-height:1.6;overflow-x:hidden}
+    ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:var(--bg-dark)}::-webkit-scrollbar-thumb{background:var(--primary);border-radius:2px}
+    body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9999}
+    h1,h2,h3,h4{font-family:'Montserrat Alternates',sans-serif;line-height:1.12;letter-spacing:-0.02em}
+
+    nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:0 5%;height:70px;display:flex;align-items:center;justify-content:space-between;background:rgba(12,20,32,0.88);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);transition:background 0.3s}
+    .nav-logo{font-family:'Montserrat Alternates',sans-serif;font-weight:800;font-size:1.35rem;letter-spacing:0.1em;color:var(--text-primary);text-decoration:none;display:flex;align-items:center;gap:10px}
+    .nav-pulse{width:7px;height:7px;background:var(--accent-gold);border-radius:50%;animation:pulseGold 2.2s ease-in-out infinite}
+    @keyframes pulseGold{0%,100%{opacity:1;transform:scale(1);box-shadow:0 0 0 0 rgba(198,131,30,0.5)}50%{opacity:0.7;transform:scale(0.75);box-shadow:0 0 0 5px rgba(198,131,30,0)}}
+    .nav-links{display:flex;align-items:center;gap:2.2rem;list-style:none}
+    .nav-links a{color:var(--text-muted);text-decoration:none;font-size:0.78rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover{color:var(--text-primary)}
+    .nav-cta{background:var(--accent-gold)!important;color:#0c1420!important;padding:0.48rem 1.1rem!important;border-radius:3px!important;font-weight:700!important;transition:all 0.2s!important}
+    .nav-cta:hover{background:#d4911f!important;box-shadow:0 4px 18px rgba(198,131,30,0.35)!important}
+
+    .ticker-wrap{margin-top:70px;overflow:hidden;padding:0.72rem 0;border-bottom:1px solid var(--border);background:var(--bg-mid)}
+    .ticker-track{display:flex;animation:ticker 38s linear infinite;white-space:nowrap}
+    .ticker-item{display:inline-flex;align-items:center;gap:0.9rem;padding:0 2.4rem;font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted)}
+    .ticker-item b{color:var(--accent-gold)}
+    .ticker-sep{color:var(--border-strong)}
+    @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+    .live-chip{display:inline-flex;align-items:center;gap:5px;font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--green)}
+    .live-dot{width:5px;height:5px;background:var(--green);border-radius:50%;animation:livePulse 1.6s ease-in-out infinite}
+    @keyframes livePulse{0%,100%{box-shadow:0 0 0 0 rgba(46,184,122,0.5)}50%{box-shadow:0 0 0 5px rgba(46,184,122,0)}}
+
+    .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:100px 5% 80px;position:relative;overflow:hidden}
+    .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(172,197,225,0.033) 1px,transparent 1px),linear-gradient(90deg,rgba(172,197,225,0.033) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse 80% 80% at 50% 45%,black 10%,transparent 100%)}
+    .hero-orb{position:absolute;border-radius:50%;pointer-events:none}
+    .hero-orb-1{width:800px;height:800px;background:radial-gradient(circle,rgba(61,81,107,0.22) 0%,transparent 70%);top:-300px;right:-200px}
+    .hero-orb-2{width:480px;height:480px;background:radial-gradient(circle,rgba(96,61,106,0.13) 0%,transparent 70%);bottom:-80px;left:-80px}
+    .hero-content{position:relative;z-index:1;max-width:920px}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:0.7rem;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:var(--accent-gold);border:1px solid rgba(198,131,30,0.28);padding:0.38rem 0.9rem;border-radius:2px;background:rgba(198,131,30,0.07);margin-bottom:1.8rem}
+    .eyebrow-dot{width:5px;height:5px;background:var(--accent-gold);border-radius:50%}
+    .hero h1{font-size:clamp(2.8rem,5.8vw,5.4rem);font-weight:900;color:var(--text-primary);margin-bottom:1.5rem}
+    .hero h1 em{font-style:normal;color:var(--secondary)}
+    .hero-sub{font-size:clamp(1rem,1.7vw,1.2rem);color:var(--text-secondary);max-width:600px;margin-bottom:2.5rem;line-height:1.8;font-weight:300}
+    .btn-row{display:flex;gap:0.9rem;flex-wrap:wrap;align-items:center}
+    .btn-primary{background:var(--accent-gold);color:#0c1420;padding:0.85rem 1.9rem;border-radius:3px;font-family:'Montserrat Alternates',sans-serif;font-weight:700;font-size:0.88rem;letter-spacing:0.04em;text-decoration:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:7px;transition:all 0.22s}
+    .btn-primary:hover{background:#d4911f;transform:translateY(-2px);box-shadow:0 8px 28px rgba(198,131,30,0.38)}
+    .btn-ghost{background:transparent;color:var(--text-secondary);padding:0.85rem 1.9rem;border-radius:3px;font-family:'Montserrat Alternates',sans-serif;font-weight:600;font-size:0.88rem;letter-spacing:0.04em;text-decoration:none;border:1px solid var(--border);display:inline-flex;align-items:center;gap:7px;transition:all 0.22s}
+    .btn-ghost:hover{border-color:var(--secondary);color:var(--text-primary);background:var(--glow)}
+
+    section{padding:96px 5%;position:relative;}
+    .section-label{font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent-gold);margin-bottom:1rem;display:flex;align-items:center;gap:10px}
+    .section-label::before{content:'';width:22px;height:1px;background:var(--accent-gold)}
+    .section-title{font-size:clamp(1.75rem,3.2vw,2.8rem);font-weight:800;color:var(--text-primary);margin-bottom:1.1rem;max-width:680px}
+    .section-sub{font-size:1rem;color:var(--text-secondary);max-width:560px;line-height:1.78;font-weight:300}
+
+    .jobs-section{background:var(--bg-mid);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .jobs-grid{display:grid;grid-template-columns:1fr;gap:2rem;margin-top:3rem}
+    .job-card{background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:2.5rem;transition:all 0.3s}
+    .job-card:hover{border-color:var(--border-strong);transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,0.3)}
+    .job-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.5rem;gap:1.5rem}
+    .job-title{font-size:1.55rem;font-weight:800;color:var(--text-primary);margin-bottom:0.4rem}
+    .job-location{font-size:0.9rem;color:var(--accent-gold);display:flex;align-items:center;gap:6px;font-weight:600}
+    .job-meta{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+    .job-meta-item{display:flex;align-items:center;gap:5px;font-size:0.78rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;font-weight:600}
+    .meta-icon{color:var(--accent-gold)}
+    .job-content{display:grid;grid-template-columns:1.4fr 1fr;gap:3rem;margin-bottom:1.5rem}
+    .job-description h3{font-size:0.95rem;font-weight:700;color:var(--text-primary);margin-top:1.5rem;margin-bottom:0.6rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-gold);display:flex;align-items:center;gap:8px}
+    .job-description h3::before{content:'';width:16px;height:1px;background:var(--accent-gold)}
+    .job-description p{font-size:0.9rem;color:var(--text-secondary);line-height:1.8;margin-bottom:0.8rem}
+    .job-description ul{list-style:none;margin-left:0;margin-bottom:0.8rem}
+    .job-description li{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.5rem;display:flex;align-items:flex-start;gap:0.6rem}
+    .job-description li::before{content:'→';color:var(--accent-gold);font-weight:700;margin-right:0.3rem;flex-shrink:0}
+    .job-sidebar{display:flex;flex-direction:column;gap:1.5rem}
+    .compensation-box{background:var(--bg-mid);border:1px solid var(--border);border-radius:4px;padding:1.5rem}
+    .compensation-box h4{font-size:0.85rem;font-weight:700;color:var(--accent-gold);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem}
+    .compensation-item{display:flex;justify-content:space-between;align-items:center;padding:0.6rem 0;border-bottom:1px solid var(--border)}
+    .compensation-item:last-child{border-bottom:none}
+    .comp-label{font-size:0.8rem;color:var(--text-muted)}
+    .comp-value{font-family:'Montserrat Alternates',sans-serif;font-size:0.95rem;font-weight:700;color:var(--text-primary)}
+    .job-cta{display:flex;gap:0.7rem;flex-direction:column;margin-top:auto}
+    .job-apply-btn{background:var(--accent-gold);color:#0c1420;padding:0.75rem 1.4rem;border-radius:3px;font-family:'Montserrat Alternates',sans-serif;font-weight:700;font-size:0.84rem;letter-spacing:0.04em;text-decoration:none;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px;transition:all 0.22s;text-align:center}
+    .job-apply-btn:hover{background:#d4911f;transform:translateY(-2px);box-shadow:0 6px 18px rgba(198,131,30,0.35)}
+    .job-apply-link{color:var(--text-secondary);text-decoration:none;font-size:0.8rem;border:1px solid var(--border);padding:0.6rem 1rem;border-radius:3px;text-align:center;transition:all 0.2s}
+    .job-apply-link:hover{border-color:var(--secondary);color:var(--text-primary)}
+
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity 0.65s ease,transform 0.65s ease}
+    .visible{opacity:1;transform:translateY(0)}
+
+    .about-box{background:var(--bg-dark);border:1px solid var(--border);border-radius:6px;padding:2.5rem;margin-bottom:2rem}
+    .about-box h3{font-size:1.2rem;font-weight:800;color:var(--text-primary);margin-bottom:1rem}
+    .about-box p{font-size:0.95rem;color:var(--text-secondary);line-height:1.8;margin-bottom:0.8rem}
+    .about-box p:last-child{margin-bottom:0}
+
+    .cta-section{text-align:center;padding:110px 5%;position:relative;overflow:hidden}
+    .cta-section::before{content:'';position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(198,131,30,0.07) 0%,transparent 65%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+    .cta-section h2{font-size:clamp(1.9rem,3.8vw,3.3rem);font-weight:900;max-width:660px;margin:1rem auto 1.3rem}
+    .cta-section>p{font-size:1rem;color:var(--text-secondary);max-width:480px;margin:0 auto 2.5rem;font-weight:300;line-height:1.8}
+
+    footer{border-top:1px solid var(--border);padding:2.5rem 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
+    .footer-logo{font-family:'Montserrat Alternates',sans-serif;font-weight:800;font-size:1rem;letter-spacing:0.1em;color:var(--text-muted)}
+    .footer-links{display:flex;gap:1.75rem;list-style:none}
+    .footer-links a{font-size:0.74rem;color:var(--text-muted);text-decoration:none;text-transform:uppercase;letter-spacing:0.07em;font-weight:600;transition:color 0.2s}
+    .footer-links a:hover{color:var(--text-secondary)}
+    .footer-copy{font-size:0.7rem;color:var(--text-muted)}
+
+    @media(max-width:768px){
+      .job-content{grid-template-columns:1fr;gap:1.5rem}
+      .job-header{flex-direction:column}
+      nav{padding:0 3%}
+      .nav-links{gap:1rem;font-size:0.65rem}
+      section{padding:60px 3%}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    EVENTIAL<span class="nav-pulse"></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/#platform">Platform</a></li>
+    <li><a href="/#who">Who We Serve</a></li>
+    <li><a href="/#proof">Case Study</a></li>
+    <li><a href="/#privacy">Privacy</a></li>
+    <li><a href="jobs.html" style="color:var(--accent-gold)">Careers</a></li>
+    <li><a href="mailto:hello@evential.co" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <div class="ticker-item"><span class="live-chip"><span class="live-dot"></span>LIVE</span>Founding team is <b>hiring now</b> <span class="ticker-sep">•</span></div>
+    <div class="ticker-item"><span class="live-chip"><span class="live-dot"></span>LIVE</span>Founding team is <b>hiring now</b> <span class="ticker-sep">•</span></div>
+    <div class="ticker-item"><span class="live-chip"><span class="live-dot"></span>LIVE</span>Founding team is <b>hiring now</b> <span class="ticker-sep">•</span></div>
+    <div class="ticker-item"><span class="live-chip"><span class="live-dot"></span>LIVE</span>Founding team is <b>hiring now</b> <span class="ticker-sep">•</span></div>
+    <div class="ticker-item"><span class="live-chip"><span class="live-dot"></span>LIVE</span>Founding team is <b>hiring now</b> <span class="ticker-sep">•</span></div>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-content">
+    <div class="eyebrow"><span class="eyebrow-dot"></span> Join the Founding Team</div>
+    <h1>Build the <em>brain</em> of <em>event intelligence.</em></h1>
+    <p class="hero-sub">We're looking for exceptional engineers who want to help define a category. Not just code. Not just features. A founding team that owns the product, the culture, and the future.</p>
+    <div class="btn-row">
+      <a href="#open-positions" class="btn-primary">View Open Positions <i data-lucide="arrow-right" style="width:15px;height:15px;"></i></a>
+    </div>
+  </div>
+</section>
+
+<section class="about-box">
+  <h3>About Evential</h3>
+  <p>Founded in late 2025, Evential is a frictionless event intelligence platform powered by a suite of elegantly designed hardware and software solutions. We don't just help event teams prepare and analyze events—we automate the entire show. From real-time inventory and crowd flow awareness to attendee connection insights and intelligent staff coordination, Evential automates every moving part of a live event.</p>
+  <p>It predicts bottlenecks before they happen, adapts operations as conditions change, and gives organizers and on-site teams complete visibility. The mission is simple: make events effortless to run so bringing people together is no longer difficult or time consuming.</p>
+  <p><strong>When it comes to creating seamless event experiences, Evential is the platform you trust.</strong></p>
+</section>
+
+<section class="jobs-section" id="open-positions">
+  <div class="section-label">Open Positions</div>
+  <h2 class="section-title">We're building a founding team. These roles define what comes next.</h2>
+  <div class="jobs-grid">
+
+    <!-- Job 1: AI/ML Engineer -->
+    <div class="job-card reveal">
+      <div class="job-header">
+        <div>
+          <h2 class="job-title">Founding AI/ML Engineer</h2>
+          <div class="job-location"><i data-lucide="map-pin" style="width:16px;height:16px;"></i>Purdue West Lafayette, IN (On-site/Hybrid)</div>
+        </div>
+      </div>
+      <div class="job-meta">
+        <div class="job-meta-item"><span class="meta-icon">→</span>Full-Time</div>
+        <div class="job-meta-item"><span class="meta-icon">→</span>Founding Role</div>
+        <div class="job-meta-item"><span class="meta-icon">→</span>Equity + Bonus</div>
+      </div>
+      <div class="job-content">
+        <div class="job-description">
+          <p><strong>The Role:</strong> As our Founding AI/ML Engineer, you aren't just writing code; you are building the brain of Evential. You will lead the development of our conversational intelligence layer (LLM) and create the visualization tools that turn raw sensor data into actionable insights for event managers. As the Founding AI/ML Engineer, you will set the technical standards and eventually lead the ML department as we scale.</p>
+          
+          <h3>What You'll Do</h3>
+          <ul>
+            <li><strong>Architect Intelligence:</strong> Design and deploy LLM-based systems (RAG) to allow managers to query event data in natural language.</li>
+            <li><strong>Data Visualization:</strong> Build custom dashboards that make complex event telemetry (crowd flow, inventory) intuitive and beautiful.</li>
+            <li><strong>Full-Stack ML:</strong> Take models from a Jupyter Notebook to a production-ready API.</li>
+            <li><strong>Strategic Leadership:</strong> Work directly with the founders to define the product roadmap.</li>
+          </ul>
+
+          <h3>Minimum Qualifications</h3>
+          <ul>
+            <li>Current Purdue University (West Lafayette) Undergraduate.</li>
+            <li>Fluency in Python and core ML libraries (PyTorch, NumPy, Pandas).</li>
+            <li>Proven track record of shipping ML projects (GitHub, Research, or Hackathons).</li>
+            <li>Strong understanding of data structures and ML fundamentals.</li>
+          </ul>
+
+          <h3>Preferred Qualifications</h3>
+          <ul>
+            <li>Major in CS, ECE, CMPE, AI, or DS.</li>
+            <li>Experience fine-tuning LLMs or building complex RAG pipelines.</li>
+            <li>Experience with cloud deployment (AWS/GCP/Azure) and API integration.</li>
+            <li>A "builder" mindset: you prefer shipping 80% today over 100% in a month.</li>
+          </ul>
+        </div>
+        <div class="job-sidebar">
+          <div class="compensation-box">
+            <h4>Compensation & Perks</h4>
+            <div class="compensation-item">
+              <span class="comp-label">Equity</span>
+              <span class="comp-value">1.0% - 3.0%</span>
+            </div>
+            <div class="compensation-item">
+              <span class="comp-label">Sign-On Bonus</span>
+              <span class="comp-value">$1,500</span>
+            </div>
+            <div class="compensation-item">
+              <span class="comp-label">Impact</span>
+              <span class="comp-value">Shape culture & product</span>
+            </div>
+          </div>
+          <div class="job-cta">
+            <a href="https://forms.office.com/r/e4KM3ev3N4" class="job-apply-btn">Apply Now <i data-lucide="arrow-right" style="width:15px;height:15px;"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Job 2: Embedded Systems Engineer -->
+    <div class="job-card reveal">
+      <div class="job-header">
+        <div>
+          <h2 class="job-title">Founding Embedded Systems Engineer</h2>
+          <div class="job-location"><i data-lucide="map-pin" style="width:16px;height:16px;"></i>Purdue West Lafayette, IN (On-site / Hybrid)</div>
+        </div>
+      </div>
+      <div class="job-meta">
+        <div class="job-meta-item"><span class="meta-icon">→</span>Full-Time</div>
+        <div class="job-meta-item"><span class="meta-icon">→</span>Founding Role</div>
+        <div class="job-meta-item"><span class="meta-icon">→</span>Equity + Bonus</div>
+      </div>
+      <div class="job-content">
+        <div class="job-description">
+          <p><strong>The Role:</strong> As our Founding Embedded Engineer, you are the architect of Evential's physical presence. You will design, prototype, and iterate on the sensor nodes and gateways that power our real-time insights. You'll be responsible for ensuring our hardware is robust enough for stadium-scale deployments and efficient enough to run on minimal power. As we grow, you will build and lead the hardware engineering department.</p>
+          
+          <h3>What You'll Do</h3>
+          <ul>
+            <li><strong>Full-Cycle Hardware:</strong> Design custom PCBs (Altium, KiCad, or Eagle) from concept to assembly.</li>
+            <li><strong>Firmware Mastery:</strong> Write highly optimized C/C++ code for Nordic and STM32 microcontrollers.</li>
+            <li><strong>Wireless Networking:</strong> Implement and optimize BLE, LoRa, or Wi-Fi protocols for high-density environments.</li>
+            <li><strong>Systems Integration:</strong> Work closely with the AI/ML team to ensure data flows seamlessly from the edge to the cloud.</li>
+          </ul>
+
+          <h3>Minimum Qualifications</h3>
+          <ul>
+            <li>Current Purdue University (West Lafayette) Undergraduate.</li>
+            <li>Proven experience building and debugging embedded systems from scratch (beyond classroom labs).</li>
+            <li>Proficiency in C programming and PCB Design.</li>
+            <li>A "hacker" mindset: Ability to prototype rapidly and find creative solutions to hardware constraints.</li>
+            <li>Strong communication skills and a desire to lead a team.</li>
+          </ul>
+
+          <h3>Preferred Qualifications</h3>
+          <ul>
+            <li>Major in ECE, EE, CMPE, or ME.</li>
+            <li>Experience with Nordic Semiconductor (nRF series) or STM32 ecosystems.</li>
+            <li>Knowledge of RF design, antenna tuning, and low-power optimization.</li>
+            <li>Experience with Robotics (sensing, actuation, and real-time control).</li>
+            <li>Familiarity with manufacturing processes (getting a board "DFM" ready).</li>
+          </ul>
+        </div>
+        <div class="job-sidebar">
+          <div class="compensation-box">
+            <h4>Compensation & Perks</h4>
+            <div class="compensation-item">
+              <span class="comp-label">Equity</span>
+              <span class="comp-value">1.0% - 3.0%</span>
+            </div>
+            <div class="compensation-item">
+              <span class="comp-label">Sign-On Bonus</span>
+              <span class="comp-value">$1,500</span>
+            </div>
+            <div class="compensation-item">
+              <span class="comp-label">Impact</span>
+              <span class="comp-value">Shape culture & product</span>
+            </div>
+          </div>
+          <div class="job-cta">
+            <a href="https://forms.office.com/r/nWUMCAEgZC" class="job-apply-btn">Apply Now <i data-lucide="arrow-right" style="width:15px;height:15px;"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Job 3: Full-Stack Engineer -->
+    <div class="job-card reveal">
+      <div class="job-header">
+        <div>
+          <h2 class="job-title">Founding Software Engineer (Full-Stack)</h2>
+          <div class="job-location"><i data-lucide="map-pin" style="width:16px;height:16px;"></i>Purdue West Lafayette, IN (On-site / Hybrid)</div>
+        </div>
+      </div>
+      <div class="job-meta">
+        <div class="job-meta-item"><span class="meta-icon">→</span>Full-Time</div>
+        <div class="job-meta-item"><span class="meta-icon">→</span>Founding Role</div>
+        <div class="job-meta-item"><span class="meta-icon">→</span>Equity + Bonus</div>
+      </div>
+      <div class="job-content">
+        <div class="job-description">
+          <p><strong>The Role:</strong> As our Founding Software Engineer, you are the architect of the Evential user experience. You will design and build the web and mobile platforms that event managers rely on to run world-class shows. You aren't just building features; you are defining our entire software DNA. You will lead the software team as we scale from our first pilot to stadium-level deployments.</p>
+          
+          <h3>What You'll Do</h3>
+          <ul>
+            <li><strong>Full-Stack Ownership:</strong> Build and maintain our core platform using the MERN stack (MongoDB, Express, React, Node.js).</li>
+            <li><strong>Mobile Development:</strong> Use Expo/React Native to put Evential's power into the pockets of on-site event staff.</li>
+            <li><strong>Real-Time Data Visualization:</strong> Work with the AI/ML team to turn live sensor data into a beautiful, real-time analytic dashboards</li>
+            <li><strong>User Experience:</strong> Create a product vision and manage usability for event managers and attendees.</li>
+          </ul>
+
+          <h3>Minimum Qualifications</h3>
+          <ul>
+            <li>Current Purdue University (West Lafayette) Undergraduate.</li>
+            <li>Proficiency in the MERN stack and modern JavaScript/TypeScript.</li>
+            <li>Experience deploying web applications to production (AWS, Heroku, Vercel, etc.).</li>
+            <li>Mastery of Git/GitHub workflows in a team environment.</li>
+            <li>A strong eye for clean, functional code and leadership potential.</li>
+          </ul>
+
+          <h3>Preferred Qualifications</h3>
+          <ul>
+            <li>Major in CS, CMPE, or ECE.</li>
+            <li>Experience with Expo / React Native for cross-platform mobile apps.</li>
+            <li>Strong understanding of UI/UX design principles (Figma experience is a plus).</li>
+            <li>Experience with WebSockets or real-time data streaming.</li>
+            <li>Previous experience in a high-growth startup or competitive hackathon circuit.</li>
+          </ul>
+        </div>
+        <div class="job-sidebar">
+          <div class="compensation-box">
+            <h4>Compensation & Perks</h4>
+            <div class="compensation-item">
+              <span class="comp-label">Equity</span>
+              <span class="comp-value">1.0% - 3.0%</span>
+            </div>
+            <div class="compensation-item">
+              <span class="comp-label">Sign-On Bonus</span>
+              <span class="comp-value">$1,500</span>
+            </div>
+            <div class="compensation-item">
+              <span class="comp-label">Impact</span>
+              <span class="comp-value">Shape culture & product</span>
+            </div>
+          </div>
+          <div class="job-cta">
+            <a href="https://forms.office.com/r/nnjpZtguhb" class="job-apply-btn">Apply Now <i data-lucide="arrow-right" style="width:15px;height:15px;"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta-section" id="more">
+  <h2>Not seeing your role?</h2>
+  <p>We're always interested in exceptional talent. If you believe you're a fit for the Evential story, reach out and tell us why.</p>
+  <div class="btn-row" style="justify-content:center;">
+    <a href="mailto:contact@evential.co" class="btn-primary">Get in Touch <i data-lucide="arrow-right" style="width:15px;height:15px;"></i></a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">EVENTIAL</div>
+  <ul class="footer-links">
+    <li><a href="/#platform">Platform</a></li>
+    <li><a href="/#who">Who We Serve</a></li>
+    <li><a href="/#proof">Case Study</a></li>
+    <li><a href="/#privacy">Privacy</a></li>
+    <li><a href="jobs.html">Careers</a></li>
+    <li><a href="mailto:hello@evential.co">Contact</a></li>
+  </ul>
+  <div class="footer-copy">© 2026 Evential, LLC. All rights reserved.</div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  document.addEventListener('DOMContentLoaded', function() {
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObs = new IntersectionObserver(entries => {
+      entries.forEach(e => { 
+        if (e.isIntersecting) { 
+          e.target.classList.add('visible'); 
+          revealObs.unobserve(e.target); 
+        } 
+      });
+    }, { threshold: 0.07, rootMargin: '0px 0px -30px 0px' });
+    revealEls.forEach(el => revealObs.observe(el));
+  });
+</script>
+
+</body>
+</html>
