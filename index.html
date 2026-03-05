@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Evential — Real-Time Event Intelligence</title>
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <meta name="description" content="Evential is the real-time intelligence layer for live events. Predict no-shows, eliminate waste, map attendee movement, and automate operations — from first check-in to final session." />
   <meta name="keywords" content="event intelligence, real-time event analytics, trade show analytics, event management platform, event ROI, attendee tracking, event operations, event data platform" />
   <meta property="og:title" content="Evential — Real-Time Event Intelligence" />
@@ -14,10 +16,13 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600;700;800;900&family=Merriweather+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.1/dist/umd/lucide.min.js"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script src="https://cdn.jsdelivr.net"></script>
+  <!-- Load fonts async to eliminate render-blocking -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600;700;800;900&family=Merriweather+Sans:wght@300;400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600;700;800;900&family=Merriweather+Sans:wght@300;400;600&display=swap" rel="stylesheet" /></noscript>
+  <!-- Single Lucide script, deferred so it doesn't block rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.1/dist/umd/lucide.min.js" defer></script>
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script src="https://cdn.jsdelivr.net" defer></script>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{
@@ -31,10 +36,10 @@
       --glow:rgba(172,197,225,0.05);
     }
     html{scroll-behavior:smooth}
-    body{font-family:'Merriweather Sans',sans-serif;background:var(--bg-dark);color:var(--text-primary);line-height:1.6;overflow-x:hidden}
+    body{font-family:'Merriweather Sans',system-ui,-apple-system,sans-serif;background:var(--bg-dark);color:var(--text-primary);line-height:1.6;overflow-x:hidden}
     ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:var(--bg-dark)}::-webkit-scrollbar-thumb{background:var(--primary);border-radius:2px}
     body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9999}
-    h1,h2,h3,h4{font-family:'Montserrat Alternates',sans-serif;line-height:1.12;letter-spacing:-0.02em}
+    h1,h2,h3,h4{font-family:'Montserrat Alternates',system-ui,-apple-system,sans-serif;line-height:1.12;letter-spacing:-0.02em}
 
     nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:0 5%;height:70px;display:flex;align-items:center;justify-content:space-between;background:rgba(12,20,32,0.88);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);transition:background 0.3s}
     .nav-logo{font-family:'Montserrat Alternates',sans-serif;font-weight:800;font-size:1.35rem;letter-spacing:0.1em;color:var(--text-primary);text-decoration:none;display:flex;align-items:center;gap:10px}
@@ -296,7 +301,7 @@
 <body>
 
 <nav id="main-nav">
-  <a href="#" class="nav-logo">EVENTIAL</a>
+  <a href="#" class="nav-logo" aria-label="Evential — Home">EVENTIAL</a>
   <ul class="nav-links">
     <li><a href="#platform">Platform</a></li>
     <li><a href="#who">Who We Serve</a></li>
@@ -683,7 +688,7 @@
     </div>
     <div>
       <div class="proof-image-block" style="margin-bottom:18px;">
-        <img src="pic1.JPG" class="img-ph reveal d1" style="height:220px;width:100%;object-fit:cover;">
+        <img src="pic1.JPG" alt="Evential live event deployment in action" class="img-ph reveal d1" loading="eager" width="800" height="220" style="height:220px;width:100%;object-fit:cover;">
         </div>
       <div class="proof-stat-grid reveal d2">
         <div class="proof-stat"><div class="proof-stat-num">1,485</div><div class="proof-stat-lbl">Data Points Per Badge</div></div>
@@ -695,9 +700,9 @@
       </div>
       <div class="proof-image-block">
         <div class="proof-image-row">
-          <img src="pic2.JPG" class="img-ph reveal d3" style="height:200px; width: 100%; object-fit: cover; ">
+          <img src="pic2.JPG" alt="Evential attendee tracking dashboard" class="img-ph reveal d3" loading="lazy" width="400" height="200" style="height:200px; width: 100%; object-fit: cover; ">
             
-          <img src="pic4.JPG" class="img-ph reveal d4" style="height:200px; width: 100%; object-fit: cover; background-position: top;">
+          <img src="pic4.JPG" alt="Evential real-time event intelligence interface" class="img-ph reveal d4" loading="lazy" width="400" height="200" style="height:200px; width: 100%; object-fit: cover; background-position: top;">
         </div>
       </div>
     </div>
@@ -842,11 +847,11 @@
   <h2>Request a pilot deployment.<br>We're selective for a reason.</h2>
   <p>We're partnering with a small number of events in 2026 to build the reference dataset that defines this category. Trade shows, corporate conferences, multi-day summits — if you run serious events, let's talk.</p>
   <div class="cta-form">
-    <a href="https://calendly.com/contact-evential/30min?month=2026-03" target="_blank" class="btn-primary">
+    <a href="https://calendly.com/contact-evential/30min?month=2026-03" target="_blank" rel="noopener noreferrer" class="btn-primary">
       Request Pilot <i data-lucide="arrow-right" style="width:15px;height:15px;"></i>
     </a>
   </div>
-  <p class="cta-note">For investors: <a href="mailto:contact@evential.co">contact@evential.co</a> &nbsp;·&nbsp; Pre-seed. Raising now.</p>
+  <p class="cta-note">For investors: <a href="/cdn-cgi/l/email-protection#4e2d21203a2f2d3a0e2b382b203a272f22602d21"><span class="__cf_email__" data-cfemail="2b4844455f4a485f6b4e5d4e455f424a47054844">[email&#160;protected]</span></a> &nbsp;·&nbsp; Pre-seed. Raising now.</p>
 </section>
 
 <footer>
@@ -858,14 +863,21 @@
     <li><a href="#privacy">Privacy</a></li>
     <li><a href="#vision">Vision</a></li>
     <li><a href="/jobs">Jobs</a></li>
-    <li><a href="mailto:contact@evential.co">Contact</a></li>
+    <li><a href="/cdn-cgi/l/email-protection#294a46475d484a5d694c5f4c475d404845074a46">Contact</a></li>
   </ul>
   <div class="footer-copy">© 2026 Evential, LLC. All rights reserved.</div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  document.addEventListener('DOMContentLoaded', function() {
-  if (typeof lucide !== 'undefined') lucide.createIcons();
+<script>
+  // Lucide icons: init after defer script loads
+  function initLucide() {
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    } else {
+      // defer means script loads after DOMContentLoaded; retry briefly
+      setTimeout(initLucide, 50);
+    }
+  }
 
   function switchTab(id, btn) {
     document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
@@ -875,12 +887,6 @@
     setTimeout(animateBars, 80);
   }
 
-  const revealEls = document.querySelectorAll('.reveal');
-  const revealObs = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
-  }, { threshold: 0.07, rootMargin: '0px 0px -30px 0px' });
-  revealEls.forEach(el => revealObs.observe(el));
-
   function animateBars() {
     document.querySelectorAll('.bar-fill[data-w]').forEach(bar => {
       const w = bar.dataset.w;
@@ -889,38 +895,50 @@
     });
   }
 
-  const barObs = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { animateBars(); barObs.unobserve(e.target); } });
-  }, { threshold: 0.2 });
-  document.querySelectorAll('.tab-visual, .how-visual').forEach(el => barObs.observe(el));
+  document.addEventListener('DOMContentLoaded', function() {
+    initLucide();
 
-  const nav = document.getElementById('main-nav');
-  window.addEventListener('scroll', () => {
-    nav.style.background = window.scrollY > 50 ? 'rgba(12,20,32,0.97)' : 'rgba(12,20,32,0.88)';
-  });
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
+    }, { threshold: 0.07, rootMargin: '0px 0px -30px 0px' });
+    revealEls.forEach(el => revealObs.observe(el));
 
-  window.submitPilot = function() {
-    const inp = document.getElementById('pilot-email');
-    if (inp.value && inp.value.includes('@')) {
-      inp.placeholder = "We'll be in touch shortly ✓";
-      
-      inp.value = '';
-      inp.style.borderColor = '#2eb87a';
-      inp.style.color = '#2eb87a';
-    } else {
-      inp.style.borderColor = '#8E181A';
-      inp.placeholder = 'Please enter a valid email';
-    }
-  };
+    const barObs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { animateBars(); barObs.unobserve(e.target); } });
+    }, { threshold: 0.2 });
+    document.querySelectorAll('.tab-visual, .how-visual').forEach(el => barObs.observe(el));
 
-  window.switchTab = function(id, btn) {
-    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    document.getElementById('tab-' + id).classList.add('active');
-    btn.classList.add('active');
-    setTimeout(animateBars, 80);
-  };
+    const nav = document.getElementById('main-nav');
+    // Passive scroll listener for better performance
+    window.addEventListener('scroll', () => {
+      nav.style.background = window.scrollY > 50 ? 'rgba(12,20,32,0.97)' : 'rgba(12,20,32,0.88)';
+    }, { passive: true });
 
+    window.submitPilot = function() {
+      const inp = document.getElementById('pilot-email');
+      if (inp && inp.value && inp.value.includes('@')) {
+        inp.placeholder = "We'll be in touch shortly ✓";
+        inp.value = '';
+        inp.style.borderColor = '#2eb87a';
+        inp.style.color = '#2eb87a';
+      } else if (inp) {
+        inp.style.borderColor = '#8E181A';
+        inp.placeholder = 'Please enter a valid email';
+      }
+    };
+
+    window.switchTab = function(id, btn) {
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      const panel = document.getElementById('tab-' + id);
+      if (panel) panel.classList.add('active');
+      if (btn) btn.classList.add('active');
+      setTimeout(animateBars, 80);
+      // Re-init lucide icons in newly shown tab panel
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+    };
   });
 </script>
 </body>
+</html>
