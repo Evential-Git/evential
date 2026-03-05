@@ -22,6 +22,9 @@
   <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600;700;800;900&family=Merriweather+Sans:wght@300;400;600&display=swap" rel="stylesheet" /></noscript>
   <script src="https://unpkg.com/lucide@latest" defer></script>
   <style>
+    h1{font-family:system-ui,-apple-system,sans-serif;font-weight:900}
+  </style>
+  <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{
       --primary:#3D516B;--primary-dark:#2a3a4d;--primary-light:#4f6882;
@@ -61,7 +64,7 @@
 
     .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:100px 5% 80px;position:relative;overflow:hidden}
     .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(172,197,225,0.033) 1px,transparent 1px),linear-gradient(90deg,rgba(172,197,225,0.033) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse 80% 80% at 50% 45%,black 10%,transparent 100%)}
-    .hero-orb{position:absolute;border-radius:50%;pointer-events:none}
+    .hero-orb{position:absolute;border-radius:50%;pointer-events:none;will-change:transform;contain:layout style}
     .hero-orb-1{width:800px;height:800px;background:radial-gradient(circle,rgba(61,81,107,0.22) 0%,transparent 70%);top:-300px;right:-200px}
     .hero-orb-2{width:480px;height:480px;background:radial-gradient(circle,rgba(96,61,106,0.13) 0%,transparent 70%);bottom:-80px;left:-80px}
     .hero-content{position:relative;z-index:1;max-width:920px}
@@ -296,7 +299,17 @@
     }
   </style>
 </head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-G7FL21YMQC"></script>
+<script>
+  // Delay GTM until after page is interactive to avoid blocking LCP/TBT
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      var s = document.createElement('script');
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-G7FL21YMQC';
+      s.async = true;
+      document.head.appendChild(s);
+    }, 2000);
+  });
+</script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
