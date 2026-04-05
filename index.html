@@ -3,1003 +3,234 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Evential — Real-Time Event Intelligence</title>
-  <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-  <meta name="description" content="Evential is the real-time intelligence layer for live events. Predict no-shows, eliminate waste, map attendee movement, and automate operations — from first check-in to final session." />
-  <meta name="keywords" content="event intelligence, real-time event analytics, trade show analytics, event management platform, event ROI, attendee tracking, event operations, event data platform" />
-  <meta property="og:title" content="Evential — Real-Time Event Intelligence" />
-  <meta property="og:description" content="Stop running events on guesswork. Evential gives organizers, exhibitors, and venues the real-time intelligence to make every decision count." />
+  <title>Evential — Event Intelligence Platform</title>
+  <meta name="description" content="Evential is the event analytics and sponsor monetization platform for B2B organizers. Real-time BLE badge tracking, automated sponsor ROI reports, and a qualified lead marketplace — all in one dashboard." />
+  <meta property="og:title" content="Evential — Event Intelligence Platform" />
+  <meta property="og:description" content="Real-time BLE badge tracking, automated sponsor ROI reports, and a qualified lead marketplace for B2B event organizers." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://evential.co" />
   <link rel="canonical" href="https://evential.co" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700;800;900&family=Merriweather+Sans:wght@300;400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700;800;900&family=Merriweather+Sans:wght@300;400&display=swap" rel="stylesheet" /></noscript>
-  
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    h1{font-family:system-ui,-apple-system,sans-serif;font-weight:900}
-  </style>
-  <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{
-      --primary:#3D516B;--primary-dark:#2a3a4d;--primary-light:#4f6882;
-      --secondary:#ACC5E1;--accent-gold:#C6831E;--accent-purple:#603D6A;
-      --accent-navy:#3D406A;--accent-rose:#6A3D5A;--accent-red:#8E181A;
-      --green:#2eb87a;--red-alert:#e05a5c;
-      --bg-dark:#0c1420;--bg-mid:#101c2c;--bg-card:#152236;
-      --text-primary:#eef2f7;--text-secondary:#8aaac8;--text-muted:#6b8aaa;
-      --border:rgba(172,197,225,0.11);--border-strong:rgba(172,197,225,0.2);
-      --glow:rgba(172,197,225,0.05);
-    }
-    html{scroll-behavior:smooth}
-    body{font-family:'Merriweather Sans',system-ui,-apple-system,sans-serif;background:var(--bg-dark);color:var(--text-primary);line-height:1.6;overflow-x:hidden}
-    ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:var(--bg-dark)}::-webkit-scrollbar-thumb{background:var(--primary);border-radius:2px}
-    body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9999}
-    h1,h2,h3,h4{font-family:'Montserrat Alternates',system-ui,-apple-system,sans-serif;line-height:1.12;letter-spacing:-0.02em}
-
-    nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:0 5%;height:70px;display:flex;align-items:center;justify-content:space-between;background:rgba(12,20,32,0.88);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);transition:background 0.3s}
-    .nav-logo{font-family:'Montserrat Alternates',sans-serif;font-weight:800;font-size:1.35rem;letter-spacing:0.1em;color:var(--text-primary);text-decoration:none;display:flex;align-items:center;gap:10px}
-    .nav-pulse{width:7px;height:7px;background:var(--accent-gold);border-radius:50%;animation:pulseGold 2.2s ease-in-out infinite}
-    @keyframes pulseGold{0%,100%{opacity:1;transform:scale(1);box-shadow:0 0 0 0 rgba(198,131,30,0.5)}50%{opacity:0.7;transform:scale(0.75);box-shadow:0 0 0 5px rgba(198,131,30,0)}}
-    .nav-links{display:flex;align-items:center;gap:2.2rem;list-style:none}
-    .nav-links a{color:var(--text-muted);text-decoration:none;font-size:0.78rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;transition:color 0.2s}
-    .nav-links a:hover{color:var(--text-primary)}
-    .nav-cta{background:var(--accent-gold)!important;color:#0c1420!important;padding:0.48rem 1.1rem!important;border-radius:3px!important;font-weight:700!important;transition:all 0.2s!important}
-    .nav-cta:hover{background:#d4911f!important;box-shadow:0 4px 18px rgba(198,131,30,0.35)!important}
-
-    .ticker-wrap{margin-top:70px;overflow:hidden;padding:0.72rem 0;border-bottom:1px solid var(--border);background:var(--bg-mid)}
-    .ticker-track{display:flex;animation:ticker 38s linear infinite;white-space:nowrap}
-    .ticker-item{display:inline-flex;align-items:center;gap:0.9rem;padding:0 2.4rem;font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted)}
-    .ticker-item b{color:var(--accent-gold)}
-    .ticker-sep{color:var(--border-strong)}
-    @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-    .live-chip{display:inline-flex;align-items:center;gap:5px;font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--green)}
-    .live-dot{width:5px;height:5px;background:var(--green);border-radius:50%;animation:livePulse 1.6s ease-in-out infinite}
-    @keyframes livePulse{0%,100%{box-shadow:0 0 0 0 rgba(46,184,122,0.5)}50%{box-shadow:0 0 0 5px rgba(46,184,122,0)}}
-
-    .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:100px 5% 80px;position:relative;overflow:hidden}
-    .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(172,197,225,0.033) 1px,transparent 1px),linear-gradient(90deg,rgba(172,197,225,0.033) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse 80% 80% at 50% 45%,black 10%,transparent 100%)}
-    .hero-orb{position:absolute;border-radius:50%;pointer-events:none;will-change:transform;contain:layout style}
-    .hero-orb-1{width:800px;height:800px;background:radial-gradient(circle,rgba(61,81,107,0.22) 0%,transparent 70%);top:-300px;right:-200px}
-    .hero-orb-2{width:480px;height:480px;background:radial-gradient(circle,rgba(96,61,106,0.13) 0%,transparent 70%);bottom:-80px;left:-80px}
-    .hero-content{position:relative;z-index:1;max-width:920px}
-    .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:0.7rem;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:var(--accent-gold);border:1px solid rgba(198,131,30,0.28);padding:0.38rem 0.9rem;border-radius:2px;background:rgba(198,131,30,0.07);margin-bottom:1.8rem}
-    .eyebrow-dot{width:5px;height:5px;background:var(--accent-gold);border-radius:50%}
-    .hero h1{font-size:clamp(2.8rem,5.8vw,5.4rem);font-weight:900;color:var(--text-primary);margin-bottom:1.5rem}
-    .hero h1 em{font-style:normal;color:var(--secondary)}
-    .hero h1 .cross{position:relative;color:var(--text-muted)}
-    .hero h1 .cross::after{content:'';position:absolute;left:0;top:52%;width:100%;height:2px;background:var(--accent-red);transform:translateY(-50%) rotate(-1deg)}
-    .hero-sub{font-size:clamp(1rem,1.7vw,1.2rem);color:var(--text-secondary);max-width:600px;margin-bottom:2.5rem;line-height:1.8;font-weight:300}
-    .btn-row{display:flex;gap:0.9rem;flex-wrap:wrap;align-items:center}
-    .btn-primary{background:var(--accent-gold);color:#0c1420;padding:0.85rem 1.9rem;border-radius:3px;font-family:'Montserrat Alternates',sans-serif;font-weight:700;font-size:0.88rem;letter-spacing:0.04em;text-decoration:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:7px;transition:all 0.22s}
-    .btn-primary:hover{background:#d4911f;transform:translateY(-2px);box-shadow:0 8px 28px rgba(198,131,30,0.38)}
-    .btn-ghost{background:transparent;color:var(--text-secondary);padding:0.85rem 1.9rem;border-radius:3px;font-family:'Montserrat Alternates',sans-serif;font-weight:600;font-size:0.88rem;letter-spacing:0.04em;text-decoration:none;border:1px solid var(--border);display:inline-flex;align-items:center;gap:7px;transition:all 0.22s}
-    .btn-ghost:hover{border-color:var(--secondary);color:var(--text-primary);background:var(--glow)}
-    .hero-stats{margin-top:3.5rem;display:flex;flex-wrap:wrap;border:1px solid var(--border);border-radius:6px;overflow:hidden;max-width:680px;background:rgba(21,34,54,0.6);backdrop-filter:blur(12px)}
-    .hero-stat{flex:1;min-width:130px;padding:1.4rem 1.5rem;border-right:1px solid var(--border);transition:background 0.2s}
-    .hero-stat:last-child{border-right:none}
-    .hero-stat:hover{background:rgba(172,197,225,0.04)}
-    .hero-stat-num{font-family:'Montserrat Alternates',sans-serif;font-size:1.75rem;font-weight:900;color:var(--text-primary);line-height:1;margin-bottom:5px}
-    .hero-stat-num span{color:var(--accent-gold)}
-    .hero-stat-label{font-size:0.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;font-weight:600}
-
-    .img-ph{background:var(--bg-card);border:1px solid var(--border);border-radius:6px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.7rem;color:var(--text-muted);font-size:0.72rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;position:relative;overflow:hidden}
-    .img-ph::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(61,81,107,0.15) 0%,rgba(96,61,106,0.08) 100%)}
-    .img-ph-icon{opacity:0.3;position:relative;z-index:1}
-    .img-ph span{position:relative;z-index:1}
-
-    section{padding:96px 5%;position:relative;}
-    .section-label{font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent-gold);margin-bottom:1rem;display:flex;align-items:center;gap:10px}
-    .section-label::before{content:'';width:22px;height:1px;background:var(--accent-gold)}
-    .section-title{font-size:clamp(1.75rem,3.2vw,2.8rem);font-weight:800;color:var(--text-primary);margin-bottom:1.1rem;max-width:680px}
-    .section-sub{font-size:1rem;color:var(--text-secondary);max-width:560px;line-height:1.78;font-weight:300}
-    .section-timeline{margin-right:auto;margin-left:auto;width: 100%;display: inline-flex;flex-direction:column;
-  justify-content: center;
-  align-items: center;}
-
-    .problem-section{background:var(--bg-mid);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-    .problem-layout{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-top:4rem}
-    .problem-cards{display:flex;flex-direction:column;gap:1.25rem}
-    .problem-card{background:var(--bg-card);border:1px solid var(--border);border-left:3px solid var(--accent-red);padding:1.4rem 1.6rem;border-radius:4px;transition:border-left-color 0.3s,transform 0.3s}
-    .problem-card:hover{border-left-color:var(--accent-gold);transform:translateX(4px)}
-    .problem-stat{font-family:'Montserrat Alternates',sans-serif;font-size:1.55rem;font-weight:900;color:var(--accent-gold);margin-bottom:0.35rem}
-    .problem-card p{font-size:0.875rem;color:var(--text-secondary);line-height:1.65}
-    .event-log{display:flex;flex-direction:column;gap:0.85rem}
-    .event-log-title{font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.25rem}
-    .log-entry{background:var(--bg-card);border:1px solid var(--border);border-radius:4px;padding:1.1rem 1.3rem;display:flex;align-items:flex-start;gap:1rem}
-    .log-dot{width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0}
-    .dot-red{background:var(--accent-red)}.dot-gold{background:var(--accent-gold)}.dot-green{background:var(--green)}
-    .log-body{flex:1}
-    .log-title{font-size:0.84rem;font-weight:600;color:var(--text-primary);margin-bottom:0.2rem}
-    .log-desc{font-size:0.77rem;color:var(--text-muted);line-height:1.5}
-    .log-badge{font-size:0.65rem;font-weight:700;padding:0.22rem 0.55rem;border-radius:2px;white-space:nowrap;flex-shrink:0;margin-top:2px}
-    .badge-loss{background:rgba(142,24,26,0.18);color:var(--red-alert)}
-    .badge-risk{background:rgba(198,131,30,0.13);color:var(--accent-gold)}
-
-    .platform-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:4rem;background:var(--border);border:1px solid var(--border);border-radius:8px;overflow:hidden}
-    .platform-card{background:var(--bg-dark);padding:2.4rem;position:relative;overflow:hidden;transition:background 0.3s}
-    .platform-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--accent-gold),transparent);opacity:0;transition:opacity 0.3s}
-    .platform-card:hover{background:rgba(21,34,54,0.9)}
-    .platform-card:hover::after{opacity:1}
-    .platform-icon{width:38px;height:38px;color:var(--accent-gold);margin-bottom:1.3rem;transition:transform 0.3s}
-    .platform-card:hover .platform-icon{transform:scale(1.1)}
-    .platform-card h3{font-size:1rem;font-weight:700;margin-bottom:0.65rem}
-    .platform-card p{font-size:0.83rem;color:var(--text-muted);line-height:1.7}
-
-    .how-section{background:var(--bg-mid);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-    .how-layout{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;margin-top:4rem}
-    .how-steps{display:flex;flex-direction:column}
-    .how-step{display:flex;gap:1.5rem;align-items:flex-start;padding:1.5rem 0;border-bottom:1px solid var(--border)}
-    .how-step:first-child{padding-top:0}
-    .how-step:last-child{border-bottom:none;padding-bottom:0}
-    .step-circle{width:44px;height:44px;flex-shrink:0;border-radius:50%;border:1px solid var(--border);background:var(--bg-dark);display:flex;align-items:center;justify-content:center;font-family:'Montserrat Alternates',sans-serif;font-size:0.95rem;font-weight:800;color:var(--accent-gold)}
-    .how-step h4{font-size:0.95rem;font-weight:700;margin-bottom:0.35rem}
-    .how-step p{font-size:0.82rem;color:var(--text-muted);line-height:1.65}
-    .how-visual{border-radius:8px;overflow:hidden;border:1px solid var(--border);background:var(--bg-card)}
-    .how-visual-header{padding:0.85rem 1.25rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;background:var(--bg-mid)}
-    .win-dot{width:10px;height:10px;border-radius:50%}
-    .win-red{background:#ff5f57}.win-gold{background:#ffbd2e}.win-green{background:#28c840}
-    .how-visual-header-label{font-size:0.72rem;color:var(--text-muted);margin-left:auto;letter-spacing:0.06em}
-    .dashboard-feed{padding:1.25rem;display:flex;flex-direction:column;gap:0.6rem}
-    .feed-item{background:var(--bg-mid);border:1px solid var(--border);border-radius:4px;padding:0.8rem 1rem;display:flex;align-items:center;gap:0.75rem;font-size:0.78rem;animation:feedIn 0.4s ease both}
-    @keyframes feedIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-    .feed-icon{flex-shrink:0;color:var(--accent-gold)}
-    .feed-text{color:var(--text-secondary);flex:1;line-height:1.4}
-    .feed-text b{color:var(--text-primary);font-weight:600}
-    .feed-time{font-size:0.65rem;color:var(--text-muted);white-space:nowrap}
-    .feed-item.alert-item{border-color:rgba(198,131,30,0.22)}
-    .feed-item.green-item .feed-icon{color:var(--green)}
-
-    .tab-nav{display:flex;border-bottom:1px solid var(--border);margin-bottom:3rem;margin-top:3rem;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-behavior:smooth;overflow-y:hidden;position:relative}
-    .tab-nav::-webkit-scrollbar{height:6px}
-    .tab-nav::-webkit-scrollbar-track{background:transparent}
-    .tab-nav::-webkit-scrollbar-thumb{background:var(--accent-gold);border-radius:3px}
-    .tab-nav::-webkit-scrollbar-thumb:hover{background:var(--secondary)}
-    .tab-btn{background:none;border:none;border-bottom:2px solid transparent;padding:0.9rem 1.8rem;margin-bottom:-1px;color:var(--text-muted);font-family:'Montserrat Alternates',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;transition:all 0.22s;white-space:nowrap;flex-shrink:0}
-    .tab-btn:hover{color:var(--text-secondary)}
-    .tab-btn.active{color:var(--accent-gold);border-bottom-color:var(--accent-gold)}
-    .tab-panel{display:none}
-    .tab-panel.active{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;animation:fadeUp 0.3s ease}
-    @keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-    .tab-content h3{font-size:1.55rem;font-weight:800;margin-bottom:1rem}
-    .tab-content>p{font-size:0.92rem;color:var(--text-secondary);line-height:1.78;margin-bottom:1.5rem;font-weight:300}
-    .feature-list{display:flex;flex-direction:column;gap:0.7rem}
-    .feature-item{display:flex;align-items:flex-start;gap:0.7rem;font-size:0.86rem;color:var(--text-secondary)}
-    .feature-arrow{color:var(--accent-gold);flex-shrink:0;margin-top:2px}
-    .tab-visual{background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:1.75rem;display:flex;flex-direction:column;gap:0.7rem}
-    .metric-row{display:flex;justify-content:space-between;align-items:center;padding:0.75rem 1rem;background:var(--bg-mid);border-radius:3px;border:1px solid var(--border)}
-    .metric-label{font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em}
-    .metric-value{font-family:'Montserrat Alternates',sans-serif;font-size:0.92rem;font-weight:700}
-    .mv-green{color:var(--green)}.mv-gold{color:var(--accent-gold)}.mv-red{color:var(--red-alert)}
-    .mini-bar-section{margin-top:0.5rem}
-    .mini-bar-label{font-size:0.65rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.09em;margin-bottom:0.6rem}
-    .bar-row{display:flex;align-items:center;gap:0.65rem;margin-bottom:0.45rem}
-    .bar-name{font-size:0.68rem;color:var(--text-muted);width:72px;text-align:right;flex-shrink:0}
-    .bar-track{flex:1;height:5px;background:var(--bg-dark);border-radius:3px;overflow:hidden}
-    .bar-fill{height:100%;border-radius:3px;background:var(--secondary);transition:width 1.2s ease}
-    .bar-fill.gold{background:var(--accent-gold)}
-    .bar-fill.dim{background:var(--primary-light)}
-
-    .data-section{background:var(--bg-mid);border-top:1px solid var(--border)}
-    .data-layout{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:3rem}
-    .data-card{background:var(--bg-card);border:1px solid var(--border);padding:1.7rem;border-radius:6px;position:relative;overflow:hidden;transition:transform 0.3s,border-color 0.3s}
-    .data-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%}
-    .dc-physical::before{background:var(--secondary)}
-    .dc-interaction::before{background:var(--accent-gold)}
-    .dc-crm::before{background:#9b6bac}
-    .dc-ops::before{background:var(--green)}
-    .data-card:hover{transform:translateY(-3px);border-color:var(--border-strong)}
-    .data-card-tag{font-size:0.66rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.7rem}
-    .t-physical{color:var(--secondary)}.t-interaction{color:var(--accent-gold)}.t-crm{color:#9b6bac}.t-ops{color:var(--green)}
-    .data-card h4{font-size:0.98rem;font-weight:700;margin-bottom:0.55rem}
-    .data-card p{font-size:0.8rem;color:var(--text-muted);line-height:1.65}
-    .chip-row{display:flex;gap:0.4rem;flex-wrap:wrap;margin-top:0.9rem}
-    .chip{font-size:0.65rem;padding:0.18rem 0.5rem;border-radius:2px;background:var(--bg-mid);color:var(--text-muted);border:1px solid var(--border);font-family:'Montserrat Alternates',sans-serif;font-weight:600;letter-spacing:0.04em}
-
-    .proof-section{background:var(--bg-dark);border-top:1px solid var(--border)}
-    .proof-layout{display:grid;grid-template-columns:1fr 1.1fr;gap:5rem;align-items:start;margin-top:3rem}
-    .proof-stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:8px;overflow:hidden;}
-    .proof-stat{background:var(--bg-card);padding:1.75rem;text-align:center}
-    .proof-stat-num{font-family:'Montserrat Alternates',sans-serif;font-size:2rem;font-weight:900;color:var(--accent-gold);line-height:1;margin-bottom:0.4rem}
-    .proof-stat-lbl{font-size:0.72rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.07em;font-weight:600}
-    .proof-image-block{display:grid;flex-direction:column;gap:1rem;margin-top:1rem}
-    .proof-image-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-
-    .vision-section{background:linear-gradient(145deg,#0f1a28 0%,var(--bg-dark) 55%);border-top:1px solid var(--border)}
-    .vision-rail{margin-top:4rem;position:relative}
-    .vision-rail::before{content:'';position:absolute;left:116px;top:8px;bottom:8px;width:1px;background:linear-gradient(180deg,var(--accent-gold) 0%,var(--primary) 60%,transparent 100%)}
-    .vision-item{display:flex;gap:2.5rem;align-items:flex-start;margin-bottom:2.75rem;position:relative}
-    .vision-year{font-family:'Montserrat Alternates',sans-serif;font-size:0.82rem;font-weight:800;color:var(--text-muted);width:88px;text-align:right;padding-top:3px;flex-shrink:0}
-    .vision-node{width:11px;height:11px;border-radius:50%;background:var(--bg-dark);border:2px solid var(--border);margin-top:4px;flex-shrink:0;position:relative;z-index:1}
-    .vision-item.now .vision-node{background:var(--accent-gold);border-color:var(--accent-gold);box-shadow:0 0 14px rgba(198,131,30,0.55)}
-    .vision-item.now .vision-year{color:var(--accent-gold)}
-    .vision-content h4{font-size:1rem;font-weight:700;margin-bottom:0.35rem}
-    .vision-content p{font-size:0.83rem;color:var(--text-muted);line-height:1.65;max-width:480px}
-
-    .traction-section{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg-mid);padding:0}
-    .traction-inner{display:grid;grid-template-columns:1fr 3fr;align-items:stretch}
-    .traction-label-col{padding:3rem 2rem 3rem 5%;border-right:1px solid var(--border);display:flex;flex-direction:column;justify-content:center;gap:0.5rem}
-    .traction-eyebrow{font-size:0.68rem;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:var(--accent-gold)}
-    .traction-heading{font-family:'Montserrat Alternates',sans-serif;font-size:1rem;font-weight:800;color:var(--text-primary);line-height:1.3}
-    .traction-sub{font-size:0.78rem;color:var(--text-muted);line-height:1.6;margin-top:0.25rem}
-    .traction-stats-col{padding:3rem 5% 3rem 3rem;display:grid;grid-template-columns:repeat(4,1fr)}
-    .traction-stat{padding:0 2rem;border-right:1px solid var(--border);display:flex;flex-direction:column;justify-content:center}
-    .traction-stat:first-child{padding-left:0}
-    .traction-stat:last-child{border-right:none}
-    .traction-num{font-family:'Montserrat Alternates',sans-serif;font-size:1.65rem;font-weight:900;color:var(--text-primary);line-height:1;margin-bottom:0.35rem}
-    .traction-num span{color:var(--accent-gold)}
-    .traction-lbl{font-size:0.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;line-height:1.4}
-
-    .cta-section{text-align:center;padding:110px 5%;position:relative;overflow:hidden}
-    .cta-section::before{content:'';position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(198,131,30,0.07) 0%,transparent 65%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
-    .cta-section h2{font-size:clamp(1.9rem,3.8vw,3.3rem);font-weight:900;max-width:660px;margin:1rem auto 1.3rem}
-    .cta-section>p{font-size:1rem;color:var(--text-secondary);max-width:480px;margin:0 auto 2.5rem;font-weight:300;line-height:1.8}
-    .cta-form{display:flex;gap:0.7rem;max-width:440px;margin:0 auto 1rem;flex-wrap:wrap;justify-content:center}
-    .cta-input{flex:1;min-width:210px;background:var(--bg-card);border:1px solid var(--border);color:var(--text-primary);padding:0.85rem 1.15rem;border-radius:3px;font-family:'Merriweather Sans',sans-serif;font-size:0.88rem;outline:none;transition:border-color 0.2s}
-    .cta-input::placeholder{color:var(--text-muted)}
-    .cta-input:focus{border-color:var(--accent-gold)}
-    .cta-note{font-size:0.72rem;color:var(--text-muted)}
-    .cta-note a{color:var(--accent-gold);text-decoration:none}
-
-    footer{border-top:1px solid var(--border);padding:2.5rem 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
-    .footer-logo{font-family:'Montserrat Alternates',sans-serif;font-weight:800;font-size:1rem;letter-spacing:0.1em;color:var(--text-muted)}
-    .footer-links{display:flex;gap:1.75rem;list-style:none}
-    .footer-links a{font-size:0.74rem;color:var(--text-muted);text-decoration:none;text-transform:uppercase;letter-spacing:0.07em;font-weight:600;transition:color 0.2s}
-    .footer-links a:hover{color:var(--text-secondary)}
-    .footer-copy{font-size:0.7rem;color:var(--text-muted)}
-
-    .reveal{opacity:0;transform:translateY(22px);transition:opacity 0.65s ease,transform 0.65s ease}
-    .reveal.visible{opacity:1;transform:translateY(0)}
-    .d1{transition-delay:0.1s}.d2{transition-delay:0.2s}.d3{transition-delay:0.3s}.d4{transition-delay:0.4s}
-
-    @media(max-width:900px){
-      .problem-layout,.how-layout,.proof-layout,.data-layout,.tab-panel.active{grid-template-columns:1fr;gap:2.5rem}
-      .platform-grid{grid-template-columns:1fr}
-      .traction-inner{grid-template-columns:1fr}
-      .traction-stats-col{grid-template-columns:1fr 1fr;gap:1.5rem;padding:2rem 5%}
-      .traction-stat{padding:0;border-right:none;border-bottom:1px solid var(--border);padding-bottom:1.5rem}
-      .traction-stat:last-child{border-bottom:none;padding-bottom:0}
-      .nav-links{display:none}
-      .vision-rail::before{left:88px}
-      footer{flex-direction:column;align-items:flex-start}
-      .footer-logo{width:100%}
-      .footer-links{width:100%;flex-direction:column;gap:0.8rem;margin:1rem 0}
-      .footer-copy{width:100%}
-      .vision-rail{margin-top:2rem}
-      .vision-item{display:flex;gap:1.5rem;align-items:flex-start;margin-bottom:2rem;position:relative;flex-wrap:wrap}
-      .vision-year{width:100%;text-align:left;font-size:0.95rem;padding-top:0;margin-bottom:0.5rem}
-      .vision-node{margin-left:0}
-      .vision-content{flex:1;min-width:100%;padding-left:0}
-      .vision-rail::before{display:none}
-      .privacy-grid{grid-template-columns:1fr!important;gap:1rem!important}
-      .privacy-grid>div{border-left:none!important;border-right:none!important;border-bottom:1px solid var(--border)}
-      .privacy-grid>div:last-child{border-bottom:none}
-      .buttons-grid{grid-template-columns:1fr!important}
-    }
-    @media(max-width:768px){
-      section{padding:60px 5%}
-    }
-    @media(max-width:600px){
-      section{padding:48px 5%}
-      .hero{padding:100px 5% 60px}
-      .btn-row{flex-direction:column;width:100%}
-      .btn-primary,.btn-ghost{width:100%;justify-content:center;text-align:center}
-      .hero-stats{max-width:100%;grid-template-columns:1fr 1fr;gap:1px}
-      .hero-stat{min-width:unset;border-right:1px solid var(--border);border-bottom:1px solid var(--border);padding:1.2rem 1rem}
-      .hero-stat:nth-child(2n),.hero-stat:nth-child(4n){border-right:none}
-      .hero-stat:nth-child(3),.hero-stat:nth-child(4){border-bottom:none}
-      .vision-year{font-size:0.85rem}
-      .vision-content h4{font-size:0.95rem}
-      .vision-content p{font-size:0.78rem}
-    }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg-base:#0B0E13;--bg-raised:#12161D;--bg-surface:#1A1F2A;--bg-surface-hover:#222835;--border:rgba(255,255,255,0.06);--border-strong:rgba(255,255,255,0.12);--accent:#E8913A;--accent-hover:#F0A050;--accent-glow:rgba(232,145,58,0.15);--accent-subtle:rgba(232,145,58,0.08);--blue:#3B82F6;--blue-glow:rgba(59,130,246,0.12);--green:#22C55E;--green-glow:rgba(34,197,94,0.1);--red:#EF4444;--purple:#A78BFA;--text-primary:#F1F3F5;--text-secondary:#9CA3B0;--text-muted:#5C6370;--radius:10px;--radius-sm:6px}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,-apple-system,sans-serif;background:var(--bg-base);color:var(--text-primary);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");pointer-events:none;z-index:9999}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--bg-base)}::-webkit-scrollbar-thumb{background:var(--accent);border-radius:4px}
+h1,h2,h3,h4,h5{font-weight:700;line-height:1.15;letter-spacing:-0.025em}
+.container{max-width:1200px;margin:0 auto;padding:0 clamp(1.25rem,4vw,3rem)}
+section{padding:clamp(60px,10vw,120px) 0;position:relative}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:64px;display:flex;align-items:center;background:rgba(11,14,19,0.8);backdrop-filter:blur(20px) saturate(1.2);-webkit-backdrop-filter:blur(20px) saturate(1.2);border-bottom:1px solid var(--border);transition:all 0.3s ease}
+nav.scrolled{background:rgba(11,14,19,0.95)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1200px;margin:0 auto;padding:0 clamp(1.25rem,4vw,3rem)}
+.nav-logo{font-family:'Space Mono',monospace;font-weight:700;font-size:1.1rem;letter-spacing:0.08em;color:var(--text-primary);text-decoration:none}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+.nav-links a{color:var(--text-muted);text-decoration:none;font-size:0.82rem;font-weight:500;transition:color 0.2s;letter-spacing:0.01em}
+.nav-links a:hover{color:var(--text-primary)}
+.nav-cta{background:var(--accent)!important;color:var(--bg-base)!important;padding:0.5rem 1.2rem!important;border-radius:var(--radius-sm)!important;font-weight:600!important;font-size:0.82rem!important;transition:all 0.25s!important}
+.nav-cta:hover{background:var(--accent-hover)!important;transform:translateY(-1px)!important;box-shadow:0 6px 20px rgba(232,145,58,0.3)!important}
+.mobile-menu-btn{display:none;background:none;border:none;color:var(--text-primary);cursor:pointer;padding:4px}
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:64px;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 65% 40%,rgba(232,145,58,0.06) 0%,transparent 70%),radial-gradient(ellipse 50% 60% at 20% 80%,rgba(59,130,246,0.04) 0%,transparent 70%)}
+.hero-grid-pattern{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse 80% 70% at 50% 40%,black 20%,transparent 100%)}
+.hero-glow{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(232,145,58,0.07) 0%,transparent 70%);pointer-events:none;transform:translate(-50%,-50%);transition:left 0.3s ease,top 0.3s ease;will-change:left,top;z-index:0;opacity:0}
+.hero:hover .hero-glow{opacity:1}
+.hero-content{position:relative;z-index:1; padding-top: 40px;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(232,145,58,0.2);padding:0.4rem 1rem;border-radius:100px;background:var(--accent-subtle);margin-bottom:2rem;animation:fadeUp 0.6s ease both}
+.hero-badge-dot{width:5px;height:5px;background:var(--accent);border-radius:50%}
+.hero h1{font-size:clamp(2.4rem,5.5vw,4.8rem);font-weight:700;margin-bottom:1.5rem;max-width:800px;animation:fadeUp 0.6s ease 0.1s both}
+.hero h1 .accent{background:linear-gradient(135deg,var(--accent) 0%,#F5C76B 50%,var(--accent) 100%);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 3s ease-in-out infinite}
+@keyframes shimmer{0%,100%{background-position:0% center}50%{background-position:200% center}}
+.hero h1 .dim{color:var(--text-muted)}
+.hero-sub{font-size:clamp(1rem,1.5vw,1.15rem);color:var(--text-secondary);max-width:560px;margin-bottom:2.5rem;font-weight:400;line-height:1.75;animation:fadeUp 0.6s ease 0.2s both}
+.hero-actions{display:flex;gap:0.75rem;flex-wrap:wrap;animation:fadeUp 0.6s ease 0.3s both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:0.8rem 1.6rem;border-radius:var(--radius-sm);font-family:'DM Sans',sans-serif;font-weight:600;font-size:0.9rem;text-decoration:none;border:none;cursor:pointer;transition:all 0.25s ease}
+.btn-primary{background:var(--accent);color:var(--bg-base)}
+.btn-primary:hover{background:var(--accent-hover);transform:translateY(-2px);box-shadow:0 8px 30px rgba(232,145,58,0.3)}
+.btn-secondary{background:transparent;color:var(--text-secondary);border:1px solid var(--border-strong)}
+.btn-secondary:hover{border-color:var(--text-muted);color:var(--text-primary);background:rgba(255,255,255,0.03)}
+.btn-arrow{transition:transform 0.2s}.btn:hover .btn-arrow{transform:translateX(3px)}
+.ticker-wrap{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg-raised);overflow:hidden;padding:0.9rem 0}
+.ticker-track{display:flex;animation:ticker 45s linear infinite;white-space:nowrap}
+.ticker-item{display:inline-flex;align-items:center;gap:0.6rem;padding:0 2.5rem;font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-muted)}
+.ticker-item b{color:var(--accent);font-weight:700}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.hero-dashboard{position:relative;z-index:1;margin-top:4rem;animation:fadeUp 0.8s ease 0.5s both}
+.dashboard-frame{background:var(--bg-raised);border:1px solid var(--border-strong);border-radius:12px;overflow:hidden;box-shadow:0 0 0 1px rgba(255,255,255,0.04),0 20px 60px rgba(0,0,0,0.5),0 0 120px rgba(232,145,58,0.04);transition:box-shadow 0.5s ease}
+.dashboard-frame:hover{box-shadow:0 0 0 1px rgba(255,255,255,0.06),0 25px 80px rgba(0,0,0,0.6),0 0 160px rgba(232,145,58,0.06)}
+.dashboard-topbar{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--border);background:var(--bg-surface)}
+.dot-row{display:flex;gap:6px}.dot-row span{width:10px;height:10px;border-radius:50%}
+.dot-red{background:#FF5F57}.dot-yellow{background:#FFBD2E}.dot-green{background:#28C840}
+.dashboard-url{flex:1;text-align:center;font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--text-muted)}
+.dashboard-body{display:grid;grid-template-columns:200px 1fr;min-height:340px}
+.dash-sidebar{border-right:1px solid var(--border);padding:16px 0;display:flex;flex-direction:column;gap:2px}
+.dash-sidebar-item{display:flex;align-items:center;gap:10px;padding:8px 16px;font-size:0.78rem;color:var(--text-muted);transition:all 0.2s}
+.dash-sidebar-item.active{color:var(--text-primary);background:rgba(255,255,255,0.04);border-right:2px solid var(--accent)}
+.dash-sidebar-item svg{width:16px;height:16px;opacity:0.5}
+.dash-sidebar-item.active svg{opacity:1;color:var(--accent)}
+.dash-main{padding:20px 24px;display:flex;flex-direction:column;gap:16px}
+.dash-header{display:flex;justify-content:space-between;align-items:center}
+.dash-title{font-size:1.1rem;font-weight:600}
+.dash-pill{font-family:'Space Mono',monospace;font-size:0.65rem;padding:4px 10px;border-radius:100px;display:flex;align-items:center;gap:5px}
+.dash-pill-live{background:rgba(34,197,94,0.1);color:var(--green);border:1px solid rgba(34,197,94,0.2)}
+.dash-pill-live::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--green);animation:pulse-green 1.5s ease-in-out infinite}
+@keyframes pulse-green{0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,0.4)}50%{box-shadow:0 0 0 4px rgba(34,197,94,0)}}
+.dash-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.dash-stat-card{background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px}
+.dash-stat-label{font-size:0.68rem;color:var(--text-muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:0.06em}
+.dash-stat-value{font-size:1.3rem;font-weight:700}.dash-stat-value .up{color:var(--green);font-size:0.7rem;margin-left:4px}
+.dash-chart-area{flex:1;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px;position:relative;overflow:hidden}
+.dash-chart-label{font-size:0.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:12px}
+.chart-bars{display:flex;align-items:flex-end;gap:6px;height:80px;padding-top:8px}
+.chart-bar{flex:1;border-radius:3px 3px 0 0;transition:height 1.2s cubic-bezier(0.22,1,0.36,1);position:relative}.chart-bar:hover{filter:brightness(1.2)}
+.live-feed-section{background:var(--bg-raised);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:clamp(48px,8vw,80px) 0}
+.live-feed-layout{display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;align-items:center}
+.live-feed-panel{background:var(--bg-base);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.live-feed-header{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--border)}
+.live-feed-header-title{font-size:0.78rem;font-weight:600;display:flex;align-items:center;gap:8px}
+.live-feed-header-title::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse-green 1.5s ease-in-out infinite}
+.live-feed-body{padding:0;max-height:320px;overflow:hidden}
+.feed-item{display:flex;align-items:center;gap:12px;padding:12px 18px;border-bottom:1px solid var(--border);font-size:0.82rem;animation:feedSlide 0.5s ease both}
+@keyframes feedSlide{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+.feed-item:last-child{border-bottom:none}
+.feed-icon{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}.feed-icon svg{width:14px;height:14px}
+.feed-icon-green{background:var(--green-glow);color:var(--green);border:1px solid rgba(34,197,94,0.15)}
+.feed-icon-orange{background:var(--accent-subtle);color:var(--accent);border:1px solid rgba(232,145,58,0.15)}
+.feed-icon-blue{background:var(--blue-glow);color:var(--blue);border:1px solid rgba(59,130,246,0.15)}
+.feed-icon-purple{background:rgba(167,139,250,0.1);color:var(--purple);border:1px solid rgba(167,139,250,0.15)}
+.feed-text{flex:1;color:var(--text-secondary);line-height:1.4}.feed-text b{color:var(--text-primary);font-weight:600}
+.feed-time{font-family:'Space Mono',monospace;font-size:0.65rem;color:var(--text-muted);white-space:nowrap}
+.section-eyebrow{font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;display:flex;align-items:center;gap:10px}
+.section-eyebrow::before{content:'';width:20px;height:1px;background:var(--accent)}
+.section-heading{font-size:clamp(1.6rem,3.2vw,2.6rem);font-weight:700;margin-bottom:1rem;max-width:640px}
+.section-desc{font-size:1rem;color:var(--text-secondary);max-width:520px;line-height:1.75;font-weight:400}
+.how-section{background:var(--bg-raised);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:3.5rem;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.how-card{background:var(--bg-base);padding:2.5rem 2rem;position:relative;overflow:hidden;transition:background 0.3s}
+.how-card:hover{background:var(--bg-raised)}
+.how-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0;transition:opacity 0.3s}
+.how-card:hover::after{opacity:1}
+.how-number{font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--accent);margin-bottom:1.25rem;display:flex;align-items:center;gap:8px;letter-spacing:0.1em}
+.how-number::after{content:'';flex:1;height:1px;background:var(--border)}
+.how-card h3{font-size:1.1rem;font-weight:600;margin-bottom:0.65rem}
+.how-card p{font-size:0.88rem;color:var(--text-muted);line-height:1.7}
+.how-icon{width:40px;height:40px;border-radius:var(--radius-sm);background:var(--accent-subtle);border:1px solid rgba(232,145,58,0.15);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;color:var(--accent)}
+.how-icon svg{width:20px;height:20px}
+.features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;margin-top:3.5rem}
+.feature-card{background:var(--bg-raised);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;transition:all 0.4s ease;position:relative;overflow:hidden}
+.feature-card:hover{border-color:var(--border-strong);box-shadow:0 12px 40px rgba(0,0,0,0.25)}
+.feature-card::before{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.03),transparent);transition:left 0.6s ease;pointer-events:none}
+.feature-card:hover::before{left:150%}
+.feature-card-icon{width:36px;height:36px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem}
+.fc-orange{background:var(--accent-subtle);color:var(--accent)}.fc-blue{background:var(--blue-glow);color:var(--blue)}.fc-green{background:var(--green-glow);color:var(--green)}.fc-purple{background:rgba(167,139,250,0.1);color:var(--purple)}
+.feature-card-icon svg{width:18px;height:18px}
+.feature-card h3{font-size:1.05rem;font-weight:600;margin-bottom:0.5rem}
+.feature-card p{font-size:0.88rem;color:var(--text-muted);line-height:1.7}
+.feature-card-tag{font-family:'Space Mono',monospace;font-size:0.62rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem}
+.auto-section{background:var(--bg-raised);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.auto-layout{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-top:3.5rem}
+.auto-visual{background:var(--bg-base);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;position:relative}
+.auto-node{background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:1rem 1.25rem;display:flex;align-items:center;gap:12px;position:relative;transition:border-color 0.4s,box-shadow 0.4s}
+.auto-node.glow{border-color:rgba(232,145,58,0.3);box-shadow:0 0 20px rgba(232,145,58,0.08)}
+.auto-node+.auto-connector{display:flex;flex-direction:column;align-items:center;padding:8px 0}
+.auto-connector-line{width:1px;height:24px;background:var(--border-strong);position:relative;overflow:hidden}
+.auto-connector-line::after{content:'';position:absolute;top:-100%;left:0;width:100%;height:100%;background:linear-gradient(180deg,transparent,var(--accent),transparent);animation:flowDown 2.5s ease-in-out infinite}
+@keyframes flowDown{0%{top:-100%}50%{top:100%}100%{top:100%}}
+.auto-connector-arrow{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:5px solid var(--accent)}
+.auto-node-tag{font-family:'Space Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;padding:2px 8px;border-radius:3px;position:absolute;top:-8px;left:12px}
+.tag-trigger{background:var(--accent);color:var(--bg-base)}.tag-action{background:var(--blue);color:white}
+.auto-node-icon{width:32px;height:32px;border-radius:var(--radius-sm);background:var(--bg-raised);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-muted);flex-shrink:0}
+.auto-node-icon svg{width:16px;height:16px}
+.auto-node-text h4{font-size:0.88rem;font-weight:600;margin-bottom:2px}.auto-node-text p{font-size:0.75rem;color:var(--text-muted)}
+.auto-features{display:flex;flex-direction:column;gap:1.5rem}
+.auto-feature{display:flex;gap:1rem;align-items:flex-start}
+.auto-feature-icon{width:32px;height:32px;border-radius:50%;flex-shrink:0;background:var(--accent-subtle);border:1px solid rgba(232,145,58,0.15);display:flex;align-items:center;justify-content:center;color:var(--accent);margin-top:2px}
+.auto-feature-icon svg{width:14px;height:14px}
+.auto-feature h4{font-size:0.92rem;font-weight:600;margin-bottom:0.25rem}.auto-feature p{font-size:0.84rem;color:var(--text-muted);line-height:1.65}
+.privacy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:3.5rem}
+.privacy-card{background:var(--bg-raised);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;text-align:center}
+.privacy-icon{width:48px;height:48px;border-radius:50%;background:var(--green-glow);border:1px solid rgba(34,197,94,0.15);display:flex;align-items:center;justify-content:center;color:var(--green);margin:0 auto 1.25rem}
+.privacy-icon svg{width:22px;height:22px}
+.privacy-card h3{font-size:1rem;font-weight:600;margin-bottom:0.5rem}.privacy-card p{font-size:0.84rem;color:var(--text-muted);line-height:1.65}
+.who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:3.5rem}
+.who-card{background:var(--bg-raised);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;transition:all 0.3s}
+.who-card:hover{border-color:var(--border-strong);transform:translateY(-2px)}
+.who-card-icon{margin-bottom:1rem;width:44px;height:44px;border-radius:var(--radius-sm);background:var(--accent-subtle);border:1px solid rgba(232,145,58,0.15);display:flex;align-items:center;justify-content:center}
+.who-card h3{font-size:1.05rem;font-weight:600;margin-bottom:0.5rem}.who-card p{font-size:0.84rem;color:var(--text-muted);line-height:1.65}
+.case-study-banner{background:linear-gradient(135deg,var(--bg-surface) 0%,var(--bg-raised) 100%);border:1px solid var(--border-strong);border-radius:var(--radius);padding:2.5rem 3rem;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;margin-top:3.5rem;position:relative;overflow:hidden}
+.case-study-banner::before{content:'';position:absolute;right:-50px;top:-50px;width:250px;height:250px;border-radius:50%;background:radial-gradient(circle,rgba(232,145,58,0.06) 0%,transparent 70%);pointer-events:none}
+.csb-stats{display:flex;gap:2rem;margin-top:1rem}.csb-stat{text-align:center}
+.csb-stat-num{font-size:1.5rem;font-weight:700;color:var(--accent);font-family:'Space Mono',monospace}
+.csb-stat-label{font-size:0.68rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:2px}
+.cta-section{text-align:center;padding:clamp(80px,12vw,140px) 0;position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(232,145,58,0.06) 0%,transparent 65%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+.cta-section .section-eyebrow{justify-content:center}.cta-section .section-heading{margin:0 auto 1rem;text-align:center;max-width:600px}.cta-section .section-desc{margin:0 auto 2.5rem;text-align:center;max-width:480px}
+footer{border-top:1px solid var(--border);padding:3.5rem 0 2rem}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;margin-bottom:2.5rem}
+.footer-brand p{font-size:0.84rem;color:var(--text-muted);line-height:1.7;margin-top:0.75rem;max-width:280px}
+.footer-col-title{font-family:'Space Mono',monospace;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1rem}
+.footer-col a{display:block;font-size:0.84rem;color:var(--text-secondary);text-decoration:none;padding:0.3rem 0;transition:color 0.2s}
+.footer-col a:hover{color:var(--text-primary)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:1.5rem;border-top:1px solid var(--border);flex-wrap:wrap;gap:1rem}
+.footer-copy{font-size:0.72rem;color:var(--text-muted)}
+.footer-legal{display:flex;gap:1.5rem}.footer-legal a{font-size:0.72rem;color:var(--text-muted);text-decoration:none;transition:color 0.2s}.footer-legal a:hover{color:var(--text-secondary)}
+.trust-bar{display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap;margin-top:3rem;padding:1.25rem 2rem;border-radius:var(--radius);border:1px solid var(--border);background:var(--bg-raised);animation:fadeUp 0.8s ease 0.6s both}
+.trust-item{font-size:0.76rem;color:var(--text-muted);display:flex;align-items:center;gap:6px;font-weight:500}
+.trust-item svg{width:14px;height:14px;color:var(--accent)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.d1{transition-delay:0.08s}.d2{transition-delay:0.16s}.d3{transition-delay:0.24s}.d4{transition-delay:0.32s}.d5{transition-delay:0.4s}.d6{transition-delay:0.48s}
+@media(max-width:1024px){.dashboard-body{grid-template-columns:1fr}.dash-sidebar{display:none}.auto-layout{grid-template-columns:1fr;gap:2.5rem}.live-feed-layout{grid-template-columns:1fr}.case-study-banner{grid-template-columns:1fr;text-align:center}.csb-stats{justify-content:center}}
+@media(max-width:900px){.how-grid{grid-template-columns:1fr}.features-grid{grid-template-columns:1fr}.privacy-grid{grid-template-columns:1fr}.who-grid{grid-template-columns:1fr}.dash-stats{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.nav-links{display:none}.mobile-menu-btn{display:block}section{padding:clamp(48px,8vw,80px) 0}.hero{min-height:auto;padding-top:100px;padding-bottom:60px}.hero-dashboard{margin-top:2.5rem}.footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column;align-items:flex-start}}
+@media(max-width:480px){.hero-actions{flex-direction:column;width:100%}.btn{width:100%;justify-content:center}.dash-stats{grid-template-columns:1fr 1fr}.csb-stats{flex-direction:column;gap:1rem}}
   </style>
 </head>
-<script>
-  // Delay GTM until after page is interactive to avoid blocking LCP/TBT
-  window.addEventListener('load', function() {
-    setTimeout(function() {
-      var s = document.createElement('script');
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-G7FL21YMQC';
-      s.async = true;
-      document.head.appendChild(s);
-    }, 2000);
-  });
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-G7FL21YMQC');
-</script>
 <body>
+<nav id="main-nav"><div class="nav-inner"><a href="#" class="nav-logo">EVENTIAL</a><ul class="nav-links"><li><a href="#how">How It Works</a></li><li><a href="#features">Features</a></li><li><a href="#automations">Automations</a></li><li><a href="#privacy">Privacy</a></li><li><a href="#who">Who We Serve</a></li><li><a href="https://dashboard.evential.co" target="_blank" rel="noopener" class="nav-cta">Open Dashboard</a></li></ul><button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div></nav>
 
-<nav id="main-nav">
-  <a href="#" class="nav-logo" aria-label="Evential — Home">EVENTIAL</a>
-  <ul class="nav-links">
-    <li><a href="#platform">Platform</a></li>
-    <li><a href="#who">Who We Serve</a></li>
-    <li><a href="#proof">Case Study</a></li>
-    <li><a href="#vision">Roadmap</a></li>
-    <li><a href="#privacy">Privacy</a></li>
-    <li><a href="/jobs">Jobs</a></li>
-    <li><a href="#pilot" class="nav-cta" aria-label="Request a Pilot — navigate to form">Request a Pilot</a></li>
-  </ul>
-</nav>
+<section class="hero" id="hero"><div class="hero-bg"></div><div class="hero-grid-pattern"></div><div class="hero-glow" id="hero-glow"></div><div class="container"><div class="hero-content"><h1>Crowd data<span class="dim">.</span><br>Sponsor ROI<span class="dim">.</span><br>Lead marketplace<span class="accent">.</span></h1><p class="hero-sub">Real-time BLE badge analytics, automated sponsor reporting, and a qualified lead marketplace for B2B event organizers — all from one dashboard.</p><div class="hero-actions"><a href="https://dashboard.evential.co" class="btn btn-primary" target="_blank" rel="noopener">Open Dashboard <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="https://calendly.com/contact-evential/30min" target="_blank" rel="noopener" class="btn btn-secondary">Book a Demo</a></div></div>
 
-<section class="hero">
-  <div class="hero-grid"></div>
-  <div class="hero-orb hero-orb-1"></div>
-  <div class="hero-orb hero-orb-2"></div>
-  <div class="hero-content">
-    <div class="eyebrow"><span class="eyebrow-dot"></span>Real-Time Event Intelligence</div>
-    <h1>
-      Stop running events<br>
-      on <span class="cross">guesswork</span>.<br>
-      Start running them<br>
-      on <em>live data</em>.
-    </h1>
-    <p class="hero-sub">Reduce no-shows. Cut catering waste. Prove sponsor ROI. We give event organizers, exhibitors, and venues the real-time data to make every decision count — before, during, and after the event.</p>
-    <div class="btn-row">
-      <a href="#pilot" class="btn-primary">Request a Pilot <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      <a href="#platform" class="btn-ghost">See How It Works <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
-    </div>
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <div class="hero-stat-num">39<span>%</span></div>
-        <div class="hero-stat-label">No-Show Rate — Identified & Explained</div>
-      </div>
-      <div class="hero-stat">
-        <div class="hero-stat-num">33<span>%</span></div>
-        <div class="hero-stat-label">Catering Waste Found in just One Event</div>
-      </div>
-      <div class="hero-stat">
-        <div class="hero-stat-num">1,485<span>+</span></div>
-        <div class="hero-stat-label">Data Points Per Badge, Zero Behavior Change</div>
-      </div>
-      <div class="hero-stat">
-        <div class="hero-stat-num">Real<span>.</span></div>
-        <div class="hero-stat-label">Numbers from a Live Event</div>
-      </div>
-    </div>
-    <p style="margin-top:0.85rem;font-size:0.68rem;color:var(--text-muted);letter-spacing:0.05em;">* INtercollegiate Entrepreneurship Summit · 16Tech Innovation District, Indianapolis · February 27, 2026. <a href="#proof" style="color:var(--accent-gold);text-decoration:none;">Read the case study →</a></p>
-  </div>
-</section>
+<div class="hero-dashboard reveal"><div class="dashboard-frame"><div class="dashboard-topbar"><div class="dot-row"><span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span></div><div class="dashboard-url">dashboard.evential.co</div></div><div class="dashboard-body"><div class="dash-sidebar"><div class="dash-sidebar-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Overview</div><div class="dash-sidebar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Events</div><div class="dash-sidebar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Sponsors</div><div class="dash-sidebar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Analytics</div><div class="dash-sidebar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Automations</div><div class="dash-sidebar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-2.82 1.18V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>Settings</div></div><div class="dash-main"><div class="dash-header"><div class="dash-title">Event Overview</div><div class="dash-pill dash-pill-live">LIVE</div></div><div class="dash-stats"><div class="dash-stat-card"><div class="dash-stat-label">Checked In</div><div class="dash-stat-value"><span class="count-up" data-target="847">0</span><span class="up">+12</span></div></div><div class="dash-stat-card"><div class="dash-stat-label">Show Rate</div><div class="dash-stat-value" style="color:var(--green)"><span class="count-up" data-target="86.8" data-suffix="%" data-decimals="1">0</span></div></div><div class="dash-stat-card"><div class="dash-stat-label">Booth Visits</div><div class="dash-stat-value"><span class="count-up" data-target="2341" data-separator=",">0</span></div></div><div class="dash-stat-card"><div class="dash-stat-label">Avg Dwell</div><div class="dash-stat-value" style="color:var(--accent)">4m 12s</div></div></div><div class="dash-chart-area"><div class="dash-chart-label">Booth Traffic — Last 6 Hours</div><div class="chart-bars" id="chart-bars"><div class="chart-bar" style="height:35%;background:var(--accent)"></div><div class="chart-bar" style="height:52%;background:var(--accent)"></div><div class="chart-bar" style="height:68%;background:var(--accent)"></div><div class="chart-bar" style="height:85%;background:var(--accent)"></div><div class="chart-bar" style="height:72%;background:var(--accent)"></div><div class="chart-bar" style="height:95%;background:var(--accent)"></div><div class="chart-bar" style="height:60%;background:var(--accent)"></div><div class="chart-bar" style="height:78%;background:var(--accent)"></div><div class="chart-bar" style="height:45%;background:rgba(232,145,58,0.4)"></div><div class="chart-bar" style="height:30%;background:rgba(232,145,58,0.25)"></div><div class="chart-bar" style="height:20%;background:rgba(232,145,58,0.15)"></div><div class="chart-bar" style="height:15%;background:rgba(232,145,58,0.1)"></div></div></div></div></div></div></div>
 
-<section class="problem-section" id="problem">
-  <div class="section-label">The Problem</div>
-  <h2 class="section-title">Every event assumption has a price tag. Most organizers never see the bill.</h2>
-  <p class="section-sub">You plan for the headcount on your registration list. You order food days in advance. You design a floor plan in a spreadsheet. Then reality shows up — and it never matches the plan.</p>
-  <div class="problem-layout">
-    <div class="problem-cards">
-      <div class="problem-card reveal">
-        <div class="problem-stat">Thousands</div>
-        <p>Of registered attendees don't show up. Yet every catering order, seat count, and staff allocation is built around 100% of sign-ups. That gap isn't bad luck — it's a structural forecasting failure.</p>
-      </div>
-      <div class="problem-card reveal d1">
-        <div class="problem-stat">Hundreds</div>
-        <p>Of prepared meals go untouched at the average event. Pre-ordered catering locked in days before doors open means food, and money, goes straight into the trash, every single time.</p>
-      </div>
-      <div class="problem-card reveal d2">
-        <div class="problem-stat">Zero</div>
-        <p>Existing platforms tell you who walked through the door, which sessions held attention, where the crowd lingered, or who had the most valuable conversations — they just tell you who registered. The physical event is invisible.</p>
-      </div>
-    </div>
-    <div class="event-log reveal d1">
-      <div class="event-log-title">What a typical event looks like without Evential</div>
-      <div class="log-entry">
-        <div class="log-dot dot-red"></div>
-        <div class="log-body">
-          <div class="log-title">Catering ordered 3 days out</div>
-          <div class="log-desc">Lunch orders placed against a registration count. No model. No adjustment trigger. No flexibility when the headcount shifts.</div>
-        </div>
-        <div class="log-badge badge-loss">$$$ sunk</div>
-      </div>
-      <div class="log-entry">
-        <div class="log-dot dot-red"></div>
-        <div class="log-body">
-          <div class="log-title">No-shows confirm — waitlist unreachable</div>
-          <div class="log-desc">Reserved seats go empty. Waitlisted attendees couldn't be reached in time. Capacity and opportunity both wasted.</div>
-        </div>
-        <div class="log-badge badge-loss">Lost seats</div>
-      </div>
-      <div class="log-entry">
-        <div class="log-dot dot-gold"></div>
-        <div class="log-body">
-          <div class="log-title">Breakout room sits at 18% capacity</div>
-          <div class="log-desc">Two sessions running in parallel — one packed, one nearly empty. No live visibility to rebalance. Nobody knows until it's over.</div>
-        </div>
-        <div class="log-badge badge-risk">Space wasted</div>
-      </div>
-      <div class="log-entry">
-        <div class="log-dot dot-gold"></div>
-        <div class="log-body">
-          <div class="log-title">Post-event survey sent — 11% respond</div>
-          <div class="log-desc">A week of analysis yields vague feelings and a few quotes. None of it is actionable. The same problems repeat at the next event.</div>
-        </div>
-        <div class="log-badge badge-risk">Blind spots persist</div>
-      </div>
-    </div>
-  </div>
-</section>
+<div class="trust-bar"><div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>GDPR / CCPA Ready</div><div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>Stripe-Powered Billing</div><div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Real-Time Database Sync</div><div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>BLE Badge Hardware</div></div></div></section>
 
-<section id="platform">
-  <div class="section-label">The Platform</div>
-  <h2 class="section-title">You're buying intelligence. The hardware is how we guarantee its accuracy.</h2>
-  <p class="section-sub">Badges ship before your event. Gateways deploy in under 30 minutes. No app. No venue Wi-Fi dependency. No attendee behavior change. Evential layers a passive physical intelligence layer on top of your existing registration stack.</p>
-  <div class="platform-grid reveal">
-    <div class="platform-card">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="platform-icon"><circle cx="12" cy="12" r="2"/><path d="M4.93 19.07a10 10 0 0 1 0-14.14"/><path d="M7.76 16.24a6 6 0 0 1 0-8.49"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
-      <h3>Smart Badge Infrastructure</h3>
-      <p>Ultra-slim badges indistinguishable from standard lanyards. BLE precision. One data point every 4.6 seconds per attendee. No app. No behavioral change. Pure signal.</p>
-    </div>
-    <div class="platform-card">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="platform-icon"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
-      <h3>Live Spatial Intelligence</h3>
-      <p>Real-time heat maps, dwell time by zone, session fill rates, crowd density — updating continuously. See your event as it actually unfolds, not just as you planned it.</p>
-    </div>
-    <div class="platform-card">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="platform-icon"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      <h3>Sponsor ROI & Lead Intelligence</h3>
-      <p>Booth foot traffic, dwell time, and repeat visit rates — all passive. Automated post-event sponsor reports and a qualified lead marketplace where organizers package and sell behavioral data.</p>
-    </div>
-    <div class="platform-card">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="platform-icon"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.46 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.46 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg>
-      <h3>Predictive Attendance Modeling</h3>
-      <p>Travel distance, registration timing, historical patterns — combined into per-registrant no-show probability scores. Validated in our first deployment: attendees averaged 50.4 mi, no-shows 61.8 mi.</p>
-    </div>
-    <div class="platform-card">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="platform-icon"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-      <h3>Interaction & Networking Metrics</h3>
-      <p>Badge proximity logs meaningful conversations. Organizers see networking density by session, time, and zone. Attendees get an opt-in post-event summary of who they met.</p>
-    </div>
-    <div class="platform-card">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="platform-icon"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-      <h3>Cross-Event Benchmarking</h3>
-      <p>Every event builds a baseline that sharpens the next one. Forecast accuracy compounds. Sponsor ROI comparisons across events. Decisions stop being guesses and start being evidence.</p>
-    </div>
-  </div>
-</section>
 
-<section class="how-section">
-  <div class="section-label">Deployment</div>
-  <h2 class="section-title">Deployed in hours. Invisible to attendees. Invaluable to you.</h2>
-  <div class="how-layout">
-    <div class="how-steps">
-      <div class="how-step reveal">
-        <div class="step-circle">01</div>
-        <div>
-          <h4>We Ship, You Place</h4>
-          <p>Pre-configured badges and gateways arrive ready. Gateways mount unobtrusively throughout your venue. We own the connectivity layer — venue Wi-Fi is never a dependency.</p>
-        </div>
-      </div>
-      <div class="how-step reveal d1">
-        <div class="step-circle">02</div>
-        <div>
-          <h4>Attendees Arrive Naturally</h4>
-          <p>Badges look and feel like standard lanyards. No app. No opt-in friction. Attendees behave naturally — which means your data reflects reality, not performance.</p>
-        </div>
-      </div>
-      <div class="how-step reveal d2">
-        <div class="step-circle">03</div>
-        <div>
-          <h4>Intelligence Streams Live</h4>
-          <p>Your dashboard shows crowd flow, room occupancy, session retention, catering status, and operational alerts — all updating in real time while the event runs.</p>
-        </div>
-      </div>
-      <div class="how-step reveal d3">
-        <div class="step-circle">04</div>
-        <div>
-          <h4>Data Compounds Event Over Event</h4>
-          <p>Each deployment adds to a historical baseline. Attendance forecasts sharpen. Operational waste shrinks. Every future event benefits from every past one.</p>
-        </div>
-      </div>
-    </div>
-    <div class="how-visual reveal d2">
-      <div class="how-visual-header">
-        <div class="win-dot win-red"></div>
-        <div class="win-dot win-gold"></div>
-        <div class="win-dot win-green"></div>
-        <div class="how-visual-header-label">Evential Live Dashboard</div>
-      </div>
-      <div class="dashboard-feed">
-        <div class="feed-item green-item" style="animation-delay:0.1s">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="feed-icon" style="width:15px;height:15px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-          <div class="feed-text"><b>14 waitlist seats activated</b> — no-shows confirmed via check-in gap at 9:02 AM</div>
-          <div class="feed-time">9:04 AM</div>
-        </div>
-        <div class="feed-item alert-item" style="animation-delay:0.25s">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="feed-icon" style="width:15px;height:15px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          <div class="feed-text">Breakout B at <b>18% capacity</b> — Main Hall at 94%. Rebalance recommended.</div>
-          <div class="feed-time">1:47 PM</div>
-        </div>
-        <div class="feed-item alert-item" style="animation-delay:0.4s">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="feed-icon" style="width:15px;height:15px;"><line x1="3" y1="2" x2="3" y2="22"/><path d="M7 2v4a2 2 0 0 1-2 2H3"/><line x1="7" y1="11" x2="7" y2="22"/><path d="M21 15V2a5 5 0 0 0-5 5v6h3v2a1 1 0 0 0 2 0v-2h2V7a1 1 0 0 0-1-1h-1"/></svg>
-          <div class="feed-text">Catering station 2: <b>12 units remaining</b> — restock in ~22 min at current pace</div>
-          <div class="feed-time">12:38 PM</div>
-        </div>
-        <div class="feed-item green-item" style="animation-delay:0.55s">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="feed-icon" style="width:15px;height:15px;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          <div class="feed-text"><b>Networking peak detected</b> — 34 active badge-to-badge interactions in AMP Dining</div>
-          <div class="feed-time">12:14 PM</div>
-        </div>
-        <div class="feed-item" style="animation-delay:0.7s">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="feed-icon" style="width:15px;height:15px;color:var(--text-muted)"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-          <div class="feed-text">Session 3 retention: <b>81% stayed full duration</b> — highest engagement of the day</div>
-          <div class="feed-time">3:12 PM</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section id="who">
-  <div class="section-label">Who We Serve</div>
-  <h2 class="section-title">One platform. Four buyers. Completely different value.</h2>
-  <p class="section-sub">An organizer, an exhibitor, a venue operator, and an attendee don't share the same problem. Evential surfaces different intelligence depending on who's looking — because the right data at the right time is what makes it actionable.</p>
-  <div class="tab-nav">
-    <button class="tab-btn active" onclick="switchTab('organizers',this)">Event Organizers</button>
-    <button class="tab-btn" onclick="switchTab('exhibitors',this)">Exhibitors & Sponsors</button>
-    <button class="tab-btn" onclick="switchTab('venues',this)">Venue Operators</button>
-    <button class="tab-btn" onclick="switchTab('attendees',this)">Attendees</button>
-  </div>
 
-  <div class="tab-panel active" id="tab-organizers">
-    <div class="tab-content">
-      <h3>Operational certainty, from pre-event to close.</h3>
-      <p>You're making $50,000 decisions based on registration counts and gut-feel. Evential gives you verified attendance forecasts, live room-by-room visibility, and the data to stop over-preparing and under-delivering — at every event you run.</p>
-      <div class="feature-list">
-        <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="feature-arrow" style="width:14px;height:14px;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>Predictive no-show modeling reduces catering waste by up to 30%</div>
-        <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="feature-arrow" style="width:14px;height:14px;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>Real-time waitlist activation fills seats the moment no-shows confirm</div>
-        <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="feature-arrow" style="width:14px;height:14px;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>Live crowd heat maps surface underutilized spaces before sessions end</div>
-        <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="feature-arrow" style="width:14px;height:14px;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>Staff allocation driven by live density data, not pre-event estimates</div>
-        <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="feature-arrow" style="width:14px;height:14px;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>Post-event reports that answer "why" — not just what happened</div>
-      </div>
-    </div>
-    <div class="tab-visual">
-      <div class="metric-row"><span class="metric-label">Predicted Attendance</span><span class="metric-value mv-green">807 / 975 reg.</span></div>
-      <div class="metric-row"><span class="metric-label">Catering Recommended</span><span class="metric-value mv-gold">643 meals</span></div>
-      <div class="metric-row"><span class="metric-label">Waitlist Seats Activated</span><span class="metric-value mv-green">142 of 300</span></div>
-      <div class="metric-row"><span class="metric-label">Breakout B Occupancy</span><span class="metric-value mv-red">18% — Alert Active</span></div>
-      <div class="metric-row"><span class="metric-label">Projected Food Waste</span><span class="metric-value mv-green">↓ 74% vs. prior event</span></div>
-      <div class="mini-bar-section">
-        <div class="mini-bar-label">Live Session Attendance</div>
-        <div class="bar-row"><div class="bar-name">Main Hall</div><div class="bar-track"><div class="bar-fill gold" data-w="88%" style="width:0%"></div></div></div>
-        <div class="bar-row"><div class="bar-name">Enclave</div><div class="bar-track"><div class="bar-fill" data-w="61%" style="width:0%"></div></div></div>
-        <div class="bar-row"><div class="bar-name">Breakout B</div><div class="bar-track"><div class="bar-fill dim" data-w="18%" style="width:0%"></div></div></div>
-      </div>
-    </div>
-  </div>
+<section class="live-feed-section"><div class="container"><div class="live-feed-layout"><div><div class="section-eyebrow reveal">Real-Time Intelligence</div><h2 class="section-heading reveal d1">See everything happening at your event. As it happens.</h2><p class="section-desc reveal d2">Every badge scan, booth visit, and session attendance shows up in your dashboard the moment it occurs. No refreshing. No waiting. No manual entry.</p></div><div class="live-feed-panel reveal d3"><div class="live-feed-header"><div class="live-feed-header-title">Live Event Feed</div><div class="dash-pill dash-pill-live" style="font-size:0.6rem">STREAMING</div></div><div class="live-feed-body" id="live-feed"><div class="feed-item" style="animation-delay:0s"><div class="feed-icon feed-icon-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div><div class="feed-text"><b>Badge #0847</b> checked in at Main Entrance</div><div class="feed-time">now</div></div><div class="feed-item" style="animation-delay:0.1s"><div class="feed-icon feed-icon-orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="feed-text"><b>Booth A-12</b> reached <b>42 visitors</b> — dwell avg 3m 18s</div><div class="feed-time">2s ago</div></div><div class="feed-item" style="animation-delay:0.2s"><div class="feed-icon feed-icon-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><div class="feed-text">Session <b>"Scaling B2B"</b> at <b>94% capacity</b></div><div class="feed-time">8s ago</div></div><div class="feed-item" style="animation-delay:0.3s"><div class="feed-icon feed-icon-purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div class="feed-text"><b>Sponsor ROI report</b> auto-generated for Acme Corp</div><div class="feed-time">14s ago</div></div><div class="feed-item" style="animation-delay:0.4s"><div class="feed-icon feed-icon-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div class="feed-text"><b>Lead report sold</b> — 38 qualified contacts to TechStart</div><div class="feed-time">22s ago</div></div><div class="feed-item" style="animation-delay:0.5s"><div class="feed-icon feed-icon-orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div><div class="feed-text"><b>Alert:</b> Breakout B at 18% capacity — rebalance suggested</div><div class="feed-time">31s ago</div></div></div></div></div></div></section>
 
-  <div class="tab-panel" id="tab-exhibitors">
-    <div class="tab-content">
-      <h3>Prove your booth ROI. Finally.</h3>
-      <p>You spent $15,000 on a booth. You came home with 200 business cards and a bunch of handshakes. Evential tells you exactly how many people engaged, for how long, whether they came back — and pipes that directly into your CRM without a single manual scan.</p>
-      <div class="feature-list">
-        <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="feature-arrow" style="width:14px;height:14px;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>Booth dwell time and return visit rates per attendee</div>
-        <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="feature-arrow" style="width:14px;height:14px;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>Automatic lead capture — proximity event creates CRM record instantly</div>
-        <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="feature-arrow" style="width:14px;height:14px;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>Salesforce and HubSpot integration, zero manual entry required</div>
-        <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="feature-arrow" style="width:14px;height:14px;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>Professional profile enrichment via LinkedIn</div>
-        <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="feature-arrow" style="width:14px;height:14px;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>Session-to-booth conversion: did your talk actually drive floor traffic?</div>
-      </div>
-    </div>
-    <div class="tab-visual">
-      <div class="metric-row"><span class="metric-label">Unique Booth Visitors</span><span class="metric-value mv-green">84 attendees</span></div>
-      <div class="metric-row"><span class="metric-label">Avg. Dwell Time</span><span class="metric-value mv-green">3m 42s</span></div>
-      <div class="metric-row"><span class="metric-label">Return Visits</span><span class="metric-value mv-green">31 (37%)</span></div>
-      <div class="metric-row"><span class="metric-label">CRM Leads Auto-Created</span><span class="metric-value mv-green">84</span></div>
-      <div class="metric-row"><span class="metric-label">Post-Keynote Traffic Spike</span><span class="metric-value mv-gold">+340%</span></div>
-      <div class="metric-row"><span class="metric-label">Cost Per Qualified Lead</span><span class="metric-value mv-green">↓ 61% vs. prior show</span></div>
-    </div>
-  </div>
+<section class="how-section" id="how"><div class="container"><div class="section-eyebrow reveal">How It Works</div><h2 class="section-heading reveal d1">From badge tap to sponsor report in five steps.</h2><p class="section-desc reveal d2">Set up once. Capture everything automatically. Monetize the data your sponsors already want.</p><div class="how-grid"><div class="how-card reveal"><div class="how-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div class="how-number">01</div><h3>Create Your Event</h3><p>Multi-step wizard guides you through event setup, floor plan design with drag-and-drop booth placement, and attendee CSV import.</p></div><div class="how-card reveal d1"><div class="how-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></div><div class="how-number">02</div><h3>Deploy BLE Badges</h3><p>Ship smart BLE badges to your venue. Gateways track attendee movement throughout the space in real-time — zero behavior change required.</p></div><div class="how-card reveal d2"><div class="how-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div class="how-number">03</div><h3>Watch It Live</h3><p>See real-time check-ins, booth heatmaps, session attendance, dwell times, and foot traffic patterns as your event unfolds.</p></div><div class="how-card reveal d3"><div class="how-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div class="how-number">04</div><h3>Auto-Generate Reports</h3><p>Within 24 hours of event close, sponsors receive comprehensive ROI reports showing booth performance vs. event averages.</p></div><div class="how-card reveal d4"><div class="how-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div class="how-number">05</div><h3>Sell Qualified Leads</h3><p>Build and sell lead reports to sponsors — contacts who visited their booth, dwelled 5+ minutes, and opted in to data sharing.</p></div><div class="how-card reveal d5"><div class="how-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="how-number">06</div><h3>Stay Compliant</h3><p>Movement data is anonymous by default. PII is only linked when attendees explicitly opt in. Built-in GDPR/CCPA templates handle the rest.</p></div></div></div></section>
 
-  <div class="tab-panel" id="tab-venues">
-    <div class="tab-content">
-      <h3>Permanent infrastructure. Compounding value.</h3>
-      <p>You host dozens of events a year. Right now, every one starts from zero. Evential's permanent venue deployment means every event that books your space activates the intelligence layer instantly — and you accumulate a utilization dataset no other venue can offer clients.</p>
-      <div class="feature-list">
-        <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="feature-arrow" style="width:14px;height:14px;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>Permanent gateway installation mapped to your floor plan</div>
-        <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="feature-arrow" style="width:14px;height:14px;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>Cross-event utilization analytics — identify chronically underused spaces</div>
-        <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="feature-arrow" style="width:14px;height:14px;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>A genuine differentiator when organizers are choosing between venues</div>
-        <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="feature-arrow" style="width:14px;height:14px;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>HVAC and capacity optimization from real-time density data</div>
-        <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="feature-arrow" style="width:14px;height:14px;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>Annual venue subscription — lowest cost-per-event model we offer</div>
-      </div>
-    </div>
-    <div class="tab-visual">
-      <div class="mini-bar-section">
-        <div class="mini-bar-label">12-Month Room Utilization</div>
-        <div class="bar-row"><div class="bar-name">Main Hall</div><div class="bar-track"><div class="bar-fill gold" data-w="88%" style="width:0%"></div></div></div>
-        <div class="bar-row"><div class="bar-name">Breakout A</div><div class="bar-track"><div class="bar-fill" data-w="61%" style="width:0%"></div></div></div>
-        <div class="bar-row"><div class="bar-name">Breakout B</div><div class="bar-track"><div class="bar-fill dim" data-w="34%" style="width:0%"></div></div></div>
-        <div class="bar-row"><div class="bar-name">Patio</div><div class="bar-track"><div class="bar-fill dim" data-w="22%" style="width:0%"></div></div></div>
-      </div>
-      <div class="metric-row"><span class="metric-label">Avg. Events / Month</span><span class="metric-value mv-green">7.2</span></div>
-      <div class="metric-row"><span class="metric-label">Breakout B Flag</span><span class="metric-value mv-red">Chronic Underuse — Reconfigure</span></div>
-      <div class="metric-row"><span class="metric-label">Peak Density Pattern</span><span class="metric-value mv-gold">Main Hall — Fri 2-4 PM</span></div>
-    </div>
-  </div>
+<section id="features"><div class="container"><div class="section-eyebrow reveal">Dashboard Features</div><h2 class="section-heading reveal d1">The stuff that actually makes your life easier.</h2><p class="section-desc reveal d2">No more post-event scrambles. No more guessing what worked. Just open the dashboard and know.</p><div class="features-grid"><div class="feature-card reveal"><div class="feature-card-icon fc-orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div><div class="feature-card-tag">Live Dashboard</div><h3>Your event, at a glance</h3><p>Who showed up, who didn't, which booths are buzzing, and which rooms are dead — all live, all real-time. Stop guessing what's happening on the floor. Just look.</p></div><div class="feature-card reveal d1"><div class="feature-card-icon fc-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div class="feature-card-tag">Event Setup</div><h3>Go from zero to launch-ready</h3><p>A guided wizard walks you through everything — floor plan, booth layout, attendee list upload. There's even a readiness score so you know when you're actually good to go.</p></div><div class="feature-card reveal d2"><div class="feature-card-icon fc-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div class="feature-card-tag">The money maker</div><h3>Reports that make sponsors happy</h3><p>Auto-generated ROI reports with real numbers — booth traffic, dwell time, qualified leads. The kind of data that makes sponsors renew before you even ask. Then sell the leads on top of that, making money post-event.</p></div></div></div></section>
 
-  <div class="tab-panel" id="tab-attendees">
-    <div class="tab-content">
-      <h3>Better connections, seamlessly.</h3>
-      <p>You came to network and discover. Evential works silently in the background — you never notice it's there. What you do notice: it's easier to find the right people, session recommendations actually matter, and meaningful conversations happen naturally. The technology disappears. The connections don't.</p>
-      <div class="feature-list">
-        <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="feature-arrow" style="width:14px;height:14px;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>Smart session recommendations based on who else is attending</div>
-        <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="feature-arrow" style="width:14px;height:14px;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>Discover attendees with shared interests without asking</div>
-        <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="feature-arrow" style="width:14px;height:14px;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>After the event, relive the event's social graph — every meaningful interaction mapped</div>
-        <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="feature-arrow" style="width:14px;height:14px;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>Connect with attendees who visited booths or sessions you care about</div>
-        <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="feature-arrow" style="width:14px;height:14px;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>Zero friction — no badges to scan, no forms to fill, no QR codes to chase</div>
-      </div>
-    </div>
-    <div class="tab-visual">
-      <div class="metric-row"><span class="metric-label">Sessions You'll Love</span><span class="metric-value mv-green">6 matched sessions</span></div>
-      <div class="metric-row"><span class="metric-label">Attendees With Shared Interests</span><span class="metric-value mv-green">23 discovered</span></div>
-      <div class="metric-row"><span class="metric-label">Conversations You Had</span><span class="metric-value mv-green">8 interactions mapped</span></div>
-      <div class="metric-row"><span class="metric-label">New Connections to Reconnect</span><span class="metric-value mv-green">5 people</span></div>
-      <div class="metric-row"><span class="metric-label">Sessions Attended</span><span class="metric-value mv-gold">4 of 6 matched</span></div>
-      <div class="mini-bar-section">
-        <div class="mini-bar-label">Your Event Interactions</div>
-        <div class="bar-row"><div class="bar-name" style="width:fit-content;">Booth Conversations</div><div class="bar-track"><div class="bar-fill gold" data-w="75%" style="width:0%"></div></div></div>
-        <div class="bar-row"><div class="bar-name" style="width:fit-content;">Session Attendance</div><div class="bar-track"><div class="bar-fill" data-w="67%" style="width:0%"></div></div></div>
-        <div class="bar-row"><div class="bar-name" style="width:fit-content;">Networking Time</div><div class="bar-track"><div class="bar-fill" data-w="89%" style="width:0%"></div></div></div>
-      </div>
-    </div>
-  </div>
-</section>
+<section class="auto-section" id="automations"><div class="container"><div class="auto-layout"><div><div class="section-eyebrow reveal">Automations</div><h2 class="section-heading reveal d1">Build workflows that run on event triggers.</h2><p class="section-desc reveal d2" style="margin-bottom:2.5rem">Set up automation routines with triggers, conditions, and actions. Drag and drop from a library of pre-built actions — or build your own.</p><div class="auto-features"><div class="auto-feature reveal d3"><div class="auto-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><h4>Send Email</h4><p>Customizable emails to recipient lists triggered by event activity.</p></div></div><div class="auto-feature reveal d4"><div class="auto-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div><div><h4>Push Notifications</h4><p>Alert organizers in the dashboard the moment key thresholds are hit.</p></div></div><div class="auto-feature reveal d5"><div class="auto-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div><h4>Export Sponsor ROI</h4><p>Automatically generate and send sponsor performance reports at event close.</p></div></div><div class="auto-feature reveal d6"><div class="auto-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><div><h4>Webhooks & Integrations</h4><p>POST event data to Zapier, Make, or any custom endpoint in real-time.</p></div></div></div></div><div class="auto-visual reveal"><div class="auto-node" style="margin-top:12px" id="auto-node-1"><div class="auto-node-tag tag-trigger">Trigger</div><div class="auto-node-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg></div><div class="auto-node-text"><h4>Event Goes Live</h4><p>Fires when event status changes to live.</p></div></div><div class="auto-connector"><div class="auto-connector-line"></div><div class="auto-connector-arrow"></div></div><div class="auto-node" id="auto-node-2"><div class="auto-node-tag tag-action">Action</div><div class="auto-node-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div><div class="auto-node-text"><h4>Send Push Notification</h4><p>Notify the organizer's dashboard.</p></div></div><div class="auto-connector"><div class="auto-connector-line"></div><div class="auto-connector-arrow"></div></div><div class="auto-node" id="auto-node-3"><div class="auto-node-tag tag-action">Action</div><div class="auto-node-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><div class="auto-node-text"><h4>Send Webhook</h4><p>POST event data to an external URL.</p></div></div></div></div></div></section>
 
-<section class="data-section" id="data">
-  <div class="section-label">The Data Layer</div>
-  <h2 class="section-title">Four dimensions of event data. Captured simultaneously. Automatically.</h2>
-  <p class="section-sub">This is not a survey tool or a check-in app. It is the first platform designed to capture what actually happens inside a live event — physical, behavioral, operational, and predictive — without asking anyone to do anything differently.</p>
-  <div class="data-layout">
-    <div class="data-card dc-physical reveal">
-      <div class="data-card-tag t-physical">Physical Intelligence</div>
-      <h3>Movement & Spatial Analytics</h3>
-      <p>Real-time badge positions mapped to zones — session rooms, booths, corridors, dining areas. Dwell time per zone, crowd density, and flow paths updated continuously throughout the event.</p>
-      <div class="chip-row">
-        <span class="chip">Dwell Time</span><span class="chip">Zone Density</span><span class="chip">Crowd Flow</span><span class="chip">Drop-off Detection</span>
-      </div>
-    </div>
-    <div class="data-card dc-interaction reveal d1">
-      <div class="data-card-tag t-interaction">Sponsor Intelligence</div>
-      <h3>Booth Traffic & Lead Quality</h3>
-      <p>Foot traffic, unique visitors, repeat visits, and peak traffic windows per booth — all passive, no scanning. Behavioral data packages into qualified lead reports organizers sell through the platform.</p>
-      <div class="chip-row">
-        <span class="chip">Foot Traffic</span><span class="chip">Dwell per Visitor</span><span class="chip">Return Visits</span><span class="chip">Lead Reports</span>
-      </div>
-    </div>
-    <div class="data-card dc-crm reveal d2">
-      <div class="data-card-tag t-crm">Attendance Intelligence</div>
-      <h3>No-Show Prediction & Check-In</h3>
-      <p>Travel distance predicts no-show probability per registrant — validated in our first deployment. Live check-in tracking surfaces gaps early enough to activate waitlists mid-event.</p>
-      <div class="chip-row">
-        <span class="chip">No-Show Scoring</span><span class="chip">Live Check-In</span><span class="chip">Waitlist Triggers</span><span class="chip">Catering Estimation</span>
-      </div>
-    </div>
-    <div class="data-card dc-ops reveal d3">
-      <div class="data-card-tag t-ops">Session Intelligence</div>
-      <h3>Engagement & Retention</h3>
-      <p>Session fill rates tracked as badges enter and leave rooms. Retention rate surfaces which speakers and content landed. Post-session networking density shows what actually resonated.</p>
-      <div class="chip-row">
-        <span class="chip">Fill Rate</span><span class="chip">Retention Rate</span><span class="chip">Session Ranking</span><span class="chip">Post-Session Flow</span>
-      </div>
-    </div>
-  </div>
-</section>
+<section id="privacy"><div class="container"><div class="section-eyebrow reveal" style="justify-content:center">Privacy-First Architecture</div><h2 class="section-heading reveal d1" style="text-align:center;margin:0 auto 1rem">Built for compliance from day one.</h2><p class="section-desc reveal d2" style="text-align:center;margin:0 auto">Movement data is anonymous by default. PII is only linked when attendees explicitly opt in at check-in.</p><div class="privacy-grid"><div class="privacy-card reveal"><div class="privacy-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Anonymous by Default</h3><p>Badge movement data never contains PII unless the attendee explicitly opts in at event check-in.</p></div><div class="privacy-card reveal d1"><div class="privacy-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3>GDPR & CCPA Ready</h3><p>Pre-built privacy templates, configurable data retention, and one-click PII erasure for full regulatory compliance.</p></div><div class="privacy-card reveal d2"><div class="privacy-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><h3>Data Retention Control</h3><p>Choose 30, 90, or 365-day retention windows. Auto-purge ensures data doesn't linger longer than you need it.</p></div></div></div></section>
 
-<section class="proof-section" id="proof">
-  <div class="proof-layout">
-    <div>
-  <div class="section-label">Field Validation</div>
-  <h2 class="section-title">Deployed in the real world. Data-validated from day one.</h2>
-  <p class="section-sub">INtercollegiate Entrepreneurship Summit · 16Tech Innovation District, Indianapolis · February 27, 2026.</p>
-  <br><br>
-      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.85;margin-bottom:2rem;font-weight:300;">Five gateways, shared public Wi-Fi, zero advance venue testing. The system collected 1,485 data points per badge over 7.5 hours — a 39% no-show rate with a measurable geographic predictor, $507 in preventable food waste, and persistent spatial asymmetry between two parallel session rooms nobody had quantified before.</p>
-      <a href="/case-study-1.pdf" class="btn-primary" style="display:inline-flex;">
-        Read the Full Case Study <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:15px;height:15px;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </a>
-    </div>
-    <div>
-      <div class="proof-image-block" style="margin-bottom:18px;">
-      <img src="pic1.JPG" alt="Evential live event deployment in action" class="img-ph" loading="lazy" width="800" height="220" style="height:220px;width:100%;object-fit:cover;">        </div>
-      <div class="proof-stat-grid reveal d2">
-        <div class="proof-stat"><div class="proof-stat-num">1,485</div><div class="proof-stat-lbl">Data Points Per Badge</div></div>
-        <div class="proof-stat"><div class="proof-stat-num">4.6s</div><div class="proof-stat-lbl">Signal Frequency</div></div>
-        <div class="proof-stat"><div class="proof-stat-num">39%</div><div class="proof-stat-lbl">No-Show Rate Identified</div></div>
-        <div class="proof-stat"><div class="proof-stat-num">$507</div><div class="proof-stat-lbl">Preventable Waste Found</div></div>
-        <div class="proof-stat"><div class="proof-stat-num">7.5h</div><div class="proof-stat-lbl">Continuous Tracking</div></div>
-        <div class="proof-stat"><div class="proof-stat-num">5</div><div class="proof-stat-lbl">Gateways, Full Coverage</div></div>
-      </div>
-      <div class="proof-image-block">
-        <div class="proof-image-row">
-          <img src="pic2.JPG" alt="Evential attendee tracking dashboard" class="img-ph reveal d3" loading="lazy" width="400" height="200" style="height:200px; width: 100%; object-fit: cover; ">
-            
-          <img src="pic4.JPG" alt="Evential real-time event intelligence interface" class="img-ph reveal d4" loading="lazy" width="400" height="200" style="height:200px; width: 100%; object-fit: cover; background-position: top;">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<section class="how-section" id="who"><div class="container"><div class="section-eyebrow reveal">Who We Serve</div><h2 class="section-heading reveal d1">Built for the people who make events happen.</h2><div class="who-grid"><div class="who-card reveal"><div class="who-card-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="var(--accent)" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><h3>Event Organizers</h3><p>Running B2B conferences, trade shows, and corporate events with 400–1,500+ attendees. Get real-time operational visibility and automate the sponsor reporting you've been doing by hand.</p></div><div class="who-card reveal d1"><div class="who-card-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><h3>Venue Operators</h3><p>Seeking analytics on space utilization across events. Permanent gateway installations let every event that books your space activate intelligence automatically.</p></div><div class="who-card reveal d2"><div class="who-card-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>Sponsors & Exhibitors</h3><p>You paid for a booth. Now get verified, qualified leads with dwell time data, return visit rates, and automated ROI reports delivered within 24 hours of event close.</p></div></div><div class="case-study-banner reveal"><div><div class="section-eyebrow" style="margin-bottom:0.75rem">Field Validated</div><h3 style="font-size:1.3rem;margin-bottom:0.5rem">Real data from real deployments.</h3><p style="font-size:0.88rem;color:var(--text-muted);line-height:1.7;max-width:420px">Our first live deployment captured 1,485 data points per badge over 7.5 hours — identifying a 39% no-show rate and $507 in preventable waste.</p><div class="csb-stats"><div class="csb-stat"><div class="csb-stat-num">1,485</div><div class="csb-stat-label">Data Points / Badge</div></div><div class="csb-stat"><div class="csb-stat-num">39%</div><div class="csb-stat-label">No-Show Rate</div></div><div class="csb-stat"><div class="csb-stat-num">$507</div><div class="csb-stat-label">Waste Identified</div></div></div></div><div><a href="/case-studies" class="btn btn-primary">View Case Studies <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></div></div></section>
 
-<section class="vision-section section-timeline" id="vision">
-  <div class="section-label">Where We're Going</div>
-  <h2 class="section-title" style="text-align: center;">Built for today. Architected for the industry we intend to define.</h2>
-  <p class="section-sub" style="text-align: center;">The events industry runs a $1.5 trillion economy on spreadsheets and assumptions. We're building the intelligence infrastructure that changes that — deliberately, and with a data moat that gets harder to close every year.</p>
-  <div class="vision-rail">
-    <div class="vision-item now">
-      <div class="vision-year">Now</div>
-      <div class="vision-node"></div>
-      <div class="vision-content">
-        <h3>Sponsor ROI & Lead Intelligence</h3>
-        <p>Passive booth analytics, automated ROI reports, and a qualified lead marketplace. Badges deployed. First case study complete. Piloting with 3–5 events this summer.</p>
-      </div>
-    </div>
-    <div class="vision-item">
-      <div class="vision-year">Q3 2026</div>
-      <div class="vision-node"></div>
-      <div class="vision-content">
-        <h3>Attendance Prediction & Crowd Behavior</h3>
-        <p>No-show prediction at scale (travel distance signal validated in POC), waitlist automation, live heatmaps, session fill tracking, and catering estimation. Organizers plan for who actually shows up.</p>
-      </div>
-    </div>
-    <div class="vision-item">
-      <div class="vision-year">Q4 2026</div>
-      <div class="vision-node"></div>
-      <div class="vision-content">
-        <h3>Engagement, Networking & EventIQ</h3>
-        <p>Session retention scoring, badge-to-badge interaction mapping, and EventIQ — our LLM layer that explains why things happened, not just what. Ask anything about your event and get an answer backed by data.</p>
-      </div>
-    </div>
-    <div class="vision-item">
-      <div class="vision-year">2027+</div>
-      <div class="vision-node"></div>
-      <div class="vision-content">
-        <h3>The Complete Event OS</h3>
-        <p>Expanded sensors, automated staff operations, venue intelligence, and food waste quantification. Five years out: organizers focus on the content. Evential handles everything else.</p>
-      </div>
-    </div>
-  </div>
-</section>
+<section class="cta-section" id="cta"><div class="container"><div class="section-eyebrow reveal">Get Started</div><h2 class="section-heading reveal d1">Your next event, powered by data.</h2><p class="section-desc reveal d2">Open the dashboard, create your first event, and start capturing the intelligence your sponsors have been asking for.</p><div class="hero-actions reveal d3" style="justify-content:center"><a href="https://dashboard.evential.co" class="btn btn-primary" target="_blank" rel="noopener">Open Dashboard <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="https://calendly.com/contact-evential/30min" target="_blank" rel="noopener" class="btn btn-secondary">Book a Demo</a></div><p class="reveal d4" style="margin-top:1.5rem;font-size:0.78rem;color:var(--text-muted)">For investors: <a href="mailto:contact@evential.co" style="color:var(--accent);text-decoration:none">contact@evential.co</a> &middot; Pre-seed. Raising now.</p></div></section>
 
-<div class="traction-section">
-  <div class="traction-inner">
-    <div class="traction-label-col">
-      <div class="traction-eyebrow">For Investors</div>
-      <div class="traction-heading">A category that doesn't exist yet. A team already in the field.</div>
-      <div class="traction-sub">Pre-seed. One live deployment. Three warm pilot prospects. Raising $150–180K now.</div>
-    </div>
-    <div class="traction-stats-col">
-      <div class="traction-stat">
-        <div class="traction-num">$30<span>B+</span></div>
-        <div class="traction-lbl">Spent Annually on B2B Events</div>
-      </div>
-      <div class="traction-stat">
-        <div class="traction-num">1<span>.</span></div>
-        <div class="traction-lbl">Live Deployment Completed — Feb 2026, Indianapolis</div>
-      </div>
-      <div class="traction-stat">
-        <div class="traction-num">3<span>+</span></div>
-        <div class="traction-lbl">Pilot Partners Open to Paying This Summer</div>
-      </div>
-      <div class="traction-stat">
-        <div class="traction-num">First<span>.</span></div>
-        <div class="traction-lbl">Passive Sponsor ROI Platform — No Funded Competitor Owns This</div>
-      </div>
-    </div>
-  </div>
-</div>
+<footer><div class="container"><div class="footer-grid"><div class="footer-brand"><div style="font-family:'Space Mono',monospace;font-weight:700;font-size:1.1rem;letter-spacing:0.08em;color:var(--text-primary)">EVENTIAL</div><p>The event intelligence platform for B2B organizers. Real-time badge tracking, automated sponsor ROI, and a qualified lead marketplace.</p></div><div class="footer-col"><div class="footer-col-title">Product</div><a href="#how">How It Works</a><a href="#features">Features</a><a href="#automations">Automations</a><a href="https://dashboard.evential.co" target="_blank" rel="noopener">Dashboard</a></div><div class="footer-col"><div class="footer-col-title">Company</div><a href="#who">Who We Serve</a><a href="/case-studies">Case Studies</a><a href="mailto:contact@evential.co">Contact</a><a href="/jobs">Jobs</a></div><div class="footer-col"><div class="footer-col-title">Legal</div><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a><a href="#privacy">Data & Compliance</a></div></div><div class="footer-bottom"><div class="footer-copy">&copy; 2026 Evential, LLC. All rights reserved.</div><div class="footer-legal"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="mailto:contact@evential.co">contact@evential.co</a></div></div></div></footer>
 
-<section id="privacy" style="background:var(--bg-mid);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
-  <div class="section-label">Data & Privacy</div>
-  <h2 class="section-title">Built with data responsibility at the foundation, not bolted on after.</h2>
-  <p class="section-sub">We know the first question any enterprise buyer or legal team asks. Here are the answers.</p>
-
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:3rem;background:var(--border);border:1px solid var(--border);border-radius:8px;overflow:hidden;" class="privacy-grid">
-
-    <div style="background:var(--bg-dark);padding:2rem;">
-      <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:20px;height:20px;color:var(--accent-gold);flex-shrink:0;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <h3 style="font-size:0.95rem;font-weight:700;">Attendee Consent</h3>
-      </div>
-      <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.7;">Badges are disclosed as standard event equipment. Organizers control consent language at registration. All spatial data is anonymized and de-identified at the point of collection — no personal movement profiles are created without explicit opt-in.</p>
-    </div>
-
-    <div style="background:var(--bg-dark);padding:2rem;border-left:1px solid var(--border);border-right:1px solid var(--border);">
-      <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:20px;height:20px;color:var(--accent-gold);flex-shrink:0;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        <h3 style="font-size:0.95rem;font-weight:700;">Data Ownership</h3>
-      </div>
-      <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.7;">Your event data is yours. Evential does not sell, license, or share individual event data with third parties. Aggregated cross-event benchmarks are opt-in only. Data is encrypted in transit and at rest. You can request full deletion at any time.</p>
-    </div>
-
-    <div style="background:var(--bg-dark);padding:2rem;">
-      <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:20px;height:20px;color:var(--accent-gold);flex-shrink:0;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/></svg>
-        <h3 style="font-size:0.95rem;font-weight:700;">Compliance</h3>
-      </div>
-      <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.7;">Evential is designed to support GDPR and CCPA compliance obligations. SOC 2 certification is in progress. Our data processing agreements are available on request for enterprise procurement teams. We work alongside your legal and security review.</p>
-    </div>
-
-  </div>
-
-  <div style="margin-top:1.5rem;padding:1.25rem 1.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:4px;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:16px;height:16px;color:var(--text-muted);flex-shrink:0;"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-    <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;flex:1;"><strong style="color:var(--text-secondary);">Common questions:</strong> Can attendees opt out? Yes — organizers can configure opt-out at check-in. What if a badge is removed? Tracking stops; no inference is made. Who can see the data? Only authorized event staff through your Evential dashboard. Is location data stored permanently? No — raw location streams are processed and discarded; only aggregated analytics are retained.</p>
-  </div>
-</section>
-
-<section style="padding:64px 5%;border-bottom:1px solid var(--border);">
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:900px;margin:0 auto;text-align:center;" class="buttons-grid">
-
-    <a href="#proof" style="text-decoration:none;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:2rem 1.5rem;display:flex;flex-direction:column;align-items:center;gap:0.75rem;transition:all 0.25s;" onmouseover="this.style.borderColor='rgba(172,197,225,0.3)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(172,197,225,0.11)';this.style.transform='translateY(0)'">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:28px;height:28px;color:var(--accent-gold);"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-      <div style="font-family:'Montserrat Alternates',sans-serif;font-size:0.9rem;font-weight:700;color:var(--text-primary);">Read the Case Study</div>
-      <div style="font-size:0.78rem;color:var(--text-muted);line-height:1.5;">See real deployment numbers from our first live event. No sign-up required, just the data.</div>
-    </a>
-
-    <div style="text-decoration:none;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:2rem 1.5rem;display:flex;flex-direction:column;align-items:center;gap:0.75rem;transition:all 0.25s;position:relative;overflow:hidden;" onmouseover="this.style.borderColor='rgba(172,197,225,0.3)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(172,197,225,0.11)';this.style.transform='translateY(0)'">
-      <div style="position:absolute;top:0;left:0;background:#8E181A;color:#eef2f7;padding:0.25rem 0.6rem;font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;border-radius:0 0 4px 0;">coming soon</div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:28px;height:28px;color:var(--accent-gold);"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-      <div style="font-family:'Montserrat Alternates',sans-serif;font-size:0.9rem;font-weight:700;color:var(--text-primary);">See a Sample Dashboard</div>
-      <div style="font-size:0.78rem;color:var(--text-muted);line-height:1.5;">Request a walkthrough of what the live intelligence view looks like for your event type.</div>
-    </div>
-
-    <div style="text-decoration:none;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:2rem 1.5rem;display:flex;flex-direction:column;align-items:center;gap:0.75rem;transition:all 0.25s;position:relative;overflow:hidden;" onmouseover="this.style.borderColor='rgba(172,197,225,0.3)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(172,197,225,0.11)';this.style.transform='translateY(0)'">
-      <div style="position:absolute;top:0;left:0;background:#8E181A;color:#eef2f7;padding:0.25rem 0.6rem;font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;border-radius:0 0 4px 0;">coming soon</div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:28px;height:28px;color:var(--accent-gold);"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/><line x1="8" y1="14" x2="8" y2="14"/><line x1="12" y1="14" x2="12" y2="14"/><line x1="8" y1="18" x2="8" y2="18"/><line x1="12" y1="18" x2="12" y2="18"/></svg>
-      <div style="font-family:'Montserrat Alternates',sans-serif;font-size:0.9rem;font-weight:700;color:var(--text-primary);">Estimate Your Savings</div>
-      <div style="font-size:0.78rem;color:var(--text-muted);line-height:1.5;">Tell us your event size and we'll model out the waste reduction and ROI specific to your events.</div>
-    </div>
-
-  </div>
-</section>
-<!-- PRICING removed for now, will add back in next update after pilots complete and we have real numbers to share. 
-<section id="pricing" style="background:var(--bg-mid);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
-  <div class="section-label">Pricing</div>
-  <h2 class="section-title">Simple to start. Scales with your events.</h2>
-  <p class="section-sub">Pricing finalizes end of 2026 as we complete pilots. Here's the model. Gateways always included, no extra charge.</p>
-
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:3rem;background:var(--border);border:1px solid var(--border);border-radius:8px;overflow:hidden;" class="reveal">
-
-    <div style="background:var(--bg-dark);padding:2rem;">
-      <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--green);margin-bottom:0.6rem;">Starter</div>
-      <div style="font-family:'Montserrat Alternates',sans-serif;font-size:2rem;font-weight:900;color:var(--text-primary);line-height:1;margin-bottom:0.3rem;">$299<span style="font-size:1rem;color:var(--text-muted);font-weight:400;">/mo</span></div>
-      <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:1.25rem;">+ $0.50/badge shipped · $10/unreturned badge</div>
-      <div style="height:1px;background:var(--border);margin-bottom:1.25rem;"></div>
-      <div style="font-size:0.8rem;color:var(--text-secondary);line-height:2;">
-        Up to 2 events/month · under 400 attendees<br>
-        Live booth analytics + heatmaps<br>
-        Automated sponsor ROI report<br>
-        Lead report marketplace — keep 80%<br>
-        No-show alerts · Gateways included
-      </div>
-      <div style="margin-top:1.25rem;font-size:0.72rem;color:var(--green);padding:0.6rem 0.8rem;background:rgba(46,184,122,0.07);border-radius:3px;border:1px solid rgba(46,184,122,0.15);">If all badges returned: <strong>$150/event</strong> + monthly fee</div>
-    </div>
-
-    <div style="background:var(--bg-card);padding:2rem;position:relative;border-left:1px solid var(--border);border-right:1px solid var(--border);">
-      <div style="position:absolute;top:0;right:0;background:var(--accent-gold);color:#0c1420;padding:0.3rem 0.75rem;font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;border-radius:0 0 0 4px;">Best Value</div>
-      <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--secondary);margin-bottom:0.6rem;">Growth</div>
-      <div style="font-family:'Montserrat Alternates',sans-serif;font-size:2rem;font-weight:900;color:var(--text-primary);line-height:1;margin-bottom:0.3rem;">$599<span style="font-size:1rem;color:var(--text-muted);font-weight:400;">/mo</span></div>
-      <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:1.25rem;">+ $1/badge shipped · $9/unreturned badge</div>
-      <div style="height:1px;background:var(--border);margin-bottom:1.25rem;"></div>
-      <div style="font-size:0.8rem;color:var(--text-secondary);line-height:2;">
-        Up to 2 events/quarter · 400–1,500 attendees<br>
-        Everything in Starter<br>
-        Sponsor portal — real-time booth login<br>
-        No-show prediction model<br>
-        Multi-event rollup · Lead marketplace — keep 85%
-      </div>
-    </div>
-
-    <div style="background:var(--bg-dark);padding:2rem;">
-      <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#c084fc;margin-bottom:0.6rem;">Enterprise</div>
-      <div style="font-family:'Montserrat Alternates',sans-serif;font-size:2rem;font-weight:900;color:var(--text-primary);line-height:1;margin-bottom:0.3rem;">$1,299<span style="font-size:1rem;color:var(--text-muted);font-weight:400;">/mo</span></div>
-      <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:1.25rem;">+ $1/badge shipped · $8/unreturned badge · annual contract</div>
-      <div style="height:1px;background:var(--border);margin-bottom:1.25rem;"></div>
-      <div style="font-size:0.8rem;color:var(--text-secondary);line-height:2;">
-        Unlimited events · 1,500+ attendees<br>
-        Everything in Growth<br>
-        White-labeled ROI reports<br>
-        Lead marketplace — keep 90%<br>
-        White-glove onboarding · Custom API
-      </div>
-    </div>
-
-  </div>
-  <div style="margin-top:1.25rem;padding:1.1rem 1.4rem;background:var(--bg-card);border:1px solid var(--border);border-radius:4px;font-size:0.8rem;color:var(--text-muted);line-height:1.7;">
-    <strong style="color:var(--text-secondary);">Also available:</strong> Buy badges outright at $15/badge — no rental or loss fees ever, subscribe for software only. Gateways sold separately at $150/unit. &nbsp;<strong style="color:var(--text-secondary);">Custom tier</strong> available for portfolios and agencies.
-  </div>
-</section>
--->
-
-<section class="cta-section" id="pilot">
-  <div class="section-label" style="justify-content:center;">Get Started</div>
-  <h2>Run your next event with us.<br>Pilots open this summer.</h2>
-  <p>We're partnering with 3–5 organizers this summer to build our first paying case studies. If you run events where data and sponsor relationships matter, let's talk.</p>
-  <div class="cta-form">
-    <a href="https://calendly.com/contact-evential/30min?month=2026-03" target="_blank" rel="noopener noreferrer" class="btn-primary">
-      Request Pilot <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:15px;height:15px;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-    </a>
-  </div>
-  <p class="cta-note">For investors: <a href="mailto:contact@evential.co">contact@evential.co</a> &nbsp;·&nbsp; Pre-seed. Raising now.</p>
-</section>
-
-<footer>
-  <div class="footer-logo">EVENTIAL</div>
-  <ul class="footer-links">
-    <li><a href="#platform">Platform</a></li>
-    <li><a href="#who">Who We Serve</a></li>
-    <li><a href="#proof">Case Study</a></li>
-    <li><a href="#vision">Roadmap</a></li>
-    <li><a href="/jobs">Jobs</a></li>
-    <li><a href="#privacy">Privacy</a></li>
-    <li><a href="mailto:contact@evential.co">Contact</a></li>
-  </ul>
-  <div class="footer-copy">© 2026 Evential, LLC. All rights reserved.</div>
-</footer>
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  function switchTab(id, btn) {
-    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    document.getElementById('tab-' + id).classList.add('active');
-    btn.classList.add('active');
-    setTimeout(animateBars, 80);
-  }
-
-  function animateBars() {
-    document.querySelectorAll('.bar-fill[data-w]').forEach(bar => {
-      const w = bar.dataset.w;
-      bar.style.width = '0%';
-      requestAnimationFrame(() => setTimeout(() => { bar.style.width = w; }, 60));
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', function() {
-
-    const revealEls = document.querySelectorAll('.reveal');
-    const revealObs = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
-    }, { threshold: 0.07, rootMargin: '0px 0px -30px 0px' });
-    revealEls.forEach(el => revealObs.observe(el));
-
-    const barObs = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { animateBars(); barObs.unobserve(e.target); } });
-    }, { threshold: 0.2 });
-    document.querySelectorAll('.tab-visual, .how-visual').forEach(el => barObs.observe(el));
-
-    const nav = document.getElementById('main-nav');
-    // Passive scroll listener for better performance
-    window.addEventListener('scroll', () => {
-      nav.style.background = window.scrollY > 50 ? 'rgba(12,20,32,0.97)' : 'rgba(12,20,32,0.88)';
-    }, { passive: true });
-
-    window.submitPilot = function() {
-      const inp = document.getElementById('pilot-email');
-      if (inp && inp.value && inp.value.includes('@')) {
-        inp.placeholder = "We'll be in touch shortly ✓";
-        inp.value = '';
-        inp.style.borderColor = '#2eb87a';
-        inp.style.color = '#2eb87a';
-      } else if (inp) {
-        inp.style.borderColor = '#8E181A';
-        inp.placeholder = 'Please enter a valid email';
-      }
-    };
-
-    window.switchTab = function(id, btn) {
-      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      document.getElementById('tab-' + id).classList.add('active');
-      btn.classList.add('active');
-      setTimeout(animateBars, 80);
-    };
-
-  });
+<script>
+const nav=document.getElementById('main-nav');window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>50)},{passive:true});
+const revealObs=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revealObs.unobserve(e.target)}})},{threshold:0.06,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
+window.addEventListener('load',()=>{document.querySelectorAll('.chart-bar').forEach((bar,i)=>{const h=bar.style.height;bar.style.height='0%';setTimeout(()=>{bar.style.height=h},800+i*80)})});
+const countObs=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting){const el=e.target,target=parseFloat(el.dataset.target),decimals=parseInt(el.dataset.decimals||'0'),suffix=el.dataset.suffix||'',useSep=el.dataset.separator===',',duration=1500,start=performance.now();function update(now){const elapsed=now-start,progress=Math.min(elapsed/duration,1),eased=1-Math.pow(1-progress,3);let current=eased*target;if(decimals>0){el.textContent=current.toFixed(decimals)+suffix}else{let num=Math.round(current).toString();if(useSep)num=num.replace(/\B(?=(\d{3})+(?!\d))/g,',');el.textContent=num+suffix}if(progress<1)requestAnimationFrame(update)}requestAnimationFrame(update);countObs.unobserve(el)}})},{threshold:0.5});document.querySelectorAll('.count-up').forEach(el=>countObs.observe(el));
+const hero=document.querySelector('.hero'),glow=document.getElementById('hero-glow');if(hero&&glow){hero.addEventListener('mousemove',e=>{const rect=hero.getBoundingClientRect();glow.style.left=(e.clientX-rect.left)+'px';glow.style.top=(e.clientY-rect.top)+'px'})}
+const autoNodes=document.querySelectorAll('.auto-node');if(autoNodes.length){let c=0;setInterval(()=>{autoNodes.forEach(n=>n.classList.remove('glow'));autoNodes[c].classList.add('glow');c=(c+1)%autoNodes.length},2000)}
+const ms=document.createElement('style');ms.textContent='@media(max-width:768px){.nav-links.show{display:flex!important;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:rgba(11,14,19,0.98);backdrop-filter:blur(20px);padding:1.5rem;gap:1rem;border-bottom:1px solid var(--border)}}';document.head.appendChild(ms);
+const feedMessages=[{icon:'green',text:'<b>Badge #0912</b> checked in at East Gate',time:'now'},{icon:'orange',text:'<b>Booth C-04</b> hit <b>50 visitors</b> milestone',time:'1s ago'},{icon:'blue',text:'Session <b>"AI in Events"</b> at <b>88% capacity</b>',time:'3s ago'},{icon:'green',text:'<b>Lead report</b> purchased by InnovateCo — 24 contacts',time:'5s ago'},{icon:'purple',text:'<b>ROI report</b> auto-sent to DataDrive Inc',time:'8s ago'},{icon:'orange',text:'<b>Alert:</b> Main Hall at 96% — overflow routing active',time:'12s ago'},{icon:'blue',text:'<b>Badge #0623</b> returned to <b>Booth A-12</b> (2nd visit)',time:'15s ago'},{icon:'green',text:'<b>Waitlist activated</b> — 8 seats released from no-shows',time:'18s ago'}];
+const iconSvgs={green:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>',orange:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>',blue:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>',purple:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>'};
+let feedIdx=0;const feedEl=document.getElementById('live-feed');if(feedEl){setInterval(()=>{const msg=feedMessages[feedIdx%feedMessages.length];const item=document.createElement('div');item.className='feed-item';item.innerHTML='<div class="feed-icon feed-icon-'+msg.icon+'">'+iconSvgs[msg.icon]+'</div><div class="feed-text">'+msg.text+'</div><div class="feed-time">'+msg.time+'</div>';feedEl.insertBefore(item,feedEl.firstChild);if(feedEl.children.length>6)feedEl.removeChild(feedEl.lastChild);feedIdx++},4000)}
 </script>
+<script>window.addEventListener('load',function(){setTimeout(function(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-G7FL21YMQC';s.async=true;document.head.appendChild(s)},2000)});window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-G7FL21YMQC');</script>
 </body>
 </html>
