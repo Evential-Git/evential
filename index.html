@@ -3,591 +3,342 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Find Sponsors for Your Event & Prove ROI | Evential</title>
-<meta name="description" content="Evential helps B2B event organizers find companies that already sponsor events like theirs, then prove sponsor ROI after the event so they renew. Free sponsor search." />
+<title>Verified Event Intelligence for Organizers | Evential</title>
+<meta name="description" content="Evential turns smart badges and venue sensors into live attendance data, real engagement analytics, and sponsor ROI reports, so the months of work behind your event never end in a guess." />
 <meta name="robots" content="index, follow" />
-<meta property="og:title" content="Find Sponsors for Your Event & Prove ROI | Evential" />
-<meta property="og:description" content="Evential helps B2B event organizers find companies that already sponsor events like theirs, then prove sponsor ROI after the event so they renew. Free sponsor search." />
+<meta property="og:title" content="Verified Event Intelligence for Organizers | Evential" />
+<meta property="og:description" content="Prove your event was worth it. Live attendance, booth analytics, and sponsor reports powered by smart badges." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://evential.co/" />
 <meta property="og:image" content="https://evential.co/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Find Sponsors for Your Event & Prove ROI | Evential" />
-<meta name="twitter:description" content="Evential helps B2B event organizers find companies that already sponsor events like theirs, then prove sponsor ROI after the event so they renew. Free sponsor search." />
+<meta name="twitter:title" content="Verified Event Intelligence for Organizers | Evential" />
+<meta name="twitter:description" content="Prove your event was worth it. Live attendance, booth analytics, and sponsor reports powered by smart badges." />
 <link rel="canonical" href="https://evential.co/" />
 <link rel="icon" type="image/x-icon" href="favicon.ico" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Montserrat+Alternates:wght@600;700;800&display=swap" rel="stylesheet" />
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --navy:#16233f;--navy-2:#1e2f52;
-  --blue:#2b50e0;--blue-hover:#2243c2;--blue-soft:#e9f0fe;--blue-soft-2:#d3e0fc;
-  --bg:#f5f7fb;--surface:#ffffff;--surface-2:#f7f9fc;
-  --border:#e8eaf2;--border-2:#dcdfeb;--border-3:#ccd0e0;
-  --text:#16203a;--text-2:#525c72;--text-3:#8b93a7;
-  --green:#1c8a4f;--green-bg:#e8f6ee;--green-border:#bfe6cd;
-  --amber:#b97516;--amber-bg:#fbf0db;--amber-border:#f0d9a8;
-  --radius:14px;--radius-sm:10px;--radius-xs:8px;--pill:999px;
-  --shadow-sm:0 1px 2px rgba(22,32,58,.06),0 1px 3px rgba(22,32,58,.04);
-  --shadow:0 6px 18px rgba(22,32,58,.07),0 1px 3px rgba(22,32,58,.04);
-  --shadow-lg:0 22px 55px rgba(22,32,58,.13),0 4px 14px rgba(22,32,58,.06);
-  --shadow-xl:0 34px 90px rgba(18,28,58,.20);
-}
-html{scroll-behavior:smooth}
-body{font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}
-::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:#c6cad8;border-radius:8px;border:3px solid var(--bg)}
-h1,h2,h3,h4{line-height:1.16;letter-spacing:-0.022em;font-weight:700;color:var(--text)}
-.container{max-width:1140px;margin:0 auto;padding:0 clamp(1.25rem,4vw,2.5rem)}
-section{padding:clamp(52px,7vw,92px) 0;position:relative}
-.eyebrow{display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:.9rem}
-.section-head{max-width:660px}
-.section-head.center{margin:0 auto;text-align:center}
-.section-head h2{font-size:clamp(1.65rem,3.4vw,2.5rem);margin-bottom:.9rem}
-.section-head p{font-size:clamp(1rem,1.4vw,1.12rem);color:var(--text-2);line-height:1.68}
-.alt-bg{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-
-/* buttons */
-.btn{display:inline-flex;align-items:center;gap:8px;padding:.78rem 1.5rem;border-radius:var(--radius-xs);font-family:inherit;font-weight:600;font-size:.95rem;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:all .2s ease;white-space:nowrap}
-.btn svg{width:17px;height:17px}
-.btn-primary{background:var(--blue);color:#fff;box-shadow:0 5px 16px rgba(43,80,224,.3)}
-.btn-primary:hover{background:var(--blue-hover);transform:translateY(-1px);box-shadow:0 9px 24px rgba(43,80,224,.36)}
-.btn-light{background:#fff;color:var(--navy);border-color:#fff}
-.btn-light:hover{background:#eef1f9;transform:translateY(-1px)}
-.btn-ghost{background:transparent;color:var(--text);border-color:var(--border-2)}
-.btn-ghost:hover{border-color:var(--border-3);background:var(--surface-2)}
-.btn-arrow{transition:transform .2s}.btn:hover .btn-arrow{transform:translateX(3px)}
-.tlink{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:.95rem;text-decoration:none;color:#cdd8f0;transition:color .2s}
-.tlink:hover{color:#fff}.tlink svg{width:16px;height:16px;transition:transform .2s}.tlink:hover svg{transform:translateX(3px)}
-.tlink.dark{color:var(--blue)}.tlink.dark:hover{color:var(--blue-hover)}
-
-/* nav */
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:68px;display:flex;align-items:center;background:rgba(245,247,251,.8);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);border-bottom:1px solid transparent;transition:border-color .3s,background .3s}
-nav.scrolled{background:rgba(245,247,251,.94);border-bottom-color:var(--border)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1140px;margin:0 auto;padding:0 clamp(1.25rem,4vw,2.5rem)}
-.nav-left{display:flex;align-items:center;gap:2.5rem}
-.nav-logo{font-family:'Montserrat Alternates',sans-serif;font-weight:700;font-size:1.4rem;color:var(--navy);text-decoration:none;letter-spacing:-0.01em}
-.nav-links{display:flex;align-items:center;gap:1.75rem;list-style:none}
-.nav-links a{color:var(--text-2);text-decoration:none;font-size:.9rem;font-weight:600;transition:color .2s;position:relative}
-.nav-links a:hover{color:var(--text)}
-.nav-links a.active{color:var(--blue)}
-.nav-actions{display:flex;align-items:center;gap:.6rem}
-.mobile-btn{display:none;background:none;border:none;color:var(--text);cursor:pointer;padding:6px}
-
-/* page hero (inner pages) */
-.page-hero{padding:120px 0 0}
-.ph-panel{background:var(--navy);border-radius:26px;padding:clamp(2.4rem,5vw,3.6rem) clamp(1.5rem,5vw,3.5rem) clamp(2.4rem,5vw,3.6rem);position:relative;overflow:hidden;box-shadow:var(--shadow-xl)}
-.ph-panel.with-card{padding-bottom:clamp(6rem,10vw,8rem)}
-.ph-panel::before{content:'';position:absolute;right:-6%;top:-34%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(96,140,255,.18) 0%,rgba(43,80,224,.05) 45%,transparent 70%);pointer-events:none}
-.ph-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,5vw,3.5rem);align-items:center;position:relative;z-index:2}
-.ph-grid.solo{grid-template-columns:1fr;max-width:680px}
-.ph-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8fa6ec;margin-bottom:1rem}
-.ph-tag{display:inline-flex;align-items:center;gap:8px;font-size:.74rem;font-weight:600;color:#b7c4e3;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);padding:.35rem .85rem;border-radius:var(--pill);margin-bottom:1.3rem}
-.ph-tag.free{color:#9be8bd;border-color:rgba(92,214,147,.3);background:rgba(92,214,147,.08)}
-.ph-tag .dot{width:6px;height:6px;border-radius:50%;background:#5cd693}
-.page-hero h1{color:#fff;font-size:clamp(2rem,4.4vw,3.2rem);font-weight:800;letter-spacing:-0.03em;margin-bottom:1.1rem}
-.page-hero h1 .hl{color:#7fa2ff}
-.ph-sub{color:#c2cce0;font-size:clamp(1rem,1.4vw,1.16rem);line-height:1.65;margin-bottom:1.8rem;max-width:540px}
-.ph-actions{display:flex;gap:1.1rem;align-items:center;flex-wrap:wrap}
-
-/* hero (homepage) */
-.hero{padding:128px 0 0;position:relative}
-.hero-panel{background:var(--navy);border-radius:26px;padding:clamp(2.4rem,5vw,4.2rem) clamp(1.5rem,5vw,4rem) clamp(7rem,11vw,9rem);position:relative;overflow:hidden;box-shadow:var(--shadow-xl)}
-.hero-panel::before{content:'';position:absolute;right:-6%;top:-32%;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(96,140,255,.20) 0%,rgba(43,80,224,.05) 45%,transparent 70%);pointer-events:none}
-.hero-panel::after{content:'';position:absolute;right:5%;top:14%;width:330px;height:330px;border:1px solid rgba(255,255,255,.06);border-radius:50%;pointer-events:none}
-.hero-inner{position:relative;z-index:2;max-width:660px}
-.hero-pilot{display:inline-flex;align-items:center;gap:8px;font-size:.74rem;font-weight:600;letter-spacing:.03em;color:#b7c4e3;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);padding:.4rem .9rem;border-radius:var(--pill);margin-bottom:1.5rem}
-.hero-pilot .dot{width:6px;height:6px;border-radius:50%;background:#5cd693;box-shadow:0 0 0 4px rgba(92,214,147,.18)}
-.hero h1{color:#fff;font-size:clamp(2.15rem,5vw,3.7rem);font-weight:800;letter-spacing:-0.03em;margin-bottom:1.2rem}
-.hero h1 .hl{color:#7fa2ff}
-.hero-sub{color:#c2cce0;font-size:clamp(1.02rem,1.5vw,1.2rem);line-height:1.65;max-width:540px;margin-bottom:2rem}
-.hero-actions{display:flex;gap:1.1rem;align-items:center;flex-wrap:wrap;margin-bottom:2.4rem}
-.hero-stats{display:flex;gap:clamp(1.4rem,4vw,2.8rem);flex-wrap:wrap}
-.hstat .n{font-size:clamp(1.4rem,2.6vw,1.85rem);font-weight:800;color:#fff;letter-spacing:-0.02em}
-.hstat .l{font-size:.8rem;color:#8d9ab8;margin-top:1px}
-
-/* discovery results card */
-.hero-card{position:relative;z-index:5;margin:-5.5rem auto 0;max-width:940px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-lg);overflow:hidden}
-.hero-card.in-hero{margin-top:-4.5rem}
-.hc-top{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.95rem 1.2rem;border-bottom:1px solid var(--border);flex-wrap:wrap}
-.hc-top-l{display:flex;align-items:center;gap:.65rem}
-.hc-count{font-weight:700;font-size:1rem}
-.chip-info{background:var(--blue-soft);color:var(--blue);font-size:.73rem;font-weight:600;padding:.24rem .7rem;border-radius:var(--pill)}
-.hc-eg{font-size:.72rem;color:var(--text-3);font-weight:600}
-.srow{display:grid;grid-template-columns:1.35fr 1.7fr .85fr 1.05fr .7fr;gap:1rem;align-items:center;padding:1rem 1.2rem;border-bottom:1px solid var(--border)}
-.srow:last-child{border-bottom:none}
-.srow.head{font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-3);font-weight:700;padding:.65rem 1.2rem;background:var(--surface-2)}
-.co{display:flex;align-items:center;gap:.65rem}
-.co-logo{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.82rem;flex-shrink:0;color:#fff}
-.co-name{font-weight:700;font-size:.93rem}
-.co-sub{font-size:.76rem;color:var(--text-3)}
-.sig .sig-t{color:var(--green);font-weight:700;font-size:.86rem;line-height:1.3}
-.sig .sig-d{font-size:.76rem;color:var(--text-3);margin-top:2px}
-.match{display:inline-flex;align-items:center;gap:5px;background:var(--blue-soft);color:var(--blue);font-size:.72rem;font-weight:700;padding:.22rem .6rem;border-radius:var(--pill);margin-top:.45rem}
-.match .pip{width:7px;height:7px;border-radius:50%;background:var(--blue)}
-.size{display:flex;align-items:center;gap:6px;font-size:.84rem;font-weight:600}
-.size svg{width:15px;height:15px;color:var(--blue)}
-.cats{display:flex;gap:5px;flex-wrap:wrap}
-.tag{font-size:.72rem;font-weight:600;color:var(--text-2);background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-xs);padding:.2rem .5rem}
-.contacts{font-size:.84rem;font-weight:600}
-
-/* pain strip */
-.pain{text-align:center;padding-bottom:clamp(20px,3vw,32px)}
-.pain h2{font-size:clamp(1.5rem,3.2vw,2.3rem);max-width:780px;margin:0 auto .9rem}
-.pain p{font-size:clamp(1rem,1.5vw,1.16rem);color:var(--text-2);max-width:640px;margin:0 auto;line-height:1.7}
-.pain .em{color:var(--text);font-weight:600}
-
-/* journey timeline */
-.journey{padding-top:clamp(20px,3vw,28px)}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin-top:3rem}
-.step{position:relative;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.6rem 1.4rem;transition:all .25s}
-.step:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--border-2)}
-.step .when{font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin-bottom:.9rem;display:flex;align-items:center;gap:8px}
-.step .node{width:30px;height:30px;border-radius:9px;background:var(--blue-soft);color:var(--blue);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.step .node svg{width:16px;height:16px}
-.step h3{font-size:1.12rem;margin-bottom:.45rem}
-.step p{font-size:.89rem;color:var(--text-2);line-height:1.6}
-.step .free{display:inline-flex;align-items:center;gap:5px;background:var(--green-bg);color:var(--green);border:1px solid var(--green-border);font-size:.7rem;font-weight:700;padding:.18rem .55rem;border-radius:var(--pill);margin-top:.85rem}
-.step .free svg{width:12px;height:12px}
-
-/* value grid (3-up) */
-.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:3rem}
-.value-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.7rem;transition:all .25s}
-.value-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--border-2)}
-.value-card .vic{width:44px;height:44px;border-radius:11px;background:var(--blue-soft);color:var(--blue);display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem}
-.value-card .vic svg{width:21px;height:21px}
-.value-card h3{font-size:1.1rem;margin-bottom:.45rem}
-.value-card p{font-size:.9rem;color:var(--text-2);line-height:1.6}
-
-/* split feature rows */
-.split{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(2rem,5vw,4rem);align-items:center;margin-top:3rem}
-.split + .split{margin-top:clamp(2.5rem,6vw,5rem)}
-.split.rev .split-visual{order:-1}
-.split-text h3{font-size:clamp(1.35rem,2.6vw,1.9rem);margin-bottom:.8rem}
-.split-text .lead{color:var(--text-2);font-size:1.02rem;margin-bottom:1.4rem;line-height:1.7}
-.flist{display:flex;flex-direction:column;gap:.8rem;margin-bottom:1.6rem}
-.fitem{display:flex;gap:.75rem;align-items:flex-start}
-.fitem .ic{width:26px;height:26px;border-radius:7px;background:var(--blue-soft);color:var(--blue);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
-.fitem .ic svg{width:14px;height:14px}
-.fitem b{font-weight:600;font-size:.94rem}
-.fitem span{display:block;font-size:.85rem;color:var(--text-2);line-height:1.5}
-
-/* payoff grid alias */
-.payoff-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(2rem,5vw,4rem);align-items:center;margin-top:2.6rem}
-
-/* mock UI */
-.mock{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-lg);overflow:hidden}
-.mock-bar{display:flex;align-items:center;gap:6px;padding:.65rem .9rem;border-bottom:1px solid var(--border);background:var(--surface-2)}
-.mock-bar .d{width:9px;height:9px;border-radius:50%}
-.mock-bar .t{margin-left:.5rem;font-size:.73rem;color:var(--text-3);font-weight:600}
-.mock-body{padding:1.15rem}
-.profile-head,.rep-head .who{display:flex;align-items:center;gap:.7rem}
-.rep-head{display:flex;align-items:center;justify-content:space-between;gap:.8rem;margin-bottom:1.1rem;flex-wrap:wrap}
-.profile-head{margin-bottom:1.1rem}
-.mock .lg{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;flex-shrink:0}
-.mock .nm{font-weight:700;font-size:1.02rem}
-.mock .role{font-size:.78rem;color:var(--text-3)}
-.rep-sent{font-size:.7rem;font-weight:700;color:var(--green);background:var(--green-bg);border:1px solid var(--green-border);padding:.22rem .6rem;border-radius:var(--pill)}
-.statcards{display:grid;grid-template-columns:repeat(3,1fr);gap:.55rem;margin-bottom:1.05rem}
-.statcard{background:var(--surface-2);border-radius:var(--radius-xs);padding:.7rem .75rem}
-.statcard .l{font-size:.66rem;color:var(--text-3);font-weight:600}
-.statcard .v{font-size:1.18rem;font-weight:800;margin-top:1px}
-.statcard .s{font-size:.64rem;color:var(--text-3)}
-.bars{display:flex;align-items:flex-end;gap:.45rem;height:84px;padding:.3rem 0 0}
-.bar{flex:1;background:var(--blue);border-radius:4px 4px 0 0;min-height:5px;opacity:.9}
-.bar.soft{background:var(--blue-soft-2)}
-.barlabels{display:flex;gap:.45rem;margin-top:.35rem}
-.barlabels span{flex:1;text-align:center;font-size:.64rem;color:var(--text-3)}
-.crow{display:flex;align-items:center;gap:.65rem;padding:.7rem 0 0;border-top:1px solid var(--border);margin-top:.9rem}
-.crow .cic{width:30px;height:30px;border-radius:8px;background:var(--green-bg);color:var(--green);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.crow .cic svg{width:14px;height:14px}
-.crow .cn{font-size:.84rem;font-weight:600}
-.crow .ce{font-size:.76rem;color:var(--text-3)}
-/* feed mock */
-.feed{display:flex;flex-direction:column}
-.feed-item{display:flex;align-items:center;gap:.65rem;padding:.65rem 0;border-bottom:1px solid var(--border)}
-.feed-item:last-child{border-bottom:none}
-.feed-ic{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.feed-ic svg{width:14px;height:14px}
-.fi-green{background:var(--green-bg);color:var(--green)}.fi-blue{background:var(--blue-soft);color:var(--blue)}.fi-amber{background:var(--amber-bg);color:var(--amber)}
-.feed-tx{font-size:.82rem;flex:1;line-height:1.4}.feed-tx b{font-weight:700}
-.feed-tm{font-size:.71rem;color:var(--text-3);white-space:nowrap}
-/* heatmap mock */
-.heat{display:grid;grid-template-columns:repeat(8,1fr);gap:5px;margin:.4rem 0 .2rem}
-.heat span{aspect-ratio:1;border-radius:5px;background:var(--blue-soft)}
-.heat .h1{background:#cdd9f7}.heat .h2{background:#9fb6ee}.heat .h3{background:#5f81e4}.heat .h4{background:var(--blue)}
-
-/* how-to steps (numbered vertical) */
-.howto{counter-reset:step;margin-top:2.8rem;display:flex;flex-direction:column;gap:1.05rem;max-width:860px}
-.hstep{display:grid;grid-template-columns:auto 1fr;gap:1.2rem;align-items:start;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.4rem 1.5rem;transition:all .25s}
-.hstep:hover{border-color:var(--border-2);box-shadow:var(--shadow)}
-.hstep .sn{counter-increment:step;width:38px;height:38px;border-radius:10px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.05rem}
-.hstep .sn::before{content:counter(step)}
-.hstep h4{font-size:1.08rem;margin-bottom:.3rem}
-.hstep p{font-size:.92rem;color:var(--text-2);line-height:1.65}
-.hstep .stip{display:inline-flex;align-items:center;gap:6px;margin-top:.6rem;font-size:.78rem;font-weight:600;color:var(--blue);background:var(--blue-soft);padding:.2rem .65rem;border-radius:var(--pill)}
-.hstep .stip svg{width:13px;height:13px}
-.hstep .stip.free{color:var(--green);background:var(--green-bg)}
-
-/* capability grid (analytics) */
-.cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:3rem}
-.cap-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.7rem;transition:all .25s}
-.cap-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--border-2)}
-.cap-card .cic{width:42px;height:42px;border-radius:11px;background:var(--blue-soft);color:var(--blue);display:flex;align-items:center;justify-content:center;margin-bottom:1rem}
-.cap-card .cic svg{width:20px;height:20px}
-.cap-card h3{font-size:1.06rem;margin-bottom:.4rem}
-.cap-card p{font-size:.88rem;color:var(--text-2);line-height:1.6}
-.cap-card .moment{margin-top:.85rem;padding-top:.85rem;border-top:1px solid var(--border);font-size:.82rem;color:var(--text-2);line-height:1.55}
-.cap-card .moment b{color:var(--text);font-weight:600}
-
-/* pricing */
-.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:3rem;align-items:start}
-.price-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:2rem 1.8rem;transition:all .25s;position:relative}
-.price-card:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
-.price-card.featured{border:2px solid var(--blue);box-shadow:var(--shadow-lg)}
-.price-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--blue);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:.3rem .85rem;border-radius:var(--pill)}
-.price-tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin-bottom:.7rem}
-.price-card h3{font-size:1.3rem;margin-bottom:.5rem}
-.price-amt{display:flex;align-items:baseline;gap:.35rem;margin:.6rem 0 .2rem}
-.price-amt .n{font-size:2.4rem;font-weight:800;letter-spacing:-0.03em}
-.price-amt .per{font-size:.86rem;color:var(--text-2);font-weight:600}
-.price-sub{font-size:.84rem;color:var(--text-3);margin-bottom:1.3rem;min-height:1.2em}
-.price-feats{display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.6rem;padding-top:1.3rem;border-top:1px solid var(--border)}
-.price-feats .pf{display:flex;gap:.6rem;align-items:flex-start;font-size:.88rem;color:var(--text)}
-.price-feats .pf svg{width:16px;height:16px;color:var(--green);flex-shrink:0;margin-top:3px}
-.price-feats .pf.muted{color:var(--text-3)}
-.price-card .btn{width:100%;justify-content:center}
-.price-note{margin-top:1rem;font-size:.78rem;color:var(--text-3);text-align:center}
-
-/* FAQ */
-.faq-grid{margin-top:2.6rem;display:flex;flex-direction:column;gap:.7rem;max-width:800px}
-.faq-grid.center{margin-left:auto;margin-right:auto}
-.faq-item{border:1px solid var(--border);background:var(--surface);border-radius:var(--radius-sm);overflow:hidden;transition:border-color .2s}
-.faq-item.open{border-color:var(--border-3)}
-.faq-q{width:100%;background:none;border:none;color:var(--text);font-family:inherit;font-size:.97rem;font-weight:600;text-align:left;padding:1.05rem 1.3rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem}
-.faq-ic{width:20px;height:20px;flex-shrink:0;color:var(--blue);transition:transform .3s}
-.faq-item.open .faq-ic{transform:rotate(45deg)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
-.faq-item.open .faq-a{max-height:360px}
-.faq-a-in{padding:0 1.3rem 1.15rem;font-size:.91rem;color:var(--text-2);line-height:1.7}
-
-/* CTA */
-.cta{text-align:center}
-.cta-panel{background:var(--navy);border-radius:26px;padding:clamp(3rem,7vw,5rem) 1.5rem;position:relative;overflow:hidden;box-shadow:var(--shadow-xl)}
-.cta-panel::before{content:'';position:absolute;left:50%;top:-42%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(96,140,255,.18) 0%,transparent 65%);transform:translateX(-50%);pointer-events:none}
-.cta-panel .inner{position:relative;z-index:2;max-width:580px;margin:0 auto}
-.cta-panel h2{color:#fff;font-size:clamp(1.8rem,3.6vw,2.55rem);margin-bottom:.9rem}
-.cta-panel p{color:#bcc6dc;font-size:1.05rem;margin-bottom:2rem}
-.cta-actions{display:flex;gap:1.1rem;align-items:center;justify-content:center;flex-wrap:wrap}
-
-/* footer */
-footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem 0 2rem}
-.footer-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:2rem;margin-bottom:2.2rem}
-.footer-brand .nav-logo{font-size:1.3rem}
-.footer-brand p{font-size:.85rem;color:var(--text-2);line-height:1.65;margin-top:.7rem;max-width:300px}
-.footer-col-title{font-size:.71rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-3);font-weight:700;margin-bottom:.9rem}
-.footer-col a{display:block;font-size:.86rem;color:var(--text-2);text-decoration:none;padding:.3rem 0;transition:color .2s}
-.footer-col a:hover{color:var(--blue)}
-.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:1.4rem;border-top:1px solid var(--border);flex-wrap:wrap;gap:.8rem}
-.footer-copy{font-size:.77rem;color:var(--text-3)}
-.footer-legal{display:flex;gap:1.3rem}.footer-legal a{font-size:.77rem;color:var(--text-3);text-decoration:none}.footer-legal a:hover{color:var(--text-2)}
-
-/* legal pages */
-.legal-body{max-width:760px}
-.legal-body h2{font-size:1.2rem;margin:2rem 0 .6rem}
-.legal-body h2:first-child{margin-top:0}
-.legal-body p{font-size:.95rem;color:var(--text-2);line-height:1.75;margin-bottom:.9rem}
-.legal-body a{color:var(--blue);text-decoration:none}
-.legal-body a:hover{text-decoration:underline}
-
-/* skip link + focus */
-.skip-link{position:absolute;left:-9999px;top:0;z-index:2000;background:var(--navy);color:#fff;padding:.7rem 1.2rem;border-radius:0 0 var(--radius-xs) 0;font-weight:600;font-size:.9rem;text-decoration:none}
-.skip-link:focus{left:0}
-a:focus-visible,button:focus-visible,.faq-q:focus-visible{outline:2px solid var(--blue);outline-offset:2px;border-radius:4px}
-
-/* trust bar (logo strip) */
-.trust{padding:clamp(28px,4vw,40px) 0;border-bottom:1px solid var(--border);background:var(--surface)}
-.trust .lbl{text-align:center;font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-3);margin-bottom:1.3rem}
-.trust-row{display:flex;align-items:center;justify-content:center;gap:clamp(1.5rem,5vw,3.5rem);flex-wrap:wrap}
-.trust-row .logo-text{font-weight:800;font-size:1.1rem;color:var(--text-3);letter-spacing:-0.01em;opacity:.75;transition:opacity .2s}
-.trust-row .logo-text:hover{opacity:1}
-
-/* proof quote */
-.proof{display:flex;gap:1.2rem;align-items:flex-start;max-width:760px;margin:2.6rem auto 0;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--blue);border-radius:var(--radius);padding:1.7rem 1.9rem}
-.proof .mark{font-family:'Montserrat Alternates',sans-serif;font-size:2.6rem;line-height:.7;color:var(--blue-soft-2);flex-shrink:0}
-.proof blockquote{font-size:1.06rem;line-height:1.6;color:var(--text);font-weight:500;margin-bottom:.8rem}
-.proof .by{font-size:.84rem;color:var(--text-3);font-weight:600}
-.proof .by b{color:var(--text-2)}
-
-/* data honesty note */
-.data-note{display:flex;gap:.7rem;align-items:flex-start;max-width:760px;margin:2rem auto 0;font-size:.82rem;color:var(--text-3);line-height:1.6}
-.data-note svg{width:16px;height:16px;flex-shrink:0;margin-top:2px;color:var(--text-3)}
-
-/* enterprise band (pricing) */
-.ent{max-width:880px;margin:2.5rem auto 0;background:var(--navy);border-radius:var(--radius);padding:2rem 2.2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;box-shadow:var(--shadow)}
-.ent h3{color:#fff;font-size:1.2rem;margin-bottom:.3rem}
-.ent p{color:#bcc6dc;font-size:.92rem;max-width:480px}
-
-/* reveal */
-.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
-.d1{transition-delay:.07s}.d2{transition-delay:.14s}.d3{transition-delay:.21s}
-
-/* responsive */
-@media(max-width:980px){
-  .ph-grid{grid-template-columns:1fr;gap:2.4rem}
-  .ph-grid .mock,.ph-grid .hero-card{order:2}
-  .payoff-grid,.split,.split.rev{grid-template-columns:1fr;gap:2.2rem}
-  .split.rev .split-visual{order:0}
-  .payoff-grid .mock,.split .split-visual{order:-1}
-  .steps,.cap-grid{grid-template-columns:1fr 1fr;gap:1rem}
-  .value-grid{grid-template-columns:1fr 1fr}
-  .price-grid{grid-template-columns:1fr;max-width:460px;margin-left:auto;margin-right:auto}
-  .price-card.featured{order:-1}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:1.5rem 2rem}
-  .footer-brand{grid-column:1/-1}
-}
-@media(max-width:760px){
-  .nav-left{gap:1rem}
-  .nav-links{display:none}
-  .nav-actions .btn-ghost{display:none}
-  .mobile-btn{display:block}
-  .nav-links.show{display:flex;flex-direction:column;align-items:flex-start;position:absolute;top:68px;left:0;right:0;background:var(--surface);border-bottom:1px solid var(--border);padding:1.2rem 1.5rem;gap:.4rem;box-shadow:var(--shadow)}
-  .nav-links.show a{padding:.5rem 0;font-size:1rem}
-  .srow,.srow.head{grid-template-columns:1.4fr 1.7fr;gap:.7rem}
-  .srow .size,.srow.head .size-h,.srow .cats,.srow.head .cats-h,.srow .contacts,.srow.head .contacts-h{display:none}
-  .hstep{grid-template-columns:1fr;gap:.7rem}
-}
-@media(max-width:560px){
-  .steps,.cap-grid,.value-grid{grid-template-columns:1fr}
-  .hero-card{margin-top:-4.5rem}
-  .hero-actions,.ph-actions{gap:.8rem}
-  .cta-actions{flex-direction:column}
-  .statcards{grid-template-columns:1fr}
-  .heat{grid-template-columns:repeat(8,1fr)}
-}
-
-</style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Evential", "url": "https://evential.co", "logo": "https://evential.co/favicon.ico", "description": "Evential helps B2B event organizers find sponsors before the event and prove sponsor ROI after it.", "contactPoint": {"@type": "ContactPoint", "email": "contact@evential.co", "contactType": "customer support"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is sponsor search really free?", "acceptedAnswer": {"@type": "Answer", "text": "Searching, ranking and viewing full sponsor profiles is free. You only pay when you export a list of companies, charged per row."}}, {"@type": "Question", "name": "How do you decide which sponsors fit my event?", "acceptedAnswer": {"@type": "Answer", "text": "You enter your event category, city and expected size. Evential scores every tracked company on category overlap, regional presence and audience-size fit, then surfaces the strongest matches first."}}, {"@type": "Question", "name": "How do the ROI numbers get captured?", "acceptedAnswer": {"@type": "Answer", "text": "At the event, lightweight BLE badges and gateway sensors capture booth visits, dwell time and session attendance with no app for attendees. After the event it becomes a report per sponsor. Movement data is anonymous by default."}}, {"@type": "Question", "name": "What kind of events is this for?", "acceptedAnswer": {"@type": "Answer", "text": "B2B conferences, trade shows, corporate events and summits \u2014 anywhere sponsor money matters and you need to win the sponsor and keep them."}}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat+Alternates:wght@600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="evential.css" />
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Evential", "url": "https://evential.co", "logo": "https://evential.co/favicon.ico", "description": "Evential provides smart badge hardware and a dashboard that turns events into verified attendance data, live analytics, and sponsor ROI reports.", "contactPoint": {"@type": "ContactPoint", "email": "contact@evential.co", "contactType": "customer support"}, "sameAs": ["https://www.linkedin.com/company/eventialco/", "https://x.com/eventialco"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Evential Event Dashboard", "description": "Smart badge hardware and a dashboard that captures live attendance, booth engagement, and generates sponsor ROI reports automatically.", "brand": {"@type": "Brand", "name": "Evential"}, "offers": {"@type": "Offer", "price": "3.99", "priceCurrency": "USD", "description": "$3.99 per attendee per event, badge hardware and sponsor ROI reports included."}}</script>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to content</a>
-<nav id="main-nav">
+<nav id="main-nav" class="nav-overlay">
   <div class="nav-inner">
     <div class="nav-left">
       <a href="index.html" class="nav-logo">EVENTIAL</a>
       <ul class="nav-links" id="nav-links">
+        <li><a href="dashboard.html" data-nav="dashboard">Product</a></li>
         <li><a href="discovery.html" data-nav="discovery">Sponsor Discovery</a></li>
-        <li><a href="dashboard.html" data-nav="dashboard">Event Dashboard</a></li>
-        <li><a href="event-analytics.html" data-nav="analytics">Analytics</a></li>
+        <li><a href="case-studies.html" data-nav="cases">Case Studies</a></li>
         <li><a href="pricing.html" data-nav="pricing">Pricing</a></li>
       </ul>
     </div>
     <div class="nav-actions">
-      <a href="https://calendly.com/contact-evential/30min" target="_blank" rel="noopener" class="btn btn-ghost" style="padding:.55rem 1rem">Book a demo</a>
-      <a href="https://discovery.evential.co" target="_blank" rel="noopener" class="btn btn-primary" style="padding:.55rem 1.15rem">Find sponsors free</a>
-      <button class="mobile-btn" id="mobile-btn" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+      <a href="https://calendly.com/contact-evential/30min" target="_blank" rel="noopener" class="btn btn-primary">Book a demo</a>
+      <button class="mobile-btn" id="mobile-btn" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
     </div>
   </div>
 </nav>
 
 <main id="main-content">
 
-<header class="hero">
-  <div class="container">
-    <div class="hero-panel">
-      <div class="hero-inner">
-        <h1>Your next sponsor is already funding <span class="hl">an event like yours.</span></h1>
-        <p class="hero-sub">You just can't see who. Evential finds the companies that already sponsor events like yours — then proves what they got, so they renew. Sponsor search is free.</p>
-        <div class="hero-actions">
-          <a href="https://discovery.evential.co" target="_blank" rel="noopener" class="btn btn-light">Find sponsors free <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-          <a href="dashboard.html" class="tlink">See how the dashboard proves ROI <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+<header class="ed-hero">
+  <video class="ed-hero-video" id="hero-video" muted loop playsinline poster="images/hero-poster-sm.jpg" aria-hidden="true">
+    <source data-src="videos/hero-event.mp4" type="video/mp4">
+  </video>
+  <div class="ed-hero-scrim"></div>
+  <div class="ed-hero-inner">
+    <div class="container">
+      <div class="ed-hero-layout solo">
+        <div>
+          <h1>Prove your event <br>was worth it.</h1>
+          <p>We tell your sponsors how much they really mattered, because we all know the difference their investment makes.</p>
+          <div class="ed-hero-actions">
+            <a href="https://calendly.com/contact-evential/30min" target="_blank" rel="noopener" class="btn btn-light">Book a demo <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            <a href="#proof" class="btn btn-outline-light">See a sponsor report</a>
+          </div>
         </div>
-        <div class="hero-stats">
-          <div class="hstat"><div class="n"><span class="count-up" data-target="1000" data-separator="," data-suffix="+">1,000+</span></div><div class="l">Sponsor records indexed</div></div>
-          <div class="hstat"><div class="n"><span class="count-up" data-target="3500" data-separator="," data-suffix="+">3,500+</span></div><div class="l">Sponsorship signals</div></div>
-          <div class="hstat"><div class="n">Free</div><div class="l">to search · pay to export</div></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="hero-card reveal">
-      <div class="hc-top">
-        <div class="hc-top-l"><span class="hc-count">14 sponsors</span><span class="chip-info">Ranked for your event</span></div>
-        <span class="hc-eg">Example results</span>
-      </div>
-      <div class="srow head">
-        <div>Company</div><div>Why they fit your event</div><div class="size-h">Size fit</div><div class="cats-h">Categories</div><div class="contacts-h">Contacts</div>
-      </div>
-      <div class="srow">
-        <div class="co"><span class="co-logo" style="background:#2f7d6b">CG</span><div><div class="co-name">CloudGrid</div><div class="co-sub">Infrastructure</div></div></div>
-        <div class="sig"><div class="sig-t">Sponsors developer &amp; AI events</div><div class="sig-d">8 similar events · active in 2026</div><span class="match"><span class="pip"></span> Strong match · 87</span></div>
-        <div class="size"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="12" width="4" height="9"/><rect x="10" y="7" width="4" height="14"/><rect x="17" y="3" width="4" height="18"/></svg> 1K–5K</div>
-        <div class="cats"><span class="tag">AI / Infra</span><span class="tag">Dev Tools</span></div>
-        <div class="contacts">3 contacts</div>
-      </div>
-      <div class="srow">
-        <div class="co"><span class="co-logo" style="background:#3a4ba8">DF</span><div><div class="co-name">DataForge</div><div class="co-sub">Data platform</div></div></div>
-        <div class="sig"><div class="sig-t">Strong enterprise tech sponsor</div><div class="sig-d">14 similar events · active in 2026</div><span class="match"><span class="pip"></span> Strong match · 91</span></div>
-        <div class="size"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="12" width="4" height="9"/><rect x="10" y="7" width="4" height="14"/><rect x="17" y="3" width="4" height="18"/></svg> 2K–20K</div>
-        <div class="cats"><span class="tag">IT Mgmt</span><span class="tag">Analytics</span></div>
-        <div class="contacts">4 contacts</div>
-      </div>
-      <div class="srow">
-        <div class="co"><span class="co-logo" style="background:#9a3d6b">SL</span><div><div class="co-name">SecureLayer</div><div class="co-sub">Cybersecurity</div></div></div>
-        <div class="sig"><div class="sig-t">Good fit for security tracks</div><div class="sig-d">6 similar events · active in 2025</div><span class="match"><span class="pip"></span> Possible match · 64</span></div>
-        <div class="size"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="12" width="4" height="9"/><rect x="10" y="7" width="4" height="14"/><rect x="17" y="3" width="4" height="18"/></svg> 500–3K</div>
-        <div class="cats"><span class="tag">Security</span><span class="tag">DevOps</span></div>
-        <div class="contacts">2 contacts</div>
       </div>
     </div>
   </div>
 </header>
 
-<section class="trust" aria-label="Trusted by">
+<section style="padding-bottom:clamp(30px,4vw,50px)">
   <div class="container">
-    <div class="lbl">Built with event organizers across these event types</div>
-    <div class="trust-row">
-      <span class="logo-text">Tech Conferences</span>
-      <span class="logo-text">Trade Shows</span>
-      <span class="logo-text">Dev Summits</span>
-      <span class="logo-text">B2B Expos</span>
-      <span class="logo-text">Corporate Events</span>
+    <div class="section-head center reveal" style="max-width:900px">
+      <h2 style="font-size:clamp(2.1rem,4vw,3.1rem)">Two ways your event can end.</h2>
     </div>
-  </div>
-</section>
-
-<section class="pain">
-  <div class="container">
-    <h2 class="reveal">Sponsorship still ends with a logo on a lanyard.</h2>
-    <p class="reveal d1">Most events run on sponsor money. Yet finding sponsors still means scraping LinkedIn and emailing companies that have never sponsored anything — and <span class="em">when the event's over, all you can send back is a thank-you note and a photo of their banner.</span> No wonder renewals are hard.</p>
-    <!--
-    <div class="proof reveal d2">
-      <div class="mark">&ldquo;</div>
-      <div>
-        <blockquote>Honestly, finding sponsors is a sh*t-show. Sometimes, we get off a call with someone with a $50 promise and we're like 'why do I even do this'?</blockquote>
-        <div class="by"><b>Amshu</b> · startup event co-ordinator · Evential 2026 pilot</div>
+    <div class="ed-fork reveal d1">
+      <div class="ed-fork-step s1">
+        <div class="ed-fork-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+        <div class="ed-fork-cap">Months of planning</div>
+      </div>
+      <div class="ed-fork-line"></div>
+      <div class="ed-fork-step s2">
+        <div class="ed-fork-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="ed-fork-cap">A few days on the floor</div>
+      </div>
+      <svg class="ed-fork-branch" viewBox="0 0 120 230" fill="none" aria-hidden="true">
+        <circle class="bd" cx="6" cy="42" r="3.5"/>
+        <path class="bp mute" d="M10 42 L 108 42"/>
+        <circle class="bd mute-d" cx="113" cy="42" r="3.5"/>
+        <path class="bp live" d="M10 42 C 64 42, 50 188, 108 188" pathLength="1"/>
+        <circle class="bd live-d" cx="113" cy="188" r="3.5"/>
+      </svg>
+      <div class="ed-fork-ends">
+        <div class="ed-fork-end mute">
+          <div class="ed-fork-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div>
+            <div class="ed-fork-k">Most events</div>
+            <div class="ed-fork-cap">A thank-you email and a few photos</div>
+          </div>
+        </div>
+        <div class="ed-fork-end live">
+          <div class="ed-fork-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M8 18v-3"/><path d="M12 18v-6"/><path d="M16 18v-4"/></svg></div>
+          <div>
+            <div class="ed-fork-k">With Evential</div>
+            <div class="ed-fork-cap">Verified proof and leads for sponsors</div>
+          </div>
+        </div>
       </div>
     </div>
-    -->
   </div>
 </section>
 
-<section class="journey" id="how">
+<section style="padding-top:0;padding-bottom:0">
+  <div class="container">
+    <div class="ed-bridge">
+      <p class="reveal">Keep your sponsors happy.</p>
+      <p class="reveal d-late"><span class="hl">Book them next year.</span></p>
+    </div>
+  </div>
+</section>
+
+<section id="how">
   <div class="container">
     <div class="section-head reveal">
-      <div class="eyebrow">How Evential works</div>
-      <h2>One system, from first pitch to next year's renewal.</h2>
-      <p>Find the right sponsors, capture what actually happens on the floor, and hand each one proof they can't argue with.</p>
+      <div class="eyebrow">How it works</div>
+      <h2>Two pieces of hardware turn into one live signal.</h2>
     </div>
-    <div class="steps">
-      <a href="discovery.html" class="step reveal d1" style="text-decoration:none;color:inherit">
-        <div class="when"><span class="node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span> Before</div>
-        <h3>Find sponsors that fit</h3>
-        <p>Search companies that already sponsor events like yours — where they've sponsored, what audiences they pay for, and who to email.</p>
-        <span class="free"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Free</span>
-      </a>
-      <a href="event-analytics.html" class="step reveal d2" style="text-decoration:none;color:inherit">
-        <div class="when"><span class="node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg></span> During</div>
-        <h3>Capture what happens</h3>
-        <p>Smart badges quietly track booth visits, dwell time and which sessions actually filled up — no app for your attendees to download.</p>
-      </a>
-      <a href="dashboard.html" class="step reveal d3" style="text-decoration:none;color:inherit">
-        <div class="when"><span class="node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg></span> After</div>
-        <h3>Send real proof</h3>
-        <p>Each sponsor gets a report: how many people stopped by, how long they stayed, which sessions sent traffic, and which leads opted in.</p>
-      </a>
-      <div class="step reveal d1">
-        <div class="when"><span class="node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></span> Next year</div>
-        <h3>Renew with evidence</h3>
-        <p>When renewal comes up, you're not selling a vibe. You're showing exactly what last year's sponsor got — and why next year is bigger.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="alt-bg" id="payoff">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="eyebrow">The payoff</div>
-      <h2>Stop selling sponsorships on promises. Renew them with proof.</h2>
-      <p>This is what a sponsor receives the day after your event — not a recap deck, but a report they can take to their own boss.</p>
-    </div>
-    <div class="payoff-grid">
-      <div class="split-text reveal">
-        <div class="flist">
-          <div class="fitem"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></span><div><b>Qualified leads</b><span>The opt-in contacts who actually engaged at their booth, ready to hand over.</span></div></div>
-          <div class="fitem"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg></span><div><b>Dwell time</b><span>How long people actually stayed, against the event average — not a footfall guess.</span></div></div>
-          <div class="fitem"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></span><div><b>Session-to-booth interest</b><span>Which talks drove people straight to their booth afterward.</span></div></div>
-          <div class="fitem"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></span><div><b>Straight into your CRM</b><span>Push every lead and outcome into your pipeline via webhooks, Zapier or Make.</span></div></div>
+    <div class="ed-showcase">
+      <div class="ed-showcase-item reveal">
+        <div class="ed-showcase-visual ed-scale-in"><picture><source srcset="images/badge-nameplate.webp" type="image/webp"><img class="ed-pulse-slow" loading="lazy" src="images/badge-nameplate.png" alt="Evential smart badge on a lanyard nameplate" width="232" height="637"></picture></div>
+        <div class="ed-showcase-text">
+          <span class="ed-showcase-num">01 · The badge</span>
+          <h3>A lanyard nameplate that just works.</h3>
+          <p>Clips onto the badge you already print. Nothing to download, nothing to charge.</p>
         </div>
-        <a href="dashboard.html" class="btn btn-ghost">See how the dashboard works <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
-      <div class="mock reveal d1">
-        <div class="mock-bar"><span class="d" style="background:#ff5f57"></span><span class="d" style="background:#febc2e"></span><span class="d" style="background:#28c840"></span><span class="t">Sponsor report · DataForge</span></div>
-        <div class="mock-body">
-          <div class="rep-head">
-            <div class="who"><span class="lg" style="background:#3a4ba8">DF</span><div><div class="nm">DataForge · Gold sponsor</div><div class="role">DevTools Week 2026</div></div></div>
-            <span class="rep-sent">Sent 6 hrs after close</span>
-          </div>
-          <div class="statcards">
-            <div class="statcard"><div class="l">Qualified leads</div><div class="v" style="color:var(--green)">142</div><div class="s">opt-in</div></div>
-            <div class="statcard"><div class="l">Avg dwell</div><div class="v">4m 12s</div><div class="s">+38% vs avg</div></div>
-            <div class="statcard"><div class="l">Booth visits</div><div class="v">638</div><div class="s">2.1× target</div></div>
-          </div>
-          <div class="bars">
-            <div class="bar soft" style="height:34%"></div><div class="bar" style="height:55%"></div><div class="bar" style="height:46%"></div><div class="bar" style="height:80%"></div><div class="bar" style="height:62%"></div><div class="bar" style="height:94%"></div><div class="bar" style="height:68%"></div>
-          </div>
-          <div class="barlabels"><span>9a</span><span>10a</span><span>11a</span><span>12p</span><span>1p</span><span>2p</span><span>3p</span></div>
-          <div class="crow"><span class="cic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span><div><div class="cn">142 leads pushed to CRM</div><div class="ce">Pipeline updated automatically</div></div></div>
+      <div class="ed-showcase-item rev reveal">
+        <div class="ed-showcase-visual ed-scale-in"><picture><source srcset="images/gateway.webp" type="image/webp"><img class="ed-pulse-slow" loading="lazy" src="images/gateway.png" alt="Evential gateway sensor with antenna" width="329" height="870"></picture></div>
+        <div class="ed-showcase-text">
+          <span class="ed-showcase-num">02 · The gateways</span>
+          <h3>Small sensors that map the whole room.</h3>
+          <p>Placed at doors, booths, and stages. They listen quietly and map your venue in real time.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="faq">
+<section class="alt-bg">
   <div class="container">
-    <div class="section-head reveal"><div class="eyebrow">Questions</div><h2>Straight answers.</h2></div>
-    <div class="faq-grid">
-      <div class="faq-item reveal d1"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Is sponsor search really free? <svg class="faq-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-a"><div class="faq-a-in">Yes. Searching, ranking and viewing full sponsor profiles is free. You only pay when you export a list of companies, charged per row. <a href="pricing.html" style="color:var(--blue);text-decoration:none">See pricing →</a></div></div></div>
-      <div class="faq-item reveal d1"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">How do you decide which sponsors fit my event? <svg class="faq-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-a"><div class="faq-a-in">You enter your event category, city and expected size. Evential scores every tracked company on category overlap, regional presence and audience-size fit, then surfaces the strongest matches first with the signals behind each score.</div></div></div>
-      <div class="faq-item reveal d1"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">How do the ROI numbers get captured? <svg class="faq-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-a"><div class="faq-a-in">At the event, lightweight BLE badges and a few gateway sensors capture booth visits, dwell time and session attendance — no app for attendees. After the event it becomes a report per sponsor. Movement data is anonymous by default; a contact only becomes a lead when someone opts in. <a href="event-analytics.html" style="color:var(--blue);text-decoration:none">More on event analytics →</a></div></div></div>
-      <div class="faq-item reveal d1"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What kind of events is this for? <svg class="faq-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-a"><div class="faq-a-in">B2B conferences, trade shows, corporate events and summits — anywhere sponsor money matters and you need to win the sponsor and keep them.</div></div></div>
+    <div class="section-head center reveal">
+      <div class="eyebrow">During the event</div>
+      <h2>Your floor, live.</h2>
+      <p>Attendance, booth traffic, and crowd density update as the event happens, not after it's over.</p>
+    </div>
+    <div class="ed-dash reveal d1 ed-scale-in">
+      <div class="ed-dash-bar"><span class="d" style="background:#ff5f57"></span><span class="d" style="background:#febc2e"></span><span class="d" style="background:#28c840"></span><span class="t">dashboard.evential.co · Live</span></div>
+      <div class="ed-dash-body">
+        <div class="ed-dash-stats">
+          <div class="ed-dash-stat"><div class="l">Badges checked in</div><div class="v"><span class="count-up" data-target="1284">0</span></div><div class="s">of 1,500 registered</div></div>
+          <div class="ed-dash-stat"><div class="l">Booth visits today</div><div class="v"><span class="count-up" data-target="892">0</span></div><div class="s">2.1× target</div></div>
+          <div class="ed-dash-stat"><div class="l">Avg dwell time</div><div class="v">3m 48s</div><div class="s">+38% vs venue avg</div></div>
+        </div>
+        <div class="ed-dash-heat-label"><b>Crowd density, Hall A</b><span>Live gradient heatmap</span></div>
+        <div class="ed-dash-heat">
+          <span class="h1" style="--i:0"></span><span class="h2" style="--i:1"></span><span class="h3" style="--i:2"></span><span class="h4" style="--i:3"></span><span class="h4" style="--i:4"></span><span class="h3" style="--i:5"></span><span class="h1" style="--i:6"></span><span style="--i:7"></span><span class="h2" style="--i:8"></span><span class="h3" style="--i:9"></span><span class="h4" style="--i:10"></span><span class="h3" style="--i:11"></span><span class="h1" style="--i:12"></span><span style="--i:13"></span>
+          <span class="h1" style="--i:2"></span><span class="h2" style="--i:3"></span><span class="h4" style="--i:4"></span><span class="h4" style="--i:5"></span><span class="h3" style="--i:6"></span><span class="h1" style="--i:7"></span><span style="--i:8"></span><span class="h1" style="--i:9"></span><span class="h2" style="--i:10"></span><span class="h3" style="--i:11"></span><span class="h2" style="--i:12"></span><span class="h1" style="--i:13"></span><span style="--i:14"></span><span style="--i:15"></span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="cta">
+<section class="ed-band light">
   <div class="container">
-    <div class="cta-panel reveal">
-      <div class="inner">
-        <h2>Find your sponsors. It's free to start.</h2>
-        <p>Search the companies already sponsoring events like yours — no account, no card, no catch.</p>
-        <div class="cta-actions">
-          <a href="https://discovery.evential.co" target="_blank" rel="noopener" class="btn btn-light">Find sponsors free <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-          <a href="https://calendly.com/contact-evential/30min" target="_blank" rel="noopener" class="tlink">or book a demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    <div class="ed-band-grid">
+      <div class="reveal">
+        <h2>The conversations on your floor are the real value.</h2>
+        <p>People come to events to meet other people. Evential simply makes sure that value doesn't disappear the moment the doors close.</p>
+        <div class="ed-band-facts">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>No app for attendees to download</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Anonymous by default</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Bosses happy</span>
         </div>
+      </div>
+      <div class="ed-photo reveal d1 ed-scale-in" style="background-image:url('images/still-booth.jpg'),radial-gradient(ellipse 80% 60% at 30% 20%,rgba(96,140,255,.16) 0%,transparent 65%)" role="img" aria-label="Two attendees in conversation at a sponsor booth"></div>
+    </div>
+  </div>
+</section>
+
+<section id="proof">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow">After the event</div>
+      <h2>This is what a sponsor actually receives.</h2>
+      <p>Not a recap deck. A report they can take to their own boss.</p>
+    </div>
+    <div class="ed-proof" style="margin-top:3.5rem">
+      <div class="reveal">
+        <div class="ed-rows">
+          <div class="ed-row"><b>Qualified leads</b><span>The opt-in contacts who actually engaged at their booth, ready to hand over.</span></div>
+          <div class="ed-row"><b>Dwell time</b><span>How long people really stayed (and where), benchmarked against the event average.</span></div>
+          <div class="ed-row"><b>Session-to-booth flow</b><span>Which talks sent people straight to which booths.</span></div>
+          <div class="ed-row"><b>Straight into your CRM</b><span>Every lead and outcome can be pushed to your pipeline through direct exports.</span></div>
+        </div>
+        <a href="dashboard.html" class="btn btn-ghost" style="margin-top:1.8rem">Explore the dashboard <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+      <div class="reveal d1">
+        <div class="ed-proof-stage" id="proof-stage">
+          <div class="ed-report lg ed-scale-in" id="proof-report">
+            <div class="ed-report-top"><span class="k">Sponsor Report</span><span class="e">Sent 6 hrs after close</span></div>
+            <div class="ed-report-title">DataForge · DevTools Week 2026</div>
+            <div class="ed-report-chart">
+              <div class="b" style="height:36%"></div><div class="b" style="height:58%"></div><div class="b" style="height:48%"></div><div class="b hi" style="height:82%"></div><div class="b" style="height:64%"></div><div class="b hi" style="height:96%"></div><div class="b" style="height:70%"></div>
+            </div>
+            <div class="ed-report-chart-labels"><span>9a</span><span>10a</span><span>11a</span><span>12p</span><span>1p</span><span>2p</span><span>3p</span></div>
+            <div class="ed-report-rows">
+              <div class="ed-report-row"><span class="l">Qualified leads</span><span class="v"><span class="count-up" data-target="142">0</span></span></div>
+              <div class="ed-report-row"><span class="l">Average dwell time</span><span class="v">4m 12s</span></div>
+              <div class="ed-report-row"><span class="l">Booth visits</span><span class="v"><span class="count-up" data-target="638">0</span></span></div>
+              <div class="ed-report-row"><span class="l">Best-performing hour</span><span class="v">1 to 2 PM</span></div>
+              <div class="ed-report-row"><span class="l">Leads delivered to CRM</span><span class="v"><span class="count-up" data-target="142">0</span></span></div>
+            </div>
+            <div class="ed-report-foot">Report #DF-2026-0614 &middot; Verified by Evential smart badges</div>
+          </div>
+          <div class="ed-reel" id="proof-reel" aria-hidden="true">
+            <button class="ed-reel-skip" type="button" tabindex="-1">Skip</button>
+            <div class="ed-reel-slide" data-dur="2600">
+              <div class="ed-reel-logo">DataForge</div>
+              <div class="k">Your sponsor ROI report</div>
+              <div class="big">You sponsored DevTools Week 2026</div>
+              <div class="sub">June 12 to 14 &middot; Indianapolis</div>
+            </div>
+            <div class="ed-reel-slide" data-dur="3200">
+              <div class="num" data-count="638">0</div>
+              <div class="big sm">people stopped by your booth</div>
+              <div class="ed-reel-dots"></div>
+              <div class="sub">Every visit verified and time-stamped by smart-badge scans</div>
+            </div>
+            <div class="ed-reel-slide" data-dur="2800">
+              <div class="ring-wrap"><span class="ring r1"></span><span class="ring r2"></span><div class="num" data-count="4" data-suffix="m">0m</div></div>
+              <div class="big sm">of face time with your team, per visit</div>
+              <div class="sub">Roughly 44 hours of conversation across the event</div>
+            </div>
+            <div class="ed-reel-slide" data-dur="3200">
+              <div class="num" data-count="142">0</div>
+              <div class="big sm">walked away as qualified leads</div>
+              <div class="ed-reel-dots" data-lit="11"></div>
+              <div class="sub">That's 22% of everyone who visited</div>
+            </div>
+            <div class="ed-reel-slide" data-dur="3000">
+              <div class="k">Your busiest hour</div>
+              <div class="ed-reel-bars-viz"><i style="--h:36%"></i><i style="--h:58%"></i><i style="--h:48%"></i><i style="--h:82%"></i><i style="--h:64%"></i><i class="pk" style="--h:96%"></i><i style="--h:70%"></i></div>
+              <div class="big sm2">Traffic peaked from 1 to 2 PM</div>
+              <div class="sub">96 visits in that hour. Worth staffing up for next time.</div>
+            </div>
+            <div class="ed-reel-slide" data-dur="3800">
+              <div class="ed-reel-doc"><i class="bar"></i><span class="chip"></span><span class="l1"></span><span></span><span></span><span></span><span></span></div>
+              <div class="k">The names behind the numbers</div>
+              <div class="big">Your full report is ready</div>
+              <div class="sub">Lead contacts, dwell times, scores, and hour-by-hour traffic</div>
+              <button class="ed-reel-cta" type="button" tabindex="-1">See your report</button>
+            </div>
+            <div class="ed-reel-progress"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          </div>
+        </div>
+        <button class="ed-reel-replay" id="reel-replay" type="button" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>Replay the sponsor intro</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ed-finder">
+  <div class="container">
+    <div class="ed-finder-head reveal">
+      <div class="eyebrow">Before the event</div>
+      <h2>Need sponsors before your event even opens?</h2>
+      <p>Use Evential before the doors open too. Tell us about your event and we'll take you straight into a free search of companies that already sponsor events like yours.</p>
+    </div>
+    <form class="ed-form reveal d1" action="https://discovery.evential.co/" method="get" target="_blank" rel="noopener">
+      <div class="ed-field">
+        <label for="w-category">Event category</label>
+        <select id="w-category" name="category">
+          <option value="tech-conference">Tech conference</option>
+          <option value="trade-show">Trade show</option>
+          <option value="dev-summit">Dev summit</option>
+          <option value="b2b-expo">B2B expo</option>
+          <option value="corporate-event">Corporate event</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="ed-field">
+        <label for="w-city">City</label>
+        <input id="w-city" name="city" type="text" placeholder="e.g. Austin, TX" />
+      </div>
+      <div class="ed-field">
+        <label for="w-size">Expected attendees</label>
+        <select id="w-size" name="size">
+          <option value="under-500">Under 500</option>
+          <option value="500-2000">500 to 2,000</option>
+          <option value="2000-10000">2,000 to 10,000</option>
+          <option value="10000-plus">10,000+</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Find sponsors <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+    </form>
+    <div class="ed-finder-note reveal d2">Free to search. No account needed.</div>
+  </div>
+</section>
+
+<section class="ed-cta" style="padding:clamp(90px,11vw,150px) 0">
+  <div class="container">
+    <div class="inner reveal">
+      <h2>See your next event, verified.</h2>
+      <p>A 30 minute walkthrough of a live dashboard and a real sponsor report.</p>
+      <div class="ed-cta-actions">
+        <a href="https://calendly.com/contact-evential/30min" target="_blank" rel="noopener" class="btn btn-light">Book a demo <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="dashboard.html" class="tlink">or explore the product first <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
     </div>
   </div>
 </section>
 
 </main>
+
+<div class="m-cta-bar" id="m-cta-bar" aria-hidden="true">
+  <a href="https://calendly.com/contact-evential/30min" target="_blank" rel="noopener" class="btn btn-primary">Book a demo <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+</div>
+
 <footer>
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="nav-logo">EVENTIAL</a>
-        <p>Find sponsors that already fund events like yours — then prove ROI so they renew.</p>
+        <p>Verified event intelligence for the people who build events. Live attendance, booth analytics, and sponsor reports that write themselves.</p>
       </div>
       <div class="footer-col">
         <div class="footer-col-title">Product</div>
-        <a href="discovery.html">Sponsor Discovery</a>
         <a href="dashboard.html">Event Dashboard</a>
-        <a href="event-analytics.html">Event analytics</a>
+        <a href="dashboard.html#analytics">Event Analytics</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="discovery.html">Sponsor Discovery</a>
         <a href="pricing.html">Pricing</a>
       </div>
       <div class="footer-col">
@@ -605,7 +356,7 @@ a:focus-visible,button:focus-visible,.faq-q:focus-visible{outline:2px solid var(
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© 2026 Evential, LLC. All rights reserved.</div>
+      <div class="footer-copy">&copy; 2026 Evential, LLC. All rights reserved.</div>
       <div class="footer-legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="mailto:contact@evential.co">contact@evential.co</a></div>
     </div>
   </div>
@@ -615,24 +366,111 @@ a:focus-visible,button:focus-visible,.faq-q:focus-visible{outline:2px solid var(
 const nav=document.getElementById('main-nav');
 if(nav)window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>40)},{passive:true});
 
-const revealObs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');revealObs.unobserve(en.target)}})},{threshold:0.1,rootMargin:'0px 0px -30px 0px'});
-document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
+/* hero video loads only on larger screens; phones get the poster and skip the 7MB file */
+(function(){
+  const v=document.getElementById('hero-video');if(!v)return;
+  const s=v.querySelector('source[data-src]');if(!s)return;
+  if(window.matchMedia('(min-width:601px)').matches&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    v.poster='images/hero-poster.jpg';
+    s.src=s.dataset.src;v.load();
+    const p=v.play();if(p&&p.catch)p.catch(()=>{});
+  }
+})();
 
-const countObs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){const el=en.target,target=parseFloat(el.dataset.target),suffix=el.dataset.suffix||'',useSep=el.dataset.separator===',',dur=1400,start=performance.now();function up(now){const p=Math.min((now-start)/dur,1),eased=1-Math.pow(1-p,3);let cur=Math.round(eased*target).toString();if(useSep)cur=cur.replace(/\B(?=(\d{3})+(?!\d))/g,',');el.textContent=cur+suffix;if(p<1)requestAnimationFrame(up)}requestAnimationFrame(up);countObs.unobserve(el)}})},{threshold:0.5});
-document.querySelectorAll('.count-up').forEach(el=>countObs.observe(el));
+const revealObs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');revealObs.unobserve(en.target)}})},{threshold:0.1,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal,.ed-scale-in').forEach(el=>revealObs.observe(el));
 
 const mb=document.getElementById('mobile-btn'),nl=document.getElementById('nav-links');
-if(mb&&nl){mb.addEventListener('click',()=>nl.classList.toggle('show'));nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nl.classList.remove('show')))}
+if(mb&&nl){
+  mb.addEventListener('click',()=>{nl.classList.toggle('show');nav.classList.toggle('menu-open',nl.classList.contains('show'))});
+  nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nl.classList.remove('show');nav.classList.remove('menu-open')}));
+}
 
-function toggleFaq(btn){const item=btn.closest('.faq-item');const open=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(el=>{el.classList.remove('open');el.querySelector('.faq-q').setAttribute('aria-expanded','false')});if(!open){item.classList.add('open');btn.setAttribute('aria-expanded','true')}}
+/* count-up numbers */
+const countObs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){const el=en.target,target=parseFloat(el.dataset.target),dur=1200,start=performance.now();function up(now){const p=Math.min(Math.max(0,(now-start)/dur),1),eased=1-Math.pow(1-p,3);el.textContent=Math.round(eased*target).toLocaleString('en-US');if(p<1)requestAnimationFrame(up)}requestAnimationFrame(up);countObs.unobserve(el)}})},{threshold:0.5});
+document.querySelectorAll('.count-up').forEach(el=>countObs.observe(el));
 
-const feedEl=document.getElementById('live-feed');
-if(feedEl){
-  const msgs=[{ic:'green',t:'<b>Badge #0912</b> checked in at East Gate',tm:'now'},{ic:'amber',t:'<b>Booth C-04</b> hit <b>50 visitors</b>',tm:'2s ago'},{ic:'blue',t:'Session <b>"AI in Events"</b> at <b>88% capacity</b>',tm:'5s ago'},{ic:'green',t:'<b>142 leads</b> synced to CRM',tm:'8s ago'},{ic:'amber',t:'<b>Main Hall 96%</b> — overflow routing on',tm:'12s ago'},{ic:'blue',t:'<b>Badge #0623</b> returned to <b>Booth A-12</b>',tm:'15s ago'},{ic:'green',t:'<b>Waitlist released</b> — 8 seats freed',tm:'18s ago'}];
-  const ic={green:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>',amber:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>',blue:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><rect x="7" y="10" width="3" height="7"/><rect x="13" y="6" width="3" height="11"/></svg>'};
-  function render(m){const d=document.createElement('div');d.className='feed-item';d.innerHTML='<div class="feed-ic fi-'+m.ic+'">'+ic[m.ic]+'</div><div class="feed-tx">'+m.t+'</div><div class="feed-tm">'+m.tm+'</div>';feedEl.insertBefore(d,feedEl.firstChild);if(feedEl.children.length>5)feedEl.removeChild(feedEl.lastChild)}
-  msgs.slice(0,5).forEach(render);let i=0;
-  const fo=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){setInterval(()=>{render(msgs[i%msgs.length]);i++},3500);fo.disconnect()}})},{threshold:0.3});fo.observe(feedEl);
+/* sponsor intro reel: the first-visit story a sponsor sees on their report page */
+(function(){
+  const reel=document.getElementById('proof-reel'),stage=document.getElementById('proof-stage');
+  if(!reel||!stage)return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const slides=[...reel.querySelectorAll('.ed-reel-slide')];
+  const bars=[...reel.querySelectorAll('.ed-reel-progress span')];
+  const replay=document.getElementById('reel-replay');
+  reel.querySelectorAll('.ed-reel-dots').forEach(d=>{
+    const lit=d.dataset.lit?parseInt(d.dataset.lit,10):null;
+    for(let i=0;i<48;i++){
+      const s=document.createElement('i');
+      s.style.animationDelay=(0.2+i*0.028)+'s';
+      if(lit!=null)s.className=i<lit?'lit':'off';
+      d.appendChild(s);
+    }
+  });
+  let timer=null,playing=false;
+  function reelCount(el){
+    const t=parseFloat(el.dataset.count),sfx=el.dataset.suffix||'',t0=performance.now(),ms=900;
+    function tick(now){const p=Math.min(1,Math.max(0,(now-t0)/ms)),e=1-Math.pow(1-p,3);el.textContent=Math.round(t*e).toLocaleString('en-US')+sfx;if(p<1)requestAnimationFrame(tick)}
+    requestAnimationFrame(tick);
+  }
+  function show(i){
+    slides.forEach((s,j)=>s.classList.toggle('cur',j===i));
+    bars.forEach((b,j)=>{
+      b.classList.remove('cur');b.classList.toggle('done',j<i);
+      if(j===i){b.style.setProperty('--dur',slides[i].dataset.dur+'ms');void b.offsetWidth;b.classList.add('cur')}
+    });
+    const n=slides[i].querySelector('.num');if(n)reelCount(n);
+    clearTimeout(timer);
+    timer=setTimeout(i<slides.length-1?()=>show(i+1):finish,parseInt(slides[i].dataset.dur,10));
+  }
+  function finish(){
+    clearTimeout(timer);playing=false;
+    reel.classList.add('out');
+    if(replay)replay.hidden=false;
+  }
+  function start(){
+    if(playing)return;playing=true;
+    bars.forEach(b=>b.classList.remove('done','cur'));
+    reel.classList.remove('out');reel.classList.add('armed');
+    show(0);
+  }
+  reel.classList.add('armed');
+  reel.querySelector('.ed-reel-skip').addEventListener('click',finish);
+  reel.querySelector('.ed-reel-cta').addEventListener('click',finish);
+  if(replay)replay.addEventListener('click',()=>{replay.hidden=true;start()});
+  const reelObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){start();reelObs.unobserve(e.target)}})},{threshold:0.45});
+  reelObs.observe(stage);
+})();
+
+/* mobile sticky CTA: appears after the hero, retires when the closing CTA is on screen */
+(function(){
+  const bar=document.getElementById('m-cta-bar');if(!bar)return;
+  if(!window.matchMedia('(max-width:600px)').matches)return;
+  const hero=document.querySelector('.ed-hero'),end=document.querySelector('.ed-cta');
+  let ticking=false;
+  function update(){
+    const past=hero?window.scrollY>hero.offsetHeight*0.9:window.scrollY>500;
+    const endVisible=end?end.getBoundingClientRect().top<window.innerHeight:false;
+    bar.classList.toggle('show',past&&!endVisible);
+    ticking=false;
+  }
+  window.addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(update);ticking=true}},{passive:true});
+})();
+
+/* subtle hero video parallax */
+const heroVideo=document.getElementById('hero-video');
+if(heroVideo&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  let ticking=false;
+  window.addEventListener('scroll',()=>{
+    if(!ticking){
+      window.requestAnimationFrame(()=>{
+        const y=Math.min(window.scrollY*0.18,120);
+        heroVideo.style.transform='translateY('+y+'px) scale(1.08)';
+        ticking=false;
+      });
+      ticking=true;
+    }
+  },{passive:true});
 }
 </script>
 <script>window.addEventListener('load',function(){setTimeout(function(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-G7FL21YMQC';s.async=true;document.head.appendChild(s)},2000)});window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-G7FL21YMQC');</script>

@@ -3,374 +3,28 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Event Dashboard — Live Analytics & Sponsor ROI Reports | Evential</title>
-<meta name="description" content="The Evential event dashboard captures booth visits, dwell time and session engagement during your event, auto-generates sponsor ROI reports, and pushes leads to your CRM." />
+<title>Event Dashboard: Live Analytics &amp; Sponsor ROI Reports | Evential</title>
+<meta name="description" content="The Evential dashboard turns smart-badge signal into live attendance, booth engagement and crowd analytics during your event, then auto-generates sponsor ROI reports and pushes leads to your CRM." />
 <meta name="robots" content="index, follow" />
-<meta property="og:title" content="Event Dashboard — Live Analytics & Sponsor ROI Reports | Evential" />
-<meta property="og:description" content="The Evential event dashboard captures booth visits, dwell time and session engagement during your event, auto-generates sponsor ROI reports, and pushes leads to your CRM." />
+<meta property="og:title" content="Event Dashboard: Live Analytics &amp; Sponsor ROI Reports | Evential" />
+<meta property="og:description" content="Live attendance, booth analytics and crowd flow during your event, then automated sponsor ROI reports the day after." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://evential.co/dashboard" />
 <meta property="og:image" content="https://evential.co/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Event Dashboard — Live Analytics & Sponsor ROI Reports | Evential" />
-<meta name="twitter:description" content="The Evential event dashboard captures booth visits, dwell time and session engagement during your event, auto-generates sponsor ROI reports, and pushes leads to your CRM." />
+<meta name="twitter:title" content="Event Dashboard: Live Analytics &amp; Sponsor ROI Reports | Evential" />
+<meta name="twitter:description" content="Live attendance, booth analytics and crowd flow during your event, then automated sponsor ROI reports the day after." />
 <link rel="canonical" href="https://evential.co/dashboard" />
 <link rel="icon" type="image/x-icon" href="favicon.ico" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Montserrat+Alternates:wght@600;700;800&display=swap" rel="stylesheet" />
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --navy:#16233f;--navy-2:#1e2f52;
-  --blue:#2b50e0;--blue-hover:#2243c2;--blue-soft:#e9f0fe;--blue-soft-2:#d3e0fc;
-  --bg:#f5f7fb;--surface:#ffffff;--surface-2:#f7f9fc;
-  --border:#e8eaf2;--border-2:#dcdfeb;--border-3:#ccd0e0;
-  --text:#16203a;--text-2:#525c72;--text-3:#8b93a7;
-  --green:#1c8a4f;--green-bg:#e8f6ee;--green-border:#bfe6cd;
-  --amber:#b97516;--amber-bg:#fbf0db;--amber-border:#f0d9a8;
-  --radius:14px;--radius-sm:10px;--radius-xs:8px;--pill:999px;
-  --shadow-sm:0 1px 2px rgba(22,32,58,.06),0 1px 3px rgba(22,32,58,.04);
-  --shadow:0 6px 18px rgba(22,32,58,.07),0 1px 3px rgba(22,32,58,.04);
-  --shadow-lg:0 22px 55px rgba(22,32,58,.13),0 4px 14px rgba(22,32,58,.06);
-  --shadow-xl:0 34px 90px rgba(18,28,58,.20);
-}
-html{scroll-behavior:smooth}
-body{font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}
-::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:#c6cad8;border-radius:8px;border:3px solid var(--bg)}
-h1,h2,h3,h4{line-height:1.16;letter-spacing:-0.022em;font-weight:700;color:var(--text)}
-.container{max-width:1140px;margin:0 auto;padding:0 clamp(1.25rem,4vw,2.5rem)}
-section{padding:clamp(52px,7vw,92px) 0;position:relative}
-.eyebrow{display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:.9rem}
-.section-head{max-width:660px}
-.section-head.center{margin:0 auto;text-align:center}
-.section-head h2{font-size:clamp(1.65rem,3.4vw,2.5rem);margin-bottom:.9rem}
-.section-head p{font-size:clamp(1rem,1.4vw,1.12rem);color:var(--text-2);line-height:1.68}
-.alt-bg{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-
-/* buttons */
-.btn{display:inline-flex;align-items:center;gap:8px;padding:.78rem 1.5rem;border-radius:var(--radius-xs);font-family:inherit;font-weight:600;font-size:.95rem;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:all .2s ease;white-space:nowrap}
-.btn svg{width:17px;height:17px}
-.btn-primary{background:var(--blue);color:#fff;box-shadow:0 5px 16px rgba(43,80,224,.3)}
-.btn-primary:hover{background:var(--blue-hover);transform:translateY(-1px);box-shadow:0 9px 24px rgba(43,80,224,.36)}
-.btn-light{background:#fff;color:var(--navy);border-color:#fff}
-.btn-light:hover{background:#eef1f9;transform:translateY(-1px)}
-.btn-ghost{background:transparent;color:var(--text);border-color:var(--border-2)}
-.btn-ghost:hover{border-color:var(--border-3);background:var(--surface-2)}
-.btn-arrow{transition:transform .2s}.btn:hover .btn-arrow{transform:translateX(3px)}
-.tlink{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:.95rem;text-decoration:none;color:#cdd8f0;transition:color .2s}
-.tlink:hover{color:#fff}.tlink svg{width:16px;height:16px;transition:transform .2s}.tlink:hover svg{transform:translateX(3px)}
-.tlink.dark{color:var(--blue)}.tlink.dark:hover{color:var(--blue-hover)}
-
-/* nav */
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:68px;display:flex;align-items:center;background:rgba(245,247,251,.8);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);border-bottom:1px solid transparent;transition:border-color .3s,background .3s}
-nav.scrolled{background:rgba(245,247,251,.94);border-bottom-color:var(--border)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1140px;margin:0 auto;padding:0 clamp(1.25rem,4vw,2.5rem)}
-.nav-left{display:flex;align-items:center;gap:2.5rem}
-.nav-logo{font-family:'Montserrat Alternates',sans-serif;font-weight:700;font-size:1.4rem;color:var(--navy);text-decoration:none;letter-spacing:-0.01em}
-.nav-links{display:flex;align-items:center;gap:1.75rem;list-style:none}
-.nav-links a{color:var(--text-2);text-decoration:none;font-size:.9rem;font-weight:600;transition:color .2s;position:relative}
-.nav-links a:hover{color:var(--text)}
-.nav-links a.active{color:var(--blue)}
-.nav-actions{display:flex;align-items:center;gap:.6rem}
-.mobile-btn{display:none;background:none;border:none;color:var(--text);cursor:pointer;padding:6px}
-
-/* page hero (inner pages) */
-.page-hero{padding:120px 0 0}
-.ph-panel{background:var(--navy);border-radius:26px;padding:clamp(2.4rem,5vw,3.6rem) clamp(1.5rem,5vw,3.5rem) clamp(2.4rem,5vw,3.6rem);position:relative;overflow:hidden;box-shadow:var(--shadow-xl)}
-.ph-panel.with-card{padding-bottom:clamp(6rem,10vw,8rem)}
-.ph-panel::before{content:'';position:absolute;right:-6%;top:-34%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(96,140,255,.18) 0%,rgba(43,80,224,.05) 45%,transparent 70%);pointer-events:none}
-.ph-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,5vw,3.5rem);align-items:center;position:relative;z-index:2}
-.ph-grid.solo{grid-template-columns:1fr;max-width:680px}
-.ph-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8fa6ec;margin-bottom:1rem}
-.ph-tag{display:inline-flex;align-items:center;gap:8px;font-size:.74rem;font-weight:600;color:#b7c4e3;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);padding:.35rem .85rem;border-radius:var(--pill);margin-bottom:1.3rem}
-.ph-tag.free{color:#9be8bd;border-color:rgba(92,214,147,.3);background:rgba(92,214,147,.08)}
-.ph-tag .dot{width:6px;height:6px;border-radius:50%;background:#5cd693}
-.page-hero h1{color:#fff;font-size:clamp(2rem,4.4vw,3.2rem);font-weight:800;letter-spacing:-0.03em;margin-bottom:1.1rem}
-.page-hero h1 .hl{color:#7fa2ff}
-.ph-sub{color:#c2cce0;font-size:clamp(1rem,1.4vw,1.16rem);line-height:1.65;margin-bottom:1.8rem;max-width:540px}
-.ph-actions{display:flex;gap:1.1rem;align-items:center;flex-wrap:wrap}
-
-/* hero (homepage) */
-.hero{padding:128px 0 0;position:relative}
-.hero-panel{background:var(--navy);border-radius:26px;padding:clamp(2.4rem,5vw,4.2rem) clamp(1.5rem,5vw,4rem) clamp(7rem,11vw,9rem);position:relative;overflow:hidden;box-shadow:var(--shadow-xl)}
-.hero-panel::before{content:'';position:absolute;right:-6%;top:-32%;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(96,140,255,.20) 0%,rgba(43,80,224,.05) 45%,transparent 70%);pointer-events:none}
-.hero-panel::after{content:'';position:absolute;right:5%;top:14%;width:330px;height:330px;border:1px solid rgba(255,255,255,.06);border-radius:50%;pointer-events:none}
-.hero-inner{position:relative;z-index:2;max-width:660px}
-.hero-pilot{display:inline-flex;align-items:center;gap:8px;font-size:.74rem;font-weight:600;letter-spacing:.03em;color:#b7c4e3;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);padding:.4rem .9rem;border-radius:var(--pill);margin-bottom:1.5rem}
-.hero-pilot .dot{width:6px;height:6px;border-radius:50%;background:#5cd693;box-shadow:0 0 0 4px rgba(92,214,147,.18)}
-.hero h1{color:#fff;font-size:clamp(2.15rem,5vw,3.7rem);font-weight:800;letter-spacing:-0.03em;margin-bottom:1.2rem}
-.hero h1 .hl{color:#7fa2ff}
-.hero-sub{color:#c2cce0;font-size:clamp(1.02rem,1.5vw,1.2rem);line-height:1.65;max-width:540px;margin-bottom:2rem}
-.hero-actions{display:flex;gap:1.1rem;align-items:center;flex-wrap:wrap;margin-bottom:2.4rem}
-.hero-stats{display:flex;gap:clamp(1.4rem,4vw,2.8rem);flex-wrap:wrap}
-.hstat .n{font-size:clamp(1.4rem,2.6vw,1.85rem);font-weight:800;color:#fff;letter-spacing:-0.02em}
-.hstat .l{font-size:.8rem;color:#8d9ab8;margin-top:1px}
-
-/* discovery results card */
-.hero-card{position:relative;z-index:5;margin:-5.5rem auto 0;max-width:940px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-lg);overflow:hidden}
-.hero-card.in-hero{margin-top:-4.5rem}
-.hc-top{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.95rem 1.2rem;border-bottom:1px solid var(--border);flex-wrap:wrap}
-.hc-top-l{display:flex;align-items:center;gap:.65rem}
-.hc-count{font-weight:700;font-size:1rem}
-.chip-info{background:var(--blue-soft);color:var(--blue);font-size:.73rem;font-weight:600;padding:.24rem .7rem;border-radius:var(--pill)}
-.hc-eg{font-size:.72rem;color:var(--text-3);font-weight:600}
-.srow{display:grid;grid-template-columns:1.35fr 1.7fr .85fr 1.05fr .7fr;gap:1rem;align-items:center;padding:1rem 1.2rem;border-bottom:1px solid var(--border)}
-.srow:last-child{border-bottom:none}
-.srow.head{font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-3);font-weight:700;padding:.65rem 1.2rem;background:var(--surface-2)}
-.co{display:flex;align-items:center;gap:.65rem}
-.co-logo{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.82rem;flex-shrink:0;color:#fff}
-.co-name{font-weight:700;font-size:.93rem}
-.co-sub{font-size:.76rem;color:var(--text-3)}
-.sig .sig-t{color:var(--green);font-weight:700;font-size:.86rem;line-height:1.3}
-.sig .sig-d{font-size:.76rem;color:var(--text-3);margin-top:2px}
-.match{display:inline-flex;align-items:center;gap:5px;background:var(--blue-soft);color:var(--blue);font-size:.72rem;font-weight:700;padding:.22rem .6rem;border-radius:var(--pill);margin-top:.45rem}
-.match .pip{width:7px;height:7px;border-radius:50%;background:var(--blue)}
-.size{display:flex;align-items:center;gap:6px;font-size:.84rem;font-weight:600}
-.size svg{width:15px;height:15px;color:var(--blue)}
-.cats{display:flex;gap:5px;flex-wrap:wrap}
-.tag{font-size:.72rem;font-weight:600;color:var(--text-2);background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-xs);padding:.2rem .5rem}
-.contacts{font-size:.84rem;font-weight:600}
-
-/* pain strip */
-.pain{text-align:center;padding-bottom:clamp(20px,3vw,32px)}
-.pain h2{font-size:clamp(1.5rem,3.2vw,2.3rem);max-width:780px;margin:0 auto .9rem}
-.pain p{font-size:clamp(1rem,1.5vw,1.16rem);color:var(--text-2);max-width:640px;margin:0 auto;line-height:1.7}
-.pain .em{color:var(--text);font-weight:600}
-
-/* journey timeline */
-.journey{padding-top:clamp(20px,3vw,28px)}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin-top:3rem}
-.step{position:relative;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.6rem 1.4rem;transition:all .25s}
-.step:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--border-2)}
-.step .when{font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin-bottom:.9rem;display:flex;align-items:center;gap:8px}
-.step .node{width:30px;height:30px;border-radius:9px;background:var(--blue-soft);color:var(--blue);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.step .node svg{width:16px;height:16px}
-.step h3{font-size:1.12rem;margin-bottom:.45rem}
-.step p{font-size:.89rem;color:var(--text-2);line-height:1.6}
-.step .free{display:inline-flex;align-items:center;gap:5px;background:var(--green-bg);color:var(--green);border:1px solid var(--green-border);font-size:.7rem;font-weight:700;padding:.18rem .55rem;border-radius:var(--pill);margin-top:.85rem}
-.step .free svg{width:12px;height:12px}
-
-/* value grid (3-up) */
-.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:3rem}
-.value-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.7rem;transition:all .25s}
-.value-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--border-2)}
-.value-card .vic{width:44px;height:44px;border-radius:11px;background:var(--blue-soft);color:var(--blue);display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem}
-.value-card .vic svg{width:21px;height:21px}
-.value-card h3{font-size:1.1rem;margin-bottom:.45rem}
-.value-card p{font-size:.9rem;color:var(--text-2);line-height:1.6}
-
-/* split feature rows */
-.split{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(2rem,5vw,4rem);align-items:center;margin-top:3rem}
-.split + .split{margin-top:clamp(2.5rem,6vw,5rem)}
-.split.rev .split-visual{order:-1}
-.split-text h3{font-size:clamp(1.35rem,2.6vw,1.9rem);margin-bottom:.8rem}
-.split-text .lead{color:var(--text-2);font-size:1.02rem;margin-bottom:1.4rem;line-height:1.7}
-.flist{display:flex;flex-direction:column;gap:.8rem;margin-bottom:1.6rem}
-.fitem{display:flex;gap:.75rem;align-items:flex-start}
-.fitem .ic{width:26px;height:26px;border-radius:7px;background:var(--blue-soft);color:var(--blue);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
-.fitem .ic svg{width:14px;height:14px}
-.fitem b{font-weight:600;font-size:.94rem}
-.fitem span{display:block;font-size:.85rem;color:var(--text-2);line-height:1.5}
-
-/* payoff grid alias */
-.payoff-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(2rem,5vw,4rem);align-items:center;margin-top:2.6rem}
-
-/* mock UI */
-.mock{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-lg);overflow:hidden}
-.mock-bar{display:flex;align-items:center;gap:6px;padding:.65rem .9rem;border-bottom:1px solid var(--border);background:var(--surface-2)}
-.mock-bar .d{width:9px;height:9px;border-radius:50%}
-.mock-bar .t{margin-left:.5rem;font-size:.73rem;color:var(--text-3);font-weight:600}
-.mock-body{padding:1.15rem}
-.profile-head,.rep-head .who{display:flex;align-items:center;gap:.7rem}
-.rep-head{display:flex;align-items:center;justify-content:space-between;gap:.8rem;margin-bottom:1.1rem;flex-wrap:wrap}
-.profile-head{margin-bottom:1.1rem}
-.mock .lg{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;flex-shrink:0}
-.mock .nm{font-weight:700;font-size:1.02rem}
-.mock .role{font-size:.78rem;color:var(--text-3)}
-.rep-sent{font-size:.7rem;font-weight:700;color:var(--green);background:var(--green-bg);border:1px solid var(--green-border);padding:.22rem .6rem;border-radius:var(--pill)}
-.statcards{display:grid;grid-template-columns:repeat(3,1fr);gap:.55rem;margin-bottom:1.05rem}
-.statcard{background:var(--surface-2);border-radius:var(--radius-xs);padding:.7rem .75rem}
-.statcard .l{font-size:.66rem;color:var(--text-3);font-weight:600}
-.statcard .v{font-size:1.18rem;font-weight:800;margin-top:1px}
-.statcard .s{font-size:.64rem;color:var(--text-3)}
-.bars{display:flex;align-items:flex-end;gap:.45rem;height:84px;padding:.3rem 0 0}
-.bar{flex:1;background:var(--blue);border-radius:4px 4px 0 0;min-height:5px;opacity:.9}
-.bar.soft{background:var(--blue-soft-2)}
-.barlabels{display:flex;gap:.45rem;margin-top:.35rem}
-.barlabels span{flex:1;text-align:center;font-size:.64rem;color:var(--text-3)}
-.crow{display:flex;align-items:center;gap:.65rem;padding:.7rem 0 0;border-top:1px solid var(--border);margin-top:.9rem}
-.crow .cic{width:30px;height:30px;border-radius:8px;background:var(--green-bg);color:var(--green);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.crow .cic svg{width:14px;height:14px}
-.crow .cn{font-size:.84rem;font-weight:600}
-.crow .ce{font-size:.76rem;color:var(--text-3)}
-/* feed mock */
-.feed{display:flex;flex-direction:column}
-.feed-item{display:flex;align-items:center;gap:.65rem;padding:.65rem 0;border-bottom:1px solid var(--border)}
-.feed-item:last-child{border-bottom:none}
-.feed-ic{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.feed-ic svg{width:14px;height:14px}
-.fi-green{background:var(--green-bg);color:var(--green)}.fi-blue{background:var(--blue-soft);color:var(--blue)}.fi-amber{background:var(--amber-bg);color:var(--amber)}
-.feed-tx{font-size:.82rem;flex:1;line-height:1.4}.feed-tx b{font-weight:700}
-.feed-tm{font-size:.71rem;color:var(--text-3);white-space:nowrap}
-/* heatmap mock */
-.heat{display:grid;grid-template-columns:repeat(8,1fr);gap:5px;margin:.4rem 0 .2rem}
-.heat span{aspect-ratio:1;border-radius:5px;background:var(--blue-soft)}
-.heat .h1{background:#cdd9f7}.heat .h2{background:#9fb6ee}.heat .h3{background:#5f81e4}.heat .h4{background:var(--blue)}
-
-/* how-to steps (numbered vertical) */
-.howto{counter-reset:step;margin-top:2.8rem;display:flex;flex-direction:column;gap:1.05rem;max-width:860px}
-.hstep{display:grid;grid-template-columns:auto 1fr;gap:1.2rem;align-items:start;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.4rem 1.5rem;transition:all .25s}
-.hstep:hover{border-color:var(--border-2);box-shadow:var(--shadow)}
-.hstep .sn{counter-increment:step;width:38px;height:38px;border-radius:10px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.05rem}
-.hstep .sn::before{content:counter(step)}
-.hstep h4{font-size:1.08rem;margin-bottom:.3rem}
-.hstep p{font-size:.92rem;color:var(--text-2);line-height:1.65}
-.hstep .stip{display:inline-flex;align-items:center;gap:6px;margin-top:.6rem;font-size:.78rem;font-weight:600;color:var(--blue);background:var(--blue-soft);padding:.2rem .65rem;border-radius:var(--pill)}
-.hstep .stip svg{width:13px;height:13px}
-.hstep .stip.free{color:var(--green);background:var(--green-bg)}
-
-/* capability grid (analytics) */
-.cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:3rem}
-.cap-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.7rem;transition:all .25s}
-.cap-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--border-2)}
-.cap-card .cic{width:42px;height:42px;border-radius:11px;background:var(--blue-soft);color:var(--blue);display:flex;align-items:center;justify-content:center;margin-bottom:1rem}
-.cap-card .cic svg{width:20px;height:20px}
-.cap-card h3{font-size:1.06rem;margin-bottom:.4rem}
-.cap-card p{font-size:.88rem;color:var(--text-2);line-height:1.6}
-.cap-card .moment{margin-top:.85rem;padding-top:.85rem;border-top:1px solid var(--border);font-size:.82rem;color:var(--text-2);line-height:1.55}
-.cap-card .moment b{color:var(--text);font-weight:600}
-
-/* pricing */
-.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:3rem;align-items:start}
-.price-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:2rem 1.8rem;transition:all .25s;position:relative}
-.price-card:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
-.price-card.featured{border:2px solid var(--blue);box-shadow:var(--shadow-lg)}
-.price-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--blue);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:.3rem .85rem;border-radius:var(--pill)}
-.price-tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin-bottom:.7rem}
-.price-card h3{font-size:1.3rem;margin-bottom:.5rem}
-.price-amt{display:flex;align-items:baseline;gap:.35rem;margin:.6rem 0 .2rem}
-.price-amt .n{font-size:2.4rem;font-weight:800;letter-spacing:-0.03em}
-.price-amt .per{font-size:.86rem;color:var(--text-2);font-weight:600}
-.price-sub{font-size:.84rem;color:var(--text-3);margin-bottom:1.3rem;min-height:1.2em}
-.price-feats{display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.6rem;padding-top:1.3rem;border-top:1px solid var(--border)}
-.price-feats .pf{display:flex;gap:.6rem;align-items:flex-start;font-size:.88rem;color:var(--text)}
-.price-feats .pf svg{width:16px;height:16px;color:var(--green);flex-shrink:0;margin-top:3px}
-.price-feats .pf.muted{color:var(--text-3)}
-.price-card .btn{width:100%;justify-content:center}
-.price-note{margin-top:1rem;font-size:.78rem;color:var(--text-3);text-align:center}
-
-/* FAQ */
-.faq-grid{margin-top:2.6rem;display:flex;flex-direction:column;gap:.7rem;max-width:800px}
-.faq-grid.center{margin-left:auto;margin-right:auto}
-.faq-item{border:1px solid var(--border);background:var(--surface);border-radius:var(--radius-sm);overflow:hidden;transition:border-color .2s}
-.faq-item.open{border-color:var(--border-3)}
-.faq-q{width:100%;background:none;border:none;color:var(--text);font-family:inherit;font-size:.97rem;font-weight:600;text-align:left;padding:1.05rem 1.3rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem}
-.faq-ic{width:20px;height:20px;flex-shrink:0;color:var(--blue);transition:transform .3s}
-.faq-item.open .faq-ic{transform:rotate(45deg)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
-.faq-item.open .faq-a{max-height:360px}
-.faq-a-in{padding:0 1.3rem 1.15rem;font-size:.91rem;color:var(--text-2);line-height:1.7}
-
-/* CTA */
-.cta{text-align:center}
-.cta-panel{background:var(--navy);border-radius:26px;padding:clamp(3rem,7vw,5rem) 1.5rem;position:relative;overflow:hidden;box-shadow:var(--shadow-xl)}
-.cta-panel::before{content:'';position:absolute;left:50%;top:-42%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(96,140,255,.18) 0%,transparent 65%);transform:translateX(-50%);pointer-events:none}
-.cta-panel .inner{position:relative;z-index:2;max-width:580px;margin:0 auto}
-.cta-panel h2{color:#fff;font-size:clamp(1.8rem,3.6vw,2.55rem);margin-bottom:.9rem}
-.cta-panel p{color:#bcc6dc;font-size:1.05rem;margin-bottom:2rem}
-.cta-actions{display:flex;gap:1.1rem;align-items:center;justify-content:center;flex-wrap:wrap}
-
-/* footer */
-footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem 0 2rem}
-.footer-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:2rem;margin-bottom:2.2rem}
-.footer-brand .nav-logo{font-size:1.3rem}
-.footer-brand p{font-size:.85rem;color:var(--text-2);line-height:1.65;margin-top:.7rem;max-width:300px}
-.footer-col-title{font-size:.71rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-3);font-weight:700;margin-bottom:.9rem}
-.footer-col a{display:block;font-size:.86rem;color:var(--text-2);text-decoration:none;padding:.3rem 0;transition:color .2s}
-.footer-col a:hover{color:var(--blue)}
-.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:1.4rem;border-top:1px solid var(--border);flex-wrap:wrap;gap:.8rem}
-.footer-copy{font-size:.77rem;color:var(--text-3)}
-.footer-legal{display:flex;gap:1.3rem}.footer-legal a{font-size:.77rem;color:var(--text-3);text-decoration:none}.footer-legal a:hover{color:var(--text-2)}
-
-/* legal pages */
-.legal-body{max-width:760px}
-.legal-body h2{font-size:1.2rem;margin:2rem 0 .6rem}
-.legal-body h2:first-child{margin-top:0}
-.legal-body p{font-size:.95rem;color:var(--text-2);line-height:1.75;margin-bottom:.9rem}
-.legal-body a{color:var(--blue);text-decoration:none}
-.legal-body a:hover{text-decoration:underline}
-
-/* skip link + focus */
-.skip-link{position:absolute;left:-9999px;top:0;z-index:2000;background:var(--navy);color:#fff;padding:.7rem 1.2rem;border-radius:0 0 var(--radius-xs) 0;font-weight:600;font-size:.9rem;text-decoration:none}
-.skip-link:focus{left:0}
-a:focus-visible,button:focus-visible,.faq-q:focus-visible{outline:2px solid var(--blue);outline-offset:2px;border-radius:4px}
-
-/* trust bar (logo strip) */
-.trust{padding:clamp(28px,4vw,40px) 0;border-bottom:1px solid var(--border);background:var(--surface)}
-.trust .lbl{text-align:center;font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-3);margin-bottom:1.3rem}
-.trust-row{display:flex;align-items:center;justify-content:center;gap:clamp(1.5rem,5vw,3.5rem);flex-wrap:wrap}
-.trust-row .logo-text{font-weight:800;font-size:1.1rem;color:var(--text-3);letter-spacing:-0.01em;opacity:.75;transition:opacity .2s}
-.trust-row .logo-text:hover{opacity:1}
-
-/* proof quote */
-.proof{display:flex;gap:1.2rem;align-items:flex-start;max-width:760px;margin:2.6rem auto 0;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--blue);border-radius:var(--radius);padding:1.7rem 1.9rem}
-.proof .mark{font-family:'Montserrat Alternates',sans-serif;font-size:2.6rem;line-height:.7;color:var(--blue-soft-2);flex-shrink:0}
-.proof blockquote{font-size:1.06rem;line-height:1.6;color:var(--text);font-weight:500;margin-bottom:.8rem}
-.proof .by{font-size:.84rem;color:var(--text-3);font-weight:600}
-.proof .by b{color:var(--text-2)}
-
-/* data honesty note */
-.data-note{display:flex;gap:.7rem;align-items:flex-start;max-width:760px;margin:2rem auto 0;font-size:.82rem;color:var(--text-3);line-height:1.6}
-.data-note svg{width:16px;height:16px;flex-shrink:0;margin-top:2px;color:var(--text-3)}
-
-/* enterprise band (pricing) */
-.ent{max-width:880px;margin:2.5rem auto 0;background:var(--navy);border-radius:var(--radius);padding:2rem 2.2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;box-shadow:var(--shadow)}
-.ent h3{color:#fff;font-size:1.2rem;margin-bottom:.3rem}
-.ent p{color:#bcc6dc;font-size:.92rem;max-width:480px}
-
-/* reveal */
-.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
-.d1{transition-delay:.07s}.d2{transition-delay:.14s}.d3{transition-delay:.21s}
-
-/* responsive */
-@media(max-width:980px){
-  .ph-grid{grid-template-columns:1fr;gap:2.4rem}
-  .ph-grid .mock,.ph-grid .hero-card{order:2}
-  .payoff-grid,.split,.split.rev{grid-template-columns:1fr;gap:2.2rem}
-  .split.rev .split-visual{order:0}
-  .payoff-grid .mock,.split .split-visual{order:-1}
-  .steps,.cap-grid{grid-template-columns:1fr 1fr;gap:1rem}
-  .value-grid{grid-template-columns:1fr 1fr}
-  .price-grid{grid-template-columns:1fr;max-width:460px;margin-left:auto;margin-right:auto}
-  .price-card.featured{order:-1}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:1.5rem 2rem}
-  .footer-brand{grid-column:1/-1}
-}
-@media(max-width:760px){
-  .nav-left{gap:1rem}
-  .nav-links{display:none}
-  .nav-actions .btn-ghost{display:none}
-  .mobile-btn{display:block}
-  .nav-links.show{display:flex;flex-direction:column;align-items:flex-start;position:absolute;top:68px;left:0;right:0;background:var(--surface);border-bottom:1px solid var(--border);padding:1.2rem 1.5rem;gap:.4rem;box-shadow:var(--shadow)}
-  .nav-links.show a{padding:.5rem 0;font-size:1rem}
-  .srow,.srow.head{grid-template-columns:1.4fr 1.7fr;gap:.7rem}
-  .srow .size,.srow.head .size-h,.srow .cats,.srow.head .cats-h,.srow .contacts,.srow.head .contacts-h{display:none}
-  .hstep{grid-template-columns:1fr;gap:.7rem}
-}
-@media(max-width:560px){
-  .steps,.cap-grid,.value-grid{grid-template-columns:1fr}
-  .hero-card{margin-top:-4.5rem}
-  .hero-actions,.ph-actions{gap:.8rem}
-  .cta-actions{flex-direction:column}
-  .statcards{grid-template-columns:1fr}
-  .heat{grid-template-columns:repeat(8,1fr)}
-}
-
-</style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Evential", "url": "https://evential.co", "logo": "https://evential.co/favicon.ico", "description": "Evential helps B2B event organizers find sponsors before the event and prove sponsor ROI after it.", "contactPoint": {"@type": "ContactPoint", "email": "contact@evential.co", "contactType": "customer support"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Evential Event Dashboard", "description": "Live event analytics and automated sponsor ROI reports powered by BLE badges.", "brand": {"@type": "Brand", "name": "Evential"}, "offers": {"@type": "Offer", "price": "3.99", "priceCurrency": "USD", "description": "$3.99 per attendee per event, hardware and reports included."}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does the dashboard cost?", "acceptedAnswer": {"@type": "Answer", "text": "The dashboard is free to use. You pay $3.99 per attendee per event, which covers badge hardware, sponsor ROI reports and event analytics. Automations are an optional $500/mo add-on."}}, {"@type": "Question", "name": "Do attendees need to download an app?", "acceptedAnswer": {"@type": "Answer", "text": "No. The smart badge does the work. There's nothing for attendees to install and no behavior change required."}}, {"@type": "Question", "name": "Is attendee data private?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Movement data is anonymous by default \u2014 badge IDs, not personal information. A contact only becomes a lead when an attendee opts in. GDPR and CCPA templates are built in."}}, {"@type": "Question", "name": "How long does setup take?", "acceptedAnswer": {"@type": "Answer", "text": "Hours, not weeks. Badges and sensors ship ahead of time and gateways are placed around the venue. Venue operators can install permanent gateways."}}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat+Alternates:wght@600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="evential.css" />
+<style>#analytics{scroll-margin-top:90px}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Evential", "url": "https://evential.co", "logo": "https://evential.co/favicon.ico", "description": "Evential provides smart-badge hardware and a dashboard that turns events into verified attendance data, live analytics, and sponsor ROI reports.", "contactPoint": {"@type": "ContactPoint", "email": "contact@evential.co", "contactType": "customer support"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Evential Event Dashboard", "description": "Live event analytics, crowd flow and automated sponsor ROI reports powered by smart badges.", "brand": {"@type": "Brand", "name": "Evential"}, "offers": {"@type": "Offer", "price": "3.99", "priceCurrency": "USD", "description": "$3.99 per attendee per event, badge hardware and reports included."}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does the dashboard cost?", "acceptedAnswer": {"@type": "Answer", "text": "The dashboard is free to use. You pay $3.99 per attendee per event, which covers badge hardware, sponsor ROI reports and event analytics."}}, {"@type": "Question", "name": "Do attendees need to download an app?", "acceptedAnswer": {"@type": "Answer", "text": "No. The smart badge does the work. There's nothing for attendees to install and no behavior change required."}}, {"@type": "Question", "name": "Is attendee data private?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Movement data is anonymous by default, badge IDs, not personal information. A contact only becomes a lead when an attendee opts in. Privacy compliance templates are built in."}}, {"@type": "Question", "name": "How long does setup take?", "acceptedAnswer": {"@type": "Answer", "text": "Hours, not weeks. Badges and sensors ship ahead of time and gateways are placed around the venue. Venue operators can install permanent gateways."}}]}</script>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -379,15 +33,14 @@ a:focus-visible,button:focus-visible,.faq-q:focus-visible{outline:2px solid var(
     <div class="nav-left">
       <a href="index.html" class="nav-logo">EVENTIAL</a>
       <ul class="nav-links" id="nav-links">
+        <li><a href="dashboard.html" data-nav="dashboard" class="active">Product</a></li>
         <li><a href="discovery.html" data-nav="discovery">Sponsor Discovery</a></li>
-        <li><a href="dashboard.html" data-nav="dashboard" class="active">Event Dashboard</a></li>
-        <li><a href="event-analytics.html" data-nav="analytics">Analytics</a></li>
+        <li><a href="case-studies.html" data-nav="cases">Case Studies</a></li>
         <li><a href="pricing.html" data-nav="pricing">Pricing</a></li>
       </ul>
     </div>
     <div class="nav-actions">
-      <a href="https://calendly.com/contact-evential/30min" target="_blank" rel="noopener" class="btn btn-ghost" style="padding:.55rem 1rem">Book a demo</a>
-      <a href="https://discovery.evential.co" target="_blank" rel="noopener" class="btn btn-primary" style="padding:.55rem 1.15rem">Find sponsors free</a>
+      <a href="https://calendly.com/contact-evential/30min" target="_blank" rel="noopener" class="btn btn-primary" style="padding:.55rem 1.15rem">Book a demo</a>
       <button class="mobile-btn" id="mobile-btn" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
     </div>
   </div>
@@ -401,8 +54,8 @@ a:focus-visible,button:focus-visible,.faq-q:focus-visible{outline:2px solid var(
       <div class="ph-grid">
         <div>
           <div class="ph-eyebrow">Event Dashboard</div>
-          <h1>Understand your event as it happens — <span class="hl">and prove it after.</span></h1>
-          <p class="ph-sub">The dashboard turns your floor into live signal during the event, then hands each sponsor a report the day after. Free to use; you pay per attendee only when you run it.</p>
+          <h1>See your event as it happens.</h1>
+          <p class="ph-sub">Smart badges and gateway sensors turn your floor into live signal during the event, then hand each sponsor a report the day after. Free to use; you pay per attendee only when you run it.</p>
           <div class="ph-actions">
             <a href="https://calendly.com/contact-evential/30min" target="_blank" rel="noopener" class="btn btn-light">Book a demo <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
             <a href="pricing.html" class="tlink">See pricing <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
@@ -424,28 +77,71 @@ a:focus-visible,button:focus-visible,.faq-q:focus-visible{outline:2px solid var(
   </div>
 </header>
 
-<section>
+<section class="alt-bg">
   <div class="container">
-    <div class="section-head reveal"><div class="eyebrow">What it does</div><h2>One dashboard for the whole event.</h2><p>Capture what happens on the floor, prove ROI to every sponsor, and move the leads straight into your pipeline.</p></div>
-    <div class="value-grid">
-      <div class="value-card reveal d1"><div class="vic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg></div><h3>Live during the event</h3><p>Check-ins, booth traffic and session capacity update in real time, so you can act while it still matters.</p></div>
-      <div class="value-card reveal d2"><div class="vic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div><h3>Sponsor ROI after</h3><p>Each sponsor gets an automated report within a day — leads, dwell time and booth traffic, benchmarked.</p></div>
-      <div class="value-card reveal d3"><div class="vic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg></div><h3>Into your CRM</h3><p>Push qualified leads and outcomes to your pipeline via webhooks, Zapier or Make — no manual export.</p></div>
+    <div class="section-head reveal"><div class="eyebrow">The hardware</div><h2>Two pieces of hardware carry the whole system.</h2><p>Nothing for attendees to install, nothing for your team to babysit during the event.</p></div>
+    <div class="photo-grid">
+      <div class="photo-card reveal d1">
+        <div class="photo-frame"><picture><source srcset="images/badge-nameplate.webp" type="image/webp"><img src="images/badge-nameplate.png" alt="Evential smart badge on a lanyard nameplate" loading="lazy" width="232" height="637"></picture></div>
+        <div class="photo-cap"><b>The smart badge</b><span>A lanyard nameplate or an adhesive sticker on the badge you already print. Every attendee wears one and forgets it's there.</span></div>
+      </div>
+      <div class="photo-card reveal d2">
+        <div class="photo-frame"><picture><source srcset="images/gateway.webp" type="image/webp"><img src="images/gateway.png" alt="Evential gateway sensor with antenna" loading="lazy" width="329" height="870"></picture></div>
+        <div class="photo-cap"><b>The gateway</b><span>Small receivers placed at booths, rooms and the registration desk pick up badge signal and relay it in real time.</span></div>
+      </div>
+      <div class="photo-card reveal d3">
+        <div class="photo-frame" style="background:var(--navy);border-radius:0">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#8fb0ff" stroke-width="1.5"><path d="M3 3v18h18"/><rect x="7" y="10" width="3" height="7" fill="#8fb0ff" stroke="none"/><rect x="13" y="6" width="3" height="11" fill="#7fa2ff" stroke="none"/></svg>
+        </div>
+        <div class="photo-cap"><b>The dashboard</b><span>Signal becomes live attendance and a floor heatmap during the event, then a sponsor report the day after.</span></div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="alt-bg">
+<section id="how">
   <div class="container">
-    <div class="section-head reveal"><div class="eyebrow">During the event</div><h2>The floor, as a live signal.</h2><p>See the rooms filling up, the booths getting traffic, and the sponsor areas being ignored — while there's still time to do something about it.</p></div>
-    <div class="split">
+    <div class="section-head center reveal"><div class="eyebrow">How it works</div><h2>From setup to renewal evidence.</h2></div>
+    <div class="ed-flow reveal d1">
+      <div class="ed-flow-step">
+        <div class="ed-fork-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div>
+        <div class="ed-fork-cap"><b>Set up your event</b>Import your sponsor list and booth map</div>
+      </div>
+      <div class="ed-flow-line"></div>
+      <div class="ed-flow-step">
+        <div class="ed-fork-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+        <div class="ed-fork-cap"><b>Hardware ships to you</b>Badges and gateways set up in hours</div>
+      </div>
+      <div class="ed-flow-line"></div>
+      <div class="ed-flow-step">
+        <div class="ed-fork-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <div class="ed-fork-cap"><b>Go live on the floor</b>Check-ins, traffic, and capacity in real time</div>
+      </div>
+      <div class="ed-flow-line"></div>
+      <div class="ed-flow-step">
+        <div class="ed-fork-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M8 18v-3"/><path d="M12 18v-6"/><path d="M16 18v-4"/></svg></div>
+        <div class="ed-fork-cap"><b>Reports go out, leads go in</b>Sponsors get ROI proof, your CRM gets leads</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt-bg" id="analytics">
+  <div class="container">
+    <div class="section-head reveal"><div class="eyebrow">Event analytics</div><h2>Know what's happening on your floor, while you can still fix it.</h2><p>The same badge data that proves sponsor ROI shows you how the event is actually going. See the bottlenecks, the dead zones and the packed rooms in real time, then act before attendees ever complain.</p></div>
+    <div class="ed-feature-grid">
+      <div class="ed-feature reveal d1"><div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><rect x="7" y="10" width="3" height="7"/><rect x="13" y="6" width="3" height="11"/></svg></div><h3>Session engagement</h3><p>Real attendance, fill rate and drop-off for every session, what lands and what empties the room.</p><div class="moment"><b>In practice:</b> you notice the 2pm workshop is half full while the overflow room next door is packed, and merge them at the break.</div></div>
+      <div class="ed-feature reveal d2"><div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg></div><h3>Crowd behavior &amp; flow</h3><p>How people move between rooms, where they cluster, and which paths jam up between sessions.</p><div class="moment"><b>In practice:</b> the hallway by registration bottlenecks at 9am, so next day you open a second entrance.</div></div>
+      <div class="ed-feature reveal d3"><div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg></div><h3>Live floor heatmap</h3><p>A real gradient heatmap of your venue built from badge density, so brighter areas mean more visitors.</p><div class="moment"><b>In practice:</b> a speaker asks for a live show of hands and sees the result on stage in seconds.</div></div>
+      <div class="ed-feature reveal d1"><div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Safety &amp; compliance</h3><p>Live capacity and overflow alerts, plus built-in privacy compliance templates. Movement data is anonymous by default.</p><div class="moment"><b>In practice:</b> the main hall hits 96% and you get pinged to open the overflow room before the fire code is an issue.</div></div>
+      <div class="ed-feature reveal d2"><div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M19 9l-5 5-4-4-3 3"/></svg></div><h3>Recommended optimizations</h3><p>Concrete fixes ranked by impact, where to move a session, reroute traffic, or relocate a quiet booth.</p><div class="moment"><b>In practice:</b> the dashboard suggests moving a popular talk to the big room tomorrow, and you do.</div></div>
+      <div class="ed-feature reveal d3"><div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg></div><h3>Automations</h3><p>Trigger waitlist releases, overflow routing, sponsor alerts and report delivery automatically when activity crosses a threshold.</p><div class="moment"><b>In practice:</b> when a session frees up 8 seats from no-shows, the waitlist is notified without anyone lifting a finger.</div></div>
+    </div>
+    <div class="split" style="margin-top:clamp(2.5rem,6vw,4rem)">
       <div class="split-text reveal">
-        <div class="flist">
-          <div class="fitem"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><rect x="7" y="10" width="3" height="7"/><rect x="13" y="6" width="3" height="11"/></svg></span><div><b>Session &amp; booth engagement</b><span>Which talks fill up and which booths people actually stop at.</span></div></div>
-          <div class="fitem"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/></svg></span><div><b>Capacity &amp; safety alerts</b><span>Get told the main hall is at 96% before people start lining the hallway.</span></div></div>
-          <div class="fitem"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M19 9l-5 5-4-4-3 3"/></svg></span><div><b>Recommended fixes</b><span>Move a packed session to a bigger room, or reroute traffic toward a quiet sponsor zone.</span></div></div>
-        </div>
-        <a href="event-analytics.html" class="btn btn-ghost">Explore event analytics <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <h3>Better events make sponsors easier to keep.</h3>
+        <p class="lead">Engagement data doubles as renewal evidence. When you can show a sponsor their booth got 2× the traffic because you rerouted the floor toward them, next year sells itself.</p>
+        <a href="case-studies.html" class="btn btn-ghost">See it in a real deployment <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
       <div class="split-visual"><div class="mock reveal d1">
         <div class="mock-bar"><span class="d" style="background:#ff5f57"></span><span class="d" style="background:#febc2e"></span><span class="d" style="background:#28c840"></span><span class="t">dashboard.evential.co · Live</span></div>
@@ -455,42 +151,28 @@ a:focus-visible,button:focus-visible,.faq-q:focus-visible{outline:2px solid var(
   </div>
 </section>
 
-<section id="how">
-  <div class="container">
-    <div class="section-head reveal"><div class="eyebrow">How it works</div><h2>From setup to renewal evidence.</h2><p>Setup takes hours, not weeks. Here's the full lifecycle of running an event on Evential.</p></div>
-    <div class="howto">
-      <div class="hstep reveal d1"><div class="sn"></div><div><h4>Create your event &amp; import sponsors</h4><p>Set up your event in the dashboard and import your sponsor list and booth map so every metric maps to the right sponsor.</p></div></div>
-      <div class="hstep reveal d1"><div class="sn"></div><div><h4>Badges &amp; sensors ship to your venue</h4><p>Lightweight BLE badges and a few gateway sensors arrive before the event and set up in hours. No app for attendees to download.</p></div></div>
-      <div class="hstep reveal d1"><div class="sn"></div><div><h4>Go live</h4><p>During the event, watch check-ins, booth visits, dwell time and session capacity in real time — and get alerts the moment a room or hall hits capacity.</p></div></div>
-      <div class="hstep reveal d1"><div class="sn"></div><div><h4>Reports auto-generate after close</h4><p>Within about a day of the event ending, each sponsor gets a report showing exactly what they got: leads, dwell time, booth traffic and session-to-booth interest.</p></div></div>
-      <div class="hstep reveal d1"><div class="sn"></div><div><h4>Push leads to your CRM</h4><p>Opt-in qualified leads and outcomes flow into your pipeline through webhooks, Zapier or Make — ready for follow-up and renewal conversations.</p></div></div>
-      <div class="hstep reveal d1"><div class="sn"></div><div><h4>Add automations (optional)</h4><p>Subscribe to automated workflows triggered by in-event data — waitlist releases, overflow routing, sponsor alerts and report delivery that run themselves.</p><span class="stip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg> $500 / mo · <a href="pricing.html" style="color:inherit">see pricing</a></span></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="alt-bg">
+<section>
   <div class="container">
     <div class="section-head reveal"><div class="eyebrow">Questions</div><h2>Straight answers.</h2></div>
     <div class="faq-grid">
-      <div class="faq-item reveal d1"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What does the dashboard cost? <svg class="faq-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-a"><div class="faq-a-in">The dashboard is free to use. You pay $3.99 per attendee per event, which covers the badge hardware, sponsor ROI reports and event analytics. Automations are an optional $500/mo add-on. <a href="pricing.html" style="color:var(--blue);text-decoration:none">See pricing →</a></div></div></div>
+      <div class="faq-item reveal d1"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What does the dashboard cost? <svg class="faq-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-a"><div class="faq-a-in">The dashboard is free to use. You pay $3.99 per attendee per event, which covers the badge hardware, sponsor ROI reports and event analytics. <a href="pricing.html">See pricing →</a></div></div></div>
       <div class="faq-item reveal d1"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Do attendees need to download an app? <svg class="faq-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-a"><div class="faq-a-in">No. The smart badge does the work. There's nothing for attendees to install and no behavior change required.</div></div></div>
-      <div class="faq-item reveal d1"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Is attendee data private? <svg class="faq-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-a"><div class="faq-a-in">Yes. Movement data is anonymous by default — badge IDs, not personal information. A contact only becomes a lead when an attendee opts in. GDPR and CCPA templates are built in.</div></div></div>
+      <div class="faq-item reveal d1"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Is attendee data private? <svg class="faq-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-a"><div class="faq-a-in">Yes. Movement data is anonymous by default, badge IDs, not personal information. A contact only becomes a lead when an attendee opts in. Privacy compliance templates are built in.</div></div></div>
       <div class="faq-item reveal d1"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">How long does setup take? <svg class="faq-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-a"><div class="faq-a-in">Hours, not weeks. Badges and sensors ship ahead of time; gateways are placed around the venue and you're live. Venue operators can install permanent gateways so every booked event activates automatically.</div></div></div>
     </div>
   </div>
 </section>
 
-<section class="cta">
+<section class="ed-cta">
   <div class="container">
-    <div class="cta-panel reveal"><div class="inner">
+    <div class="inner reveal">
       <h2>See what your event actually delivered.</h2>
-      <p>Book a 30-minute demo and we'll walk you through a live dashboard and a real sponsor report.</p>
-      <div class="cta-actions">
+      <p>Book a 30 minute demo and we'll walk you through a live dashboard and a real sponsor report.</p>
+      <div class="ed-cta-actions">
         <a href="https://calendly.com/contact-evential/30min" target="_blank" rel="noopener" class="btn btn-light">Book a demo <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
         <a href="discovery.html" class="tlink">or find sponsors free first <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
-    </div></div>
+    </div>
   </div>
 </section>
 
@@ -500,13 +182,14 @@ a:focus-visible,button:focus-visible,.faq-q:focus-visible{outline:2px solid var(
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="nav-logo">EVENTIAL</a>
-        <p>Find sponsors that already fund events like yours — then prove ROI so they renew.</p>
+        <p>Verified event intelligence, live attendance, booth analytics, and sponsor ROI reports for event organizers.</p>
       </div>
       <div class="footer-col">
         <div class="footer-col-title">Product</div>
-        <a href="discovery.html">Sponsor Discovery</a>
         <a href="dashboard.html">Event Dashboard</a>
-        <a href="event-analytics.html">Event analytics</a>
+        <a href="dashboard.html#analytics">Event Analytics</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="discovery.html">Sponsor Discovery</a>
         <a href="pricing.html">Pricing</a>
       </div>
       <div class="footer-col">
@@ -537,9 +220,6 @@ if(nav)window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',win
 const revealObs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');revealObs.unobserve(en.target)}})},{threshold:0.1,rootMargin:'0px 0px -30px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
 
-const countObs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){const el=en.target,target=parseFloat(el.dataset.target),suffix=el.dataset.suffix||'',useSep=el.dataset.separator===',',dur=1400,start=performance.now();function up(now){const p=Math.min((now-start)/dur,1),eased=1-Math.pow(1-p,3);let cur=Math.round(eased*target).toString();if(useSep)cur=cur.replace(/\B(?=(\d{3})+(?!\d))/g,',');el.textContent=cur+suffix;if(p<1)requestAnimationFrame(up)}requestAnimationFrame(up);countObs.unobserve(el)}})},{threshold:0.5});
-document.querySelectorAll('.count-up').forEach(el=>countObs.observe(el));
-
 const mb=document.getElementById('mobile-btn'),nl=document.getElementById('nav-links');
 if(mb&&nl){mb.addEventListener('click',()=>nl.classList.toggle('show'));nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nl.classList.remove('show')))}
 
@@ -547,7 +227,7 @@ function toggleFaq(btn){const item=btn.closest('.faq-item');const open=item.clas
 
 const feedEl=document.getElementById('live-feed');
 if(feedEl){
-  const msgs=[{ic:'green',t:'<b>Badge #0912</b> checked in at East Gate',tm:'now'},{ic:'amber',t:'<b>Booth C-04</b> hit <b>50 visitors</b>',tm:'2s ago'},{ic:'blue',t:'Session <b>"AI in Events"</b> at <b>88% capacity</b>',tm:'5s ago'},{ic:'green',t:'<b>142 leads</b> synced to CRM',tm:'8s ago'},{ic:'amber',t:'<b>Main Hall 96%</b> — overflow routing on',tm:'12s ago'},{ic:'blue',t:'<b>Badge #0623</b> returned to <b>Booth A-12</b>',tm:'15s ago'},{ic:'green',t:'<b>Waitlist released</b> — 8 seats freed',tm:'18s ago'}];
+  const msgs=[{ic:'green',t:'<b>Badge #0912</b> checked in at East Gate',tm:'now'},{ic:'amber',t:'<b>Booth C-04</b> hit <b>50 visitors</b>',tm:'2s ago'},{ic:'blue',t:'Session <b>"AI in Events"</b> at <b>88% capacity</b>',tm:'5s ago'},{ic:'green',t:'<b>142 leads</b> synced to CRM',tm:'8s ago'},{ic:'amber',t:'<b>Main Hall 96%</b>, overflow routing on',tm:'12s ago'},{ic:'blue',t:'<b>Badge #0623</b> returned to <b>Booth A-12</b>',tm:'15s ago'},{ic:'green',t:'<b>Waitlist released</b>, 8 seats freed',tm:'18s ago'}];
   const ic={green:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>',amber:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>',blue:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><rect x="7" y="10" width="3" height="7"/><rect x="13" y="6" width="3" height="11"/></svg>'};
   function render(m){const d=document.createElement('div');d.className='feed-item';d.innerHTML='<div class="feed-ic fi-'+m.ic+'">'+ic[m.ic]+'</div><div class="feed-tx">'+m.t+'</div><div class="feed-tm">'+m.tm+'</div>';feedEl.insertBefore(d,feedEl.firstChild);if(feedEl.children.length>5)feedEl.removeChild(feedEl.lastChild)}
   msgs.slice(0,5).forEach(render);let i=0;
