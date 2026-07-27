@@ -118,6 +118,19 @@ nav.nav-overlay.scrolled .btn-ghost:hover,nav.nav-overlay.menu-open .btn-ghost:h
 .ed-fork.visible .ed-fork-end.live{transition-delay:.7s}
 @media(prefers-reduced-motion:reduce){.ed-fork:not(.visible) .ed-fork-line{transform:none}.ed-fork-branch .bp.live{stroke-dashoffset:0;transition:none}.ed-fork .ed-fork-step,.ed-fork .ed-fork-end{opacity:1;transform:none;transition:none}.ed-fork-end.mute{opacity:.55}}
 
+/* what "verified proof and leads for sponsors" concretely means, reveals below the fork graphic */
+.ed-fork-detail{max-width:600px;margin:3rem auto 0}
+.ed-fork-detail .ed-rows{margin-top:0}
+
+/* attributed citation callout, meant to stand out, not hide as a footnote */
+.ed-source{display:inline-block;max-width:560px;text-align:left;font-size:.95rem;color:var(--text-2);line-height:1.55;margin-top:1rem;padding:.85rem 1.15rem;background:var(--blue-tint);border-left:3px solid var(--blue);border-radius:0 var(--radius-xs) var(--radius-xs) 0}
+.ed-source a{color:var(--blue);font-weight:700;text-decoration:none;border-bottom:1px solid var(--blue-soft-2)}
+.ed-source a:hover{border-bottom-color:var(--blue)}
+
+/* compact hardware pair for the relocated "how it works" section, sized to fit one screen */
+.ed-hw-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;margin-top:2.4rem}
+.ed-hw-grid .photo-card{flex:1 1 260px;max-width:320px}
+
 /* emotional bridge line between sections */
 .ed-bridge{text-align:center;padding:clamp(20px,4vw,40px) 0 clamp(40px,6vw,70px)}
 .ed-bridge p{font-size:clamp(2rem,4.4vw,3.4rem);color:var(--text-3);line-height:1.28;max-width:1020px;margin:0 auto;font-weight:600;letter-spacing:-0.02em;text-wrap:balance}
@@ -224,9 +237,7 @@ nav.nav-overlay.scrolled .btn-ghost:hover,nav.nav-overlay.menu-open .btn-ghost:h
 
 /* large flagship report variant, with a second page peeking behind */
 .ed-report.lg{width:min(620px,100%);padding:clamp(2.4rem,4.4vw,3.5rem);position:relative;z-index:1;margin:0 auto}
-.ed-report.lg.ed-scale-in.visible{transform:rotate(-1.2deg)}
-.ed-report.lg::before{content:'';position:absolute;inset:18px -13px -17px 18px;background:#F6F8FD;border:1px solid var(--border);border-radius:var(--radius-sm);z-index:-1;transform:rotate(.9deg);transform-origin:bottom right;box-shadow:var(--shadow)}
-@media(prefers-reduced-motion:reduce){.ed-report.lg.ed-scale-in,.ed-report.lg.ed-scale-in.visible{opacity:1;transform:rotate(-1.2deg);transition:none}}
+.ed-report.lg::before{content:'';position:absolute;inset:18px -13px -17px 18px;background:#F6F8FD;border:1px solid var(--border);border-radius:var(--radius-sm);z-index:-1;box-shadow:var(--shadow)}
 sti.ed-report.lg .ed-report-top .k{font-size:.82rem}
 .ed-report.lg .ed-report-title{font-size:1.7rem}
 .ed-report.lg .ed-report-row{padding:1.1rem 0}
