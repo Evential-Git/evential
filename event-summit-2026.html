@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Intercollegiate Entrepreneurship Summit, Measured | Evential</title>
+<meta name="description" content="Our first live deployment: shared public Wi-Fi, no advance testing, a four-hour network outage, and what we changed after it." />
+<meta name="theme-color" content="#0B1B4D" />
+<meta name="robots" content="index, follow" />
+<meta property="og:title" content="Intercollegiate Entrepreneurship Summit, Measured | Evential" />
+<meta property="og:description" content="Our first live deployment, and what a four-hour network outage taught us." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://evential.co/event-summit-2026" />
+<meta property="og:image" content="https://evential.co/images/summit-booth-1200.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="canonical" href="https://evential.co/event-summit-2026" />
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat+Alternates:wght@600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="evential.css" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Intercollegiate Entrepreneurship Summit, Measured","description":"An engineering note about Evential's first live deployment and a four-hour network outage.","image":"https://evential.co/images/summit-booth-1200.webp","datePublished":"2026-03-06","dateModified":"2026-08-27","author":{"@type":"Organization","name":"Evential","url":"https://evential.co/"},"publisher":{"@type":"Organization","name":"Evential","url":"https://evential.co/"},"about":{"@type":"Event","name":"Intercollegiate Entrepreneurship Summit","startDate":"2026-02-27","location":{"@type":"Place","name":"16Tech Innovation District","address":"Indianapolis, IN"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type":"ListItem","position":1,"name":"Evential","item":"https://evential.co/"},{"@type":"ListItem","position":2,"name":"Results","item":"https://evential.co/events-measured"},{"@type":"ListItem","position":3,"name":"Intercollegiate Entrepreneurship Summit","item":"https://evential.co/event-summit-2026"}]}</script>
+</head>
+<body class="engineering-note-page">
+<a href="#main-content" class="skip-link">Skip to content</a>
+<nav id="main-nav">
+  <div class="nav-inner">
+    <div class="nav-left">
+      <a href="index.html" class="nav-logo">EVENTIAL</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#system">How it works</a></li>
+        <li><a href="events-measured.html" data-nav="events" class="active">Results</a></li>
+        <li><a href="discovery.html" data-nav="discovery">Sponsor Discovery</a></li>
+        <li><a href="pricing.html" data-nav="pricing">Pricing</a></li>
+        <li><a href="vision.html" data-nav="vision">Vision</a></li>
+      </ul>
+    </div>
+    <div class="nav-actions">
+      <a href="https://calendly.com/contact-evential/30min" target="_blank" rel="noopener" class="btn btn-primary" style="padding:.55rem 1.15rem" data-cta="nav">Plan event coverage</a>
+      <button class="mobile-btn" id="mobile-btn" aria-label="Open menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div>
+</nav>
+
+<main id="main-content">
+<nav class="event-breadcrumb" aria-label="Breadcrumb"><div class="container"><ol><li><a href="events-measured.html">Results</a></li><li aria-current="page">Intercollegiate Entrepreneurship Summit</li></ol></div></nav>
+
+<header class="page-hero engineering-hero">
+  <div class="container">
+    <div class="ph-panel light engineering-hero-panel">
+      <div class="engineering-hero-grid">
+        <div>
+          <div class="ph-eyebrow">Engineering note · first deployment</div>
+          <h1>The deployment that changed how we build.</h1>
+          <p class="ph-sub">16Tech Innovation District, Indianapolis, IN &middot; February 27, 2026 &middot; 175 registered, 106 attended &middot; five gateways, four rooms</p>
+        </div>
+        <picture class="engineering-hero-photo"><source media="(max-width: 640px)" srcset="images/summit-booth-640.webp"><source srcset="images/summit-booth-1200.webp" type="image/webp"><img src="images/summit-booth-1200.webp" alt="An exhibitor speaking with an attendee at the Intercollegiate Entrepreneurship Summit" width="1200" height="800"></picture>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section style="padding-top:clamp(20px,4vw,32px)">
+  <div class="container" style="max-width:820px">
+    <p class="ev-result reveal">This deployment ran on the venue's own shared public Wi-Fi with no advance testing. Four hours in, the network rate-limited our uploads and three of five gateways stopped reporting. It is why every deployment since ships with its own connectivity.</p>
+
+    <div class="ev-note reveal d1" style="margin:2rem 0">
+      <p><strong>What actually happened.</strong> From roughly 9:15 AM to 1:15 PM, three of the five gateways could not upload to the database. Two gateways stayed online throughout. The badges themselves kept working, a working badge logged a reading roughly every 4.6 seconds, but for four hours, most of that signal had nowhere to go.</p>
+    </div>
+
+    <div class="ev-results reveal d2">
+      <div class="ev-result-row"><span class="num">175</span><span class="desc">registered, 106 attended. The gap between the two is the story on this page as much as the network is.</span></div>
+      <div class="ev-result-row"><span class="num">4.6s</span><span class="desc">average signal frequency from a working badge, when its gateway was online.</span></div>
+      <div class="ev-result-row"><span class="num">4 hrs</span><span class="desc">three of five gateways were offline, on the venue's shared public network.</span></div>
+    </div>
+    <div class="ev-scope">First live deployment. No advance venue testing, no dedicated connectivity. Every deployment since carries its own.</div>
+  </div>
+</section>
+
+<section class="alt-bg">
+  <div class="container" style="max-width:820px">
+    <div class="section-head reveal">
+      <div class="eyebrow">What still got measured</div>
+      <h2>Two findings, from the gateways that stayed up.</h2>
+    </div>
+    <div class="ed-rows reveal d1" style="margin-top:2rem">
+      <div class="ed-row"><b>Travel distance predicted no-shows</b><span>Registrants who did not attend had travelled further on average: 61.8 miles, against 50.4 miles for those who showed up. Worth building into catering and room-sizing decisions.</span></div>
+      <div class="ed-row"><b>Two rooms, wildly uneven</b><span>At 3:20 PM, one session room held 80 people and the room next door held none. A pattern nobody had ever quantified before.</span></div>
+    </div>
+    <p class="ev-source" style="margin-top:1.6rem">39% of registrants did not show, and roughly $507 of catering was ordered for people who never arrived. Small on its own; the math gets bigger at scale.</p>
+  </div>
+</section>
+
+<section class="ed-cta">
+  <div class="container">
+    <div class="inner reveal">
+      <h2>See what a full deployment measures.</h2>
+      <p>NCAEC ran with dedicated connectivity and no outage, across ten booths and two rooms.</p>
+      <div class="ed-cta-actions">
+        <a href="event-ncaec-2026.html" class="btn btn-light" data-cta="summit_closing">Read the NCAEC result <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">EVENTIAL</a>
+        <p>The measurement layer for real-world marketing, beginning with trade show floors.</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Product</div>
+        <a href="method.html">Method</a>
+        <a href="events-measured.html">Results</a>
+        <a href="discovery.html">Sponsor Discovery</a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Company</div>
+        <a href="vision.html">Ten-year vision</a>
+        <a href="mailto:contact@evential.co">Contact</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="mailto:contact@evential.co">Investors</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Connect</div>
+        <a href="https://www.linkedin.com/company/eventialco/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://x.com/eventialco" target="_blank" rel="noopener">X (Twitter)</a>
+        <a href="https://calendly.com/contact-evential/30min" target="_blank" rel="noopener">Plan event coverage</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2026 Evential, LLC. All rights reserved.</div>
+      <div class="footer-legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="mailto:contact@evential.co">contact@evential.co</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js" defer></script>
+</body>
+</html>

@@ -3,14 +3,15 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0B1B4D" />
 <title>Sponsor Discovery: Free Sponsor Search Tool | Evential</title>
-<meta name="description" content="Search a free database of companies that already sponsor events like yours, ranked by fit, with sponsorship history and contact routes. A free companion tool from the makers of the Evential dashboard." />
+<meta name="description" content="Search a free database of companies that already sponsor events like yours, ranked by fit, with sponsorship history and contacts included." />
 <meta name="robots" content="index, follow" />
 <meta property="og:title" content="Sponsor Discovery: Free Sponsor Search Tool | Evential" />
 <meta property="og:description" content="Search a free database of companies that already sponsor events like yours, ranked by fit, with contacts included." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://evential.co/discovery" />
-<meta property="og:image" content="https://evential.co/og-image.png" />
+<meta property="og:image" content="https://evential.co/og-image.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -21,26 +22,28 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat+Alternates:wght@600;700;800&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="evential.css" />
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Evential", "url": "https://evential.co", "logo": "https://evential.co/favicon.ico", "description": "Evential provides smart-badge hardware and a dashboard that turns events into verified attendance data, live analytics, and sponsor ROI reports.", "contactPoint": {"@type": "ContactPoint", "email": "contact@evential.co", "contactType": "customer support"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Evential", "url": "https://evential.co", "logo": "https://evential.co/favicon.ico", "description": "Evential measures what happened on trade show floors and gives every exhibitor its own result, computed to one published rule.", "contactPoint": {"@type": "ContactPoint", "email": "contact@evential.co", "contactType": "customer support"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Evential Sponsor Discovery", "description": "Free searchable database of companies that already sponsor events like yours, ranked by fit, with history and contacts.", "brand": {"@type": "Brand", "name": "Evential"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free to search; $1 per row to export."}}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do I need an account to search?", "acceptedAnswer": {"@type": "Answer", "text": "You can search, rank and view profiles for free. You'll only be asked to sign in when you want to save or export a list."}}, {"@type": "Question", "name": "What does export cost?", "acceptedAnswer": {"@type": "Answer", "text": "Export is $1 per row, which includes the full set of data columns and exhaustive detail for each company. You only pay for the rows you export."}}, {"@type": "Question", "name": "Where does the sponsor data come from?", "acceptedAnswer": {"@type": "Answer", "text": "From public sources, event websites, sponsor pages, press releases and company sites, refreshed regularly. Where a detail is modeled rather than verified, the tool labels it."}}, {"@type": "Question", "name": "Is Discovery part of the Event Dashboard?", "acceptedAnswer": {"@type": "Answer", "text": "No, it's a separate, free standalone tool. Many organizers use it just to build a sponsor list, with no dashboard or hardware involved."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do I need an account to search?","acceptedAnswer":{"@type":"Answer","text":"You can search, rank and view profiles for free. Sign-in is required to save or export a list."}},{"@type":"Question","name":"What does export cost?","acceptedAnswer":{"@type":"Answer","text":"Export is $1 per row. You pay only for rows you export."}},{"@type":"Question","name":"Where does the sponsor data come from?","acceptedAnswer":{"@type":"Answer","text":"Public sources such as event websites, sponsor pages, press releases and company sites. Modeled details are labeled."}},{"@type":"Question","name":"Is Discovery part of the Event Dashboard?","acceptedAnswer":{"@type":"Answer","text":"No. Sponsor Discovery is a separate free tool and does not require event coverage."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type":"ListItem","position":1,"name":"Evential","item":"https://evential.co/"},{"@type":"ListItem","position":2,"name":"Sponsor Discovery","item":"https://evential.co/discovery"}]}</script>
 </head>
-<body>
+<body class="discovery-page">
 <a href="#main-content" class="skip-link">Skip to content</a>
 <nav id="main-nav">
   <div class="nav-inner">
     <div class="nav-left">
       <a href="index.html" class="nav-logo">EVENTIAL</a>
       <ul class="nav-links" id="nav-links">
-        <li><a href="dashboard.html" data-nav="dashboard">Product</a></li>
+        <li><a href="index.html#system">How it works</a></li>
+        <li><a href="events-measured.html" data-nav="events">Results</a></li>
         <li><a href="discovery.html" data-nav="discovery" class="active">Sponsor Discovery</a></li>
-        <li><a href="case-studies.html" data-nav="cases">Case Studies</a></li>
         <li><a href="pricing.html" data-nav="pricing">Pricing</a></li>
+        <li><a href="vision.html" data-nav="vision">Vision</a></li>
       </ul>
     </div>
     <div class="nav-actions">
-      <a href="https://calendly.com/contact-evential/30min" target="_blank" rel="noopener" class="btn btn-primary" style="padding:.55rem 1.15rem">Book a demo</a>
-      <button class="mobile-btn" id="mobile-btn" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+      <a href="https://calendly.com/contact-evential/30min" target="_blank" rel="noopener" class="btn btn-primary" style="padding:.55rem 1.15rem">Plan event coverage</a>
+      <button class="mobile-btn" id="mobile-btn" aria-label="Open menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
     </div>
   </div>
 </nav>
@@ -52,9 +55,9 @@
     <div class="ph-panel with-card">
       <div class="ph-grid">
         <div>
-          <div class="ph-eyebrow">Free tool, from the makers of the Evential dashboard</div>
+          <div class="ph-eyebrow">A free companion tool</div>
           <h1>Find the companies <span class="hl">already sponsoring</span> events like yours.</h1>
-          <p class="ph-sub">Stop cold-emailing companies that have never sponsored anything. Search a database of real sponsors, ranked by how well they fit your event, with the history and contacts to back it up. Free, standalone, no dashboard required.</p>
+          <p class="ph-sub">Stop cold-emailing companies that have never sponsored anything. Search a database of real sponsors, ranked by how well they fit your event, with the history and contacts to back it up. Discovery finds them; measurement is how you keep them. Free, standalone, no coverage required.</p>
           <div class="ph-actions">
             <a href="https://discovery.evential.co" target="_blank" rel="noopener" class="btn btn-light">Open Sponsor Discovery <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
             <a href="#how" class="tlink">See how it works <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
@@ -66,32 +69,41 @@
     <div class="hero-card reveal">
       <div class="hc-top">
         <div class="hc-top-l"><span class="hc-count">14 sponsors</span><span class="chip-info">Ranked for your event</span></div>
-        <span class="hc-eg">Example results</span>
+        <span class="hc-eg">Example results, categories shown in place of company names</span>
       </div>
       <div class="srow head"><div>Company</div><div>Why they fit your event</div><div class="size-h">Size fit</div><div class="cats-h">Categories</div><div class="contacts-h">Contacts</div></div>
       <div class="srow">
-        <div class="co"><span class="co-logo" style="background:#2f7d6b">CG</span><div><div class="co-name">CloudGrid</div><div class="co-sub">Infrastructure</div></div></div>
-        <div class="sig"><div class="sig-t">Sponsors developer &amp; AI events</div><div class="sig-d">8 similar events · active in 2026</div><span class="match"><span class="pip"></span> Strong match · 87</span></div>
+        <div class="co"><span class="co-logo" style="background:#2f7d6b" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2 5 13h6l-1 9 9-13h-6V2Z"/></svg></span><div><div class="co-name">A regional electrical distributor</div><div class="co-sub">Category example</div></div></div>
+        <div class="sig"><div class="sig-t">Sponsors state contractor associations</div><div class="sig-d">8 similar events &middot; active in 2026</div><span class="match"><span class="pip"></span> Strong match</span></div>
         <div class="size"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="12" width="4" height="9"/><rect x="10" y="7" width="4" height="14"/><rect x="17" y="3" width="4" height="18"/></svg> 1K–5K</div>
-        <div class="cats"><span class="tag">AI / Infra</span><span class="tag">Dev Tools</span></div>
+        <div class="cats"><span class="tag">Distribution</span><span class="tag">Electrical</span></div>
         <div class="contacts">3 contacts</div>
       </div>
       <div class="srow">
-        <div class="co"><span class="co-logo" style="background:#3a4ba8">DF</span><div><div class="co-name">DataForge</div><div class="co-sub">Data platform</div></div></div>
-        <div class="sig"><div class="sig-t">Strong enterprise tech sponsor</div><div class="sig-d">14 similar events · active in 2026</div><span class="match"><span class="pip"></span> Strong match · 91</span></div>
+        <div class="co"><span class="co-logo" style="background:#3a4ba8" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M14.5 6.5a5 5 0 0 0-6.7 6.7L3 18l3 3 4.8-4.8a5 5 0 0 0 6.7-6.7l-3 3-3-3 3-3Z"/></svg></span><div><div class="co-name">A national tool manufacturer</div><div class="co-sub">Category example</div></div></div>
+        <div class="sig"><div class="sig-t">Exhibits at trade shows in the building trades</div><div class="sig-d">14 similar events &middot; active in 2026</div><span class="match"><span class="pip"></span> Strong match</span></div>
         <div class="size"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="12" width="4" height="9"/><rect x="10" y="7" width="4" height="14"/><rect x="17" y="3" width="4" height="18"/></svg> 2K–20K</div>
-        <div class="cats"><span class="tag">IT Mgmt</span><span class="tag">Analytics</span></div>
+        <div class="cats"><span class="tag">Tools</span><span class="tag">Safety</span></div>
         <div class="contacts">4 contacts</div>
       </div>
     </div>
   </div>
 </header>
 
+<section class="sponsor-loop-strip" aria-label="The Evential sponsorship loop">
+  <div class="container">
+    <div class="sponsor-loop-intro"><span class="eyebrow">One sponsorship loop</span><p>Discovery is the beginning. Measurement is how the next decision gets better.</p></div>
+    <div class="sponsor-loop">
+      <div><span>01</span><b>Find likely sponsors</b></div><i>→</i><div><span>02</span><b>Reach the right person</b></div><i>→</i><div><span>03</span><b>Measure the activation</b></div><i>→</i><div><span>04</span><b>Prove and renew</b></div>
+    </div>
+  </div>
+</section>
+
 <section>
   <div class="container">
-    <div class="section-head reveal"><div class="eyebrow">Why it's different</div><h2>A shortlist built from real sponsorship history.</h2><p>LinkedIn tells you a company exists. Discovery tells you whether they sponsor events like yours, at what size, and who actually says yes.</p></div>
+    <div class="section-head reveal"><div class="eyebrow">Why it's different</div><h2>Find who actually says yes.</h2><p>LinkedIn tells you a company exists. Discovery shows you which companies already sponsor events like yours, and who actually reviews sponsorships.</p></div>
     <div class="ed-feature-grid">
-      <div class="ed-feature reveal d1"><div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div><h3>They already say yes</h3><p>Every company in the database has a real sponsorship history. You start warm, not cold.</p></div>
+      <div class="ed-feature reveal d1"><div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div><h3>They already say yes</h3><p>Start with companies that have already sponsored events like yours, not a blank prospect list.</p></div>
       <div class="ed-feature reveal d2"><div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><h3>Ranked for your event</h3><p>A match score from category, location and audience-size fit, strongest matches first.</p></div>
       <div class="ed-feature reveal d3"><div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg></div><h3>Contacts that matter</h3><p>Partnership, events and field-marketing routes for the teams that approve sponsorships.</p></div>
     </div>
@@ -112,15 +124,15 @@
         <a href="https://discovery.evential.co" target="_blank" rel="noopener" class="btn btn-primary">Try it free <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
       <div class="split-visual"><div class="mock reveal d1">
-        <div class="mock-bar"><span class="d" style="background:#ff5f57"></span><span class="d" style="background:#febc2e"></span><span class="d" style="background:#28c840"></span><span class="t">discovery.evential.co · profile</span></div>
+        <div class="mock-bar"><span class="d" style="background:#ff5f57"></span><span class="d" style="background:#febc2e"></span><span class="d" style="background:#28c840"></span><span class="t">discovery.evential.co &middot; example profile</span></div>
         <div class="mock-body">
-          <div class="profile-head"><span class="lg" style="background:#2f7d6b">CG</span><div><div class="nm">CloudGrid</div><div class="role">Sponsors developer &amp; AI events</div></div></div>
+          <div class="profile-head"><span class="lg" style="background:#2f7d6b" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2 5 13h6l-1 9 9-13h-6V2Z"/></svg></span><div><div class="nm">A regional electrical distributor</div><div class="role">Sponsors state contractor associations</div></div></div>
           <div class="statcards">
             <div class="statcard"><div class="l">Events sponsored</div><div class="v">8</div><div class="s">high activity</div></div>
             <div class="statcard"><div class="l">Typical size</div><div class="v">1K–5K</div><div class="s">attendees</div></div>
-            <div class="statcard"><div class="l">Match</div><div class="v" style="color:var(--blue)">87</div><div class="s">strong</div></div>
+            <div class="statcard"><div class="l">Match</div><div class="v" style="color:var(--blue)">Strong</div><div class="s">fit for your event</div></div>
           </div>
-          <div class="bars"><div class="bar soft" style="height:8%"></div><div class="bar soft" style="height:8%"></div><div class="bar" style="height:34%"></div><div class="bar" style="height:62%"></div><div class="bar" style="height:62%"></div><div class="bar" style="height:96%"></div></div>
+          <div class="bars"><div class="bar soft" style="height:6%"></div><div class="bar soft" style="height:11%"></div><div class="bar" style="height:29%"></div><div class="bar" style="height:71%"></div><div class="bar" style="height:58%"></div><div class="bar" style="height:96%"></div></div>
           <div class="barlabels"><span>'21</span><span>'22</span><span>'23</span><span>'24</span><span>'25</span><span>'26</span></div>
           <div class="crow"><span class="cic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg></span><div><div class="cn">Partnerships team</div><div class="ce">Sponsorship packages &amp; fit</div></div></div>
         </div>
@@ -136,8 +148,8 @@
 <section class="ed-band slim">
   <div class="container">
     <div class="reveal">
-      <h2>A profile ends with a real person you can email.</h2>
-      <p>Every match comes with the partnerships or events contact who actually reviews sponsorship requests, not a generic info inbox.</p>
+      <h2>A real person you can email.</h2>
+      <p>Every result includes the best contact we can find for the team that actually reviews sponsorships.</p>
     </div>
   </div>
 </section>
@@ -169,15 +181,15 @@
     <div class="split" style="margin-top:0">
       <div class="split-text reveal">
         <div class="eyebrow">After the event</div>
-        <h3>Once your sponsors are locked in, prove what they got.</h3>
-        <p class="lead">Discovery finds the sponsors. The Event Dashboard is where you check attendees in, capture live engagement, and send every sponsor a report worth renewing over.</p>
+        <h3>Once sponsors are booked, prove what happened.</h3>
+        <p class="lead">The Event Dashboard measures traffic, dwell, return visits, and qualified leads, then gives every sponsor a report with their own name on it.</p>
         <a href="dashboard.html" class="btn btn-ghost">See the Event Dashboard <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
       <div class="split-visual"><div class="mock reveal d1">
-        <div class="mock-bar"><span class="d" style="background:#ff5f57"></span><span class="d" style="background:#febc2e"></span><span class="d" style="background:#28c840"></span><span class="t">Sponsor report · DataForge</span></div>
+        <div class="mock-bar"><span class="d" style="background:#ff5f57"></span><span class="d" style="background:#febc2e"></span><span class="d" style="background:#28c840"></span><span class="t">Sponsor report &middot; Milwaukee Tool, NCAEC 2026</span></div>
         <div class="mock-body">
-          <div class="rep-head"><div class="who"><span class="lg" style="background:#3a4ba8">DF</span><div><div class="nm">DataForge · Gold sponsor</div><div class="role">DevTools Week 2026</div></div></div><span class="rep-sent">Sent 6 hrs after close</span></div>
-          <div class="statcards"><div class="statcard"><div class="l">Qualified leads</div><div class="v" style="color:var(--green)">142</div><div class="s">opt-in</div></div><div class="statcard"><div class="l">Avg dwell</div><div class="v">4m 12s</div><div class="s">+38% vs avg</div></div><div class="statcard"><div class="l">Booth visits</div><div class="v">638</div><div class="s">2.1× target</div></div></div>
+          <div class="rep-head"><div class="who"><span class="lg" style="background:#3a4ba8">MT</span><div><div class="nm">Milwaukee Tool</div><div class="role">NCAEC Trade Show and Convention</div></div></div><span class="rep-sent">Generated 2026&#8209;08&#8209;12</span></div>
+          <div class="statcards"><div class="statcard"><div class="l">Booth score</div><div class="v" style="color:var(--green)">99</div><div class="s">out of 100</div></div><div class="statcard"><div class="l">Avg dwell</div><div class="v">8m 50s</div><div class="s">event avg 4m 18s</div></div><div class="statcard"><div class="l">Qualified leads</div><div class="v">60</div><div class="s">47 named</div></div></div>
         </div>
       </div></div>
     </div>
@@ -191,7 +203,7 @@
       <div class="faq-item reveal d1"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Do I need an account to search? <svg class="faq-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-a"><div class="faq-a-in">You can search, rank and view profiles for free. You'll only be asked to sign in when you want to save or export a list.</div></div></div>
       <div class="faq-item reveal d1"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What does export cost? <svg class="faq-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-a"><div class="faq-a-in">Export is $1 per row, which includes the full set of data columns and exhaustive detail for each company. You only pay for the rows you export. <a href="pricing.html">See pricing →</a></div></div></div>
       <div class="faq-item reveal d1"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Where does the sponsor data come from? <svg class="faq-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-a"><div class="faq-a-in">From public sources, event websites, sponsor pages, press releases and company sites, refreshed regularly. Where a detail is modeled rather than directly verified, the tool labels it so you know what you're looking at.</div></div></div>
-      <div class="faq-item reveal d1"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Is Discovery part of the Event Dashboard? <svg class="faq-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-a"><div class="faq-a-in">No, it's a separate, free standalone tool. Many organizers use it just to build a sponsor list, with no dashboard or hardware involved. <a href="dashboard.html">Learn about the dashboard →</a></div></div></div>
+      <div class="faq-item reveal d1"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Is Discovery part of the Event Dashboard? <svg class="faq-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-a"><div class="faq-a-in">No. It is a separate free tool. You can build sponsor lists without buying event coverage. <a href="dashboard.html">See the Event Dashboard →</a></div></div></div>
     </div>
   </div>
 </section>
@@ -215,18 +227,19 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="nav-logo">EVENTIAL</a>
-        <p>Verified event intelligence, live attendance, booth analytics, and sponsor ROI reports for event organizers.</p>
+        <p>The measurement layer for real-world marketing, beginning with trade show floors.</p>
       </div>
       <div class="footer-col">
         <div class="footer-col-title">Product</div>
-        <a href="dashboard.html">Event Dashboard</a>
-        <a href="dashboard.html#analytics">Event Analytics</a>
-        <a href="case-studies.html">Case Studies</a>
+        <a href="method.html">Method</a>
+        <a href="events-measured.html">Results</a>
         <a href="discovery.html">Sponsor Discovery</a>
         <a href="pricing.html">Pricing</a>
+        <a href="dashboard.html">Floor Measurement</a>
       </div>
       <div class="footer-col">
         <div class="footer-col-title">Company</div>
+        <a href="vision.html">Ten-year vision</a>
         <a href="mailto:contact@evential.co">Contact</a>
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
@@ -236,7 +249,7 @@
         <div class="footer-col-title">Connect</div>
         <a href="https://www.linkedin.com/company/eventialco/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://x.com/eventialco" target="_blank" rel="noopener">X (Twitter)</a>
-        <a href="https://calendly.com/contact-evential/30min" target="_blank" rel="noopener">Book a demo</a>
+        <a href="https://calendly.com/contact-evential/30min" target="_blank" rel="noopener">Plan event coverage</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -246,19 +259,8 @@
   </div>
 </footer>
 
-<script>
-const nav=document.getElementById('main-nav');
-if(nav)window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>40)},{passive:true});
+<script src="site.js" defer></script>
 
-const revealObs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');revealObs.unobserve(en.target)}})},{threshold:0.1,rootMargin:'0px 0px -30px 0px'});
-document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
-
-const mb=document.getElementById('mobile-btn'),nl=document.getElementById('nav-links');
-if(mb&&nl){mb.addEventListener('click',()=>nl.classList.toggle('show'));nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nl.classList.remove('show')))}
-
-function toggleFaq(btn){const item=btn.closest('.faq-item');const open=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(el=>{el.classList.remove('open');el.querySelector('.faq-q').setAttribute('aria-expanded','false')});if(!open){item.classList.add('open');btn.setAttribute('aria-expanded','true')}}
-</script>
-<script>window.addEventListener('load',function(){setTimeout(function(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-G7FL21YMQC';s.async=true;document.head.appendChild(s)},2000)});window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-G7FL21YMQC');</script>
 
 </body>
 </html>
