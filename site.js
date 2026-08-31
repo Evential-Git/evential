@@ -70,77 +70,38 @@ window.toggleFaq=function(btn){
   if(!open){item.classList.add('open');btn.setAttribute('aria-expanded','true')}
 };
 
-/* analytics, deferred off the critical path but not hidden behind a magic 2s wait */
-window.addEventListener('load',function(){
-  setTimeout(function(){
-    var s=document.createElement('script');
-    s.src='https://www.googletagmanager.com/gtag/js?id=G-G7FL21YMQC';s.async=true;
-    document.head.appendChild(s);
-  },400);
-});
-window.dataLayer=window.dataLayer||[];
-function gtag(){dataLayer.push(arguments)}
-gtag('js',new Date());gtag('config','G-G7FL21YMQC');
-
-/* ---- conversion instrumentation ----
-   Without these, "did the rebuild work" has no answer. Every CTA carries a
-   data-cta naming its position, so position and conversion can be compared. */
-
-document.addEventListener('click',function(e){
-  var el=e.target.closest('[data-cta]');
-  if(!el)return;
-  var loc=el.dataset.cta,label=(el.textContent||'').trim().slice(0,60);
-  gtag('event','cta_click',{location:loc,label:label,page:location.pathname});
-
-  var href=el.getAttribute('href')||'';
-  if(href.indexOf('calendly.com')>-1){
-    gtag('event','calendly_open',{source_page:location.pathname,position:loc});
-  }else if(/\.pdf($|\?)/i.test(href)){
-    gtag('event','pdf_download',{asset:href.split('/').pop(),position:loc});
-  }else if(href.indexOf('discovery.evential.co')>-1){
-    gtag('event','discovery_open',{source_page:location.pathname});
-  }
-});
-
-/* email capture: fires on submit, before the form navigates away */
-document.querySelectorAll('form[action*="formspree"]').forEach(function(f){
-  f.addEventListener('submit',function(){
-    gtag('event','email_capture',{source_page:location.pathname,offer:'ncaec_report'});
-  });
-});
-
-/* Calendly posts a message when a booking actually completes. Without this,
-   a click and a booking are indistinguishable. */
-window.addEventListener('message',function(e){
-  if(!e.data||typeof e.data!=='object')return;
-  if(e.data.event==='calendly.event_scheduled'){
-    gtag('event','calendly_booked',{source_page:location.pathname});
-  }
-});
-
-/* did the visitor actually reach the proof? */
-var proofEl=document.querySelector('#proof,.ev-results');
-if(proofEl){
-  var po=new IntersectionObserver(function(entries){
-    entries.forEach(function(en){
-      if(en.isIntersecting){
-        gtag('event','proof_view',{page:location.pathname});
-        po.disconnect();
-      }
+/* legal-document scrollspy: keep the desktop contents rail tied to the
+   section currently being read. The policy remains fully usable without JS. */
+var legalToc=document.querySelector('.legal-toc');
+if(legalToc){
+  var legalLinks=Array.from(legalToc.querySelectorAll('a[href^="#"]'));
+  var legalSections=legalLinks.map(function(link){
+    return document.getElementById(link.getAttribute('href').slice(1));
+  }).filter(Boolean);
+  var legalFrame=0;
+  function updateLegalToc(){
+    legalFrame=0;
+    var marker=window.scrollY+Math.min(180,window.innerHeight*.28);
+    var current=legalSections[0];
+    legalSections.forEach(function(section){
+      if(section.offsetTop<=marker)current=section;
     });
-  },{threshold:0.4});
-  po.observe(proofEl);
+    if(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-8){
+      current=legalSections[legalSections.length-1];
+    }
+    legalLinks.forEach(function(link){
+      var active=current&&link.getAttribute('href')==='#'+current.id;
+      if(active)link.setAttribute('aria-current','location');
+      else link.removeAttribute('aria-current');
+    });
+  }
+  function queueLegalToc(){
+    if(!legalFrame)legalFrame=requestAnimationFrame(updateLegalToc);
+  }
+  window.addEventListener('scroll',queueLegalToc,{passive:true});
+  window.addEventListener('resize',queueLegalToc);
+  legalLinks.forEach(function(link){link.addEventListener('click',function(){requestAnimationFrame(updateLegalToc)})});
+  updateLegalToc();
 }
-
-/* tag Calendly links so bookings attribute back to a page and a position */
-document.querySelectorAll('a[href*="calendly.com"]').forEach(function(a){
-  var u;
-  try{ u=new URL(a.href); }catch(err){ return; }
-  if(u.searchParams.get('utm_source'))return;
-  u.searchParams.set('utm_source','evential.co');
-  u.searchParams.set('utm_medium','cta');
-  u.searchParams.set('utm_content',(location.pathname.replace(/^\/|\.html$/g,'')||'home')+'-'+(a.dataset.cta||'unknown'));
-  a.href=u.toString();
-});
 
 })();
