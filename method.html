@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Measurement Rule: QVS-1 and EI-1 | Evential</title>
+<meta name="description" content="How Evential defines a qualified lead and computes booth engagement: QVS-1, EI-1, limitations, corrections and the dispute process." />
+<meta name="theme-color" content="#0B1B4D" />
+<meta name="robots" content="index, follow" />
+<meta property="og:title" content="The Measurement Rule: QVS-1 and EI-1 | Evential" />
+<meta property="og:description" content="What counts as a qualified lead, how booth engagement is weighted, and how to dispute a number. Published in full." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://evential.co/method" />
+<meta property="og:image" content="https://evential.co/images/og-image.jpg?v=20260828" />
+<meta property="og:image:alt" content="Evential: Give every exhibitor a reason to come back." />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://evential.co/images/og-image.jpg?v=20260828" />
+<meta name="twitter:image:alt" content="Evential: Give every exhibitor a reason to come back." />
+<meta name="twitter:title" content="The Measurement Rule: QVS-1 and EI-1 | Evential" />
+<meta name="twitter:description" content="What counts as a qualified lead, how booth engagement is weighted, and how to dispute a number." />
+<link rel="canonical" href="https://evential.co/method" />
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Montserrat+Alternates:wght@600;700;800&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,600;1,8..60,400&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="evential.css" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"The Measurement Rule: QVS-1 and EI-1","description":"The published method Evential uses to define qualified leads and compute booth engagement.","image":"https://evential.co/images/og-image.jpg","datePublished":"2026-08-12","dateModified":"2026-08-12","author":{"@type":"Organization","name":"Evential","url":"https://evential.co/"},"publisher":{"@type":"Organization","name":"Evential","url":"https://evential.co/"},"about":{"@type":"Thing","name":"Qualified Visit Standard"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type":"ListItem","position":1,"name":"Evential","item":"https://evential.co/"},{"@type":"ListItem","position":2,"name":"Method","item":"https://evential.co/method"}]}</script>
+</head>
+<body class="method-page">
+<a href="#main-content" class="skip-link">Skip to content</a>
+<nav id="main-nav">
+  <div class="nav-inner">
+    <div class="nav-left">
+      <a href="index.html" class="nav-logo">EVENTIAL</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#system">How it works</a></li>
+        <li><a href="events-measured.html" data-nav="events">Results</a></li>
+        <li><a href="discovery.html" data-nav="discovery">Sponsor Discovery</a></li>
+        <li><a href="pricing.html" data-nav="pricing">Pricing</a></li>
+        <li><a href="vision.html" data-nav="vision">Vision</a></li>
+      </ul>
+    </div>
+    <div class="nav-actions">
+      <a href="https://calendly.com/contact-evential/30min" target="_blank" rel="noopener" class="btn btn-primary" style="padding:.55rem 1.15rem" data-cta="nav">Plan event coverage</a>
+      <button class="mobile-btn" id="mobile-btn" aria-label="Open menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div>
+</nav>
+
+<main id="main-content">
+
+<header class="page-hero">
+  <div class="container">
+    <div class="ph-panel">
+      <div class="ph-grid solo">
+        <div>
+          <div class="ph-eyebrow">Method</div>
+          <h1>What counts as a visit, and what counts as a lead.</h1>
+          <p class="ph-sub">Two definitions. The same ones for every booth, at every event we measure. Published here so you can check any number we give you.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section style="padding-top:clamp(40px,6vw,60px)">
+  <div class="container" style="max-width:800px">
+
+    <div class="method-visuals reveal" aria-label="Visual summary of the Evential visit threshold and Engagement Index formula">
+      <div class="visit-timeline">
+        <h3>Three signals, three different outcomes</h3>
+        <p>The rule removes a pass-by, qualifies sustained dwell, and combines meaningful return visits.</p>
+        <div class="visit-tracks">
+          <div class="visit-track"><span>Walk-by</span><div class="track-line walk" data-result="not a visit"><i style="--start:16%;--width:7%"></i></div></div>
+          <div class="visit-track"><span>One sustained stop</span><div class="track-line dwell" data-result="qualified"><i style="--start:18%;--width:56%"></i></div></div>
+          <div class="visit-track"><span>Two return visits</span><div class="track-line repeat" data-result="qualified"><i style="--start:12%;--width:24%"></i><i></i></div></div>
+        </div>
+      </div>
+      <div class="index-formula">
+        <h3>Engagement Index</h3>
+        <p>Weighted within one event.</p>
+        <div class="formula-ring"><b>EI-1</b></div>
+        <div class="formula-legend"><span><i></i>65% dwell</span><span><i></i>35% repeat visits</span></div>
+      </div>
+    </div>
+
+    <div class="ev-method reveal">
+      <span class="ev-eyebrow">Qualified Visit Standard &middot; QVS&#8209;1</span>
+      <h2>What counts as a visit, and what counts as a qualified lead</h2>
+      <p>A visit is a continuous run of readings above the proximity threshold for a booth. A gap of more than five minutes starts a new visit.</p>
+      <p>A visitor counts as a qualified lead for a booth if their best single visit lasted three minutes or more, or if two or more visits of at least sixty seconds each totalled three minutes or more. Scanning the booth's QR flyer also qualifies the visitor because interest was stated directly.</p>
+      <p>A walk past does not qualify. A single badge reading does not qualify.</p>
+      <p>Thresholds are set before the event and applied identically to every booth in coverage. Where booths adjoin closely enough that a badge is in range of both, the visit counts for both, because the person was in front of both. That is real floor overlap, not double-counting.</p>
+    </div>
+
+    <div class="ev-method reveal d1">
+      <span class="ev-eyebrow">Engagement Index &middot; EI&#8209;1</span>
+      <h2>How a booth's score is computed</h2>
+      <p>EI-1 weights dwell at 65 percent and repeat visits at 35 percent. The result is normalized within the event to a 0&ndash;100 scale. An index of 100 is the strongest measured booth at that event.</p>
+      <p>It is deliberately not a dollar figure. We can measure how long people stayed and whether they came back. We cannot measure what that was worth to you, and a number that claimed to would be invented.</p>
+      <p>The index is computed within a single event. It does not yet compare across events.</p>
+    </div>
+
+    <div class="ev-note reveal d2">
+      <p><strong>What we do not measure.</strong> We do not measure conversations, purchase intent or what a lead is worth to a sponsor. Those require the sponsor's own sales criteria.</p>
+    </div>
+
+    <hr style="border:0;border-top:1px solid var(--border);margin:3rem 0">
+
+    <div class="section-head reveal">
+      <div class="eyebrow">If a number looks wrong</div>
+      <h2>Tell us. We'll show you the basis for it.</h2>
+    </div>
+    <div class="ev-method reveal d1" style="margin-top:1.6rem">
+      <p>If a number in your report does not match what your team saw at the booth, tell us. We will show you the visit-level basis for it, and if we are wrong, we will correct the report and reissue it.</p>
+      <p style="margin-top:.9rem"><a href="mailto:contact@evential.co">contact@evential.co</a></p>
+    </div>
+
+  </div>
+</section>
+
+<section class="ed-cta" style="padding:clamp(70px,9vw,110px) 0">
+  <div class="container">
+    <div class="inner reveal">
+      <h2>See the method applied to a real floor.</h2>
+      <p>Every number in the NCAEC result was produced by the rule above.</p>
+      <div class="ed-cta-actions">
+        <a href="event-ncaec-2026.html" class="btn btn-light" data-cta="method_closing">Read the NCAEC result <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">EVENTIAL</a>
+        <p>The measurement layer for real-world marketing, beginning with trade show floors.</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Product</div>
+        <a href="method.html">Method</a>
+        <a href="events-measured.html">Results</a>
+        <a href="discovery.html">Sponsor Discovery</a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Company</div>
+        <a href="vision.html">Ten-year vision</a>
+        <a href="mailto:contact@evential.co">Contact</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="mailto:contact@evential.co">Investors</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Connect</div>
+        <a href="https://www.linkedin.com/company/eventialco/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://x.com/eventialco" target="_blank" rel="noopener">X (Twitter)</a>
+        <a href="https://calendly.com/contact-evential/30min" target="_blank" rel="noopener">Plan event coverage</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2026 Evential, LLC. All rights reserved.</div>
+      <div class="footer-legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="mailto:contact@evential.co">contact@evential.co</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js" defer></script>
+</body>
+</html>
