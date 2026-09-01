@@ -219,8 +219,6 @@
   </section>
 </main>
 
-<div class="m-cta-bar" id="m-cta-bar"><a href="https://calendly.com/contact-evential/30min" target="_blank" rel="noopener" class="btn btn-primary" data-cta="sticky">Plan event coverage</a></div>
-
 <footer>
   <div class="container">
     <div class="footer-grid">
@@ -236,7 +234,6 @@
 <script src="site.js" defer></script>
 <script>
 (function(){var v=document.getElementById('hero-video');if(!v)return;var s=v.querySelector('source[data-src]');if(!s)return;if(window.matchMedia('(min-width:601px)').matches&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){v.poster='images/hero-poster.jpg';s.src=s.dataset.src;v.load();var p=v.play();if(p&&p.catch)p.catch(function(){});}})();
-(function(){var bar=document.getElementById('m-cta-bar');if(!bar)return;var hero=document.querySelector('.ed-hero'),end=document.querySelector('.ed-cta');var endVisible=false;function update(){bar.classList.toggle('show',bar.classList.contains('past-hero')&&!endVisible)}new IntersectionObserver(function(e){bar.classList.toggle('past-hero',!e[0].isIntersecting);update()},{threshold:0}).observe(hero);new IntersectionObserver(function(e){endVisible=e[0].isIntersecting;update()},{threshold:0}).observe(end);})();
 </script>
 </body>
 </html>
