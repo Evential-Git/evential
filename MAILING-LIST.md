@@ -46,6 +46,45 @@ Turnstile keys are required to activate the form.
 
 ## Manage contacts
 
+### Newsletter unsubscribe buttons
+
+Each contact now has an automatically generated `unsubscribe_url` in Table
+Editor, including all imported contacts and future website signups. Export that
+column with each recipient and use **that recipient's URL** for the newsletter's
+Unsubscribe button. For a sender using double-brace merge fields, for example:
+
+```html
+<a href="{{unsubscribe_url}}">Unsubscribe</a>
+```
+
+Use the merge syntax your sending tool supports. Do not send the same contact's
+link to everybody, and do not use the bare `/unsubscribe` URL: each link must
+include its personal `#token=...` fragment. Preserve the fragment through any
+link rewriting; disable click tracking for this link if necessary.
+
+Opening a link shows a confirmation page; clicking **Unsubscribe** immediately
+sets that row's `unsubscribed` flag and records `unsubscribed_at`. Repeating the
+request succeeds without changing its original timestamp. GET requests and
+email link previews do not change preferences. No login or CAPTCHA is required.
+The page contains no analytics and passes the token to the API only in a POST
+body. Treat personal URLs as private credentials; never publish a contact export.
+
+Always exclude `unsubscribed = true` immediately before each newsletter send.
+If a sending platform keeps its own audience copy, synchronize suppression from
+this table before sending; this endpoint cannot cancel mail already queued there.
+
+The website calls `POST /functions/v1/mailing-unsubscribe` on the configured
+Supabase project with JSON `{ "token": "<recipient token>" }`. The server-only
+`unsubscribe_mailing_contact` database function handles the update. This is a
+newsletter-body link flow, not an RFC 8058 `List-Unsubscribe-Post` endpoint.
+
+To recreate this feature, apply
+`supabase/migrations/20260928010000_mailing_unsubscribe.sql` after the initial
+schema, then deploy `mailing-unsubscribe` with `--no-verify-jwt --use-api`.
+This uses Supabase's existing server credentials; no new secrets are needed.
+
+### Contact maintenance
+
 - Use Table Editor to search, edit and export contacts. `contact_type` retains
   Event / Investor / Mentor categories; website signups use Website.
 - Mark `unsubscribed = true` when an unsubscribe request arrives at
@@ -58,14 +97,15 @@ Turnstile keys are required to activate the form.
   website stores the time and exact opt-in statement for new signups.
 - This implements collection and private management, not campaign delivery or
   email ownership verification. No emails are sent by the signup function.
-  Include a working unsubscribe mechanism when setting up a sending service.
+  Include the recipient's `unsubscribe_url` in every newsletter.
 - Local CSV/SQLite copies contain personal data. Keep a secure backup outside
   the website folder; temporary files may be cleaned up by the OS.
 
 ## Verification
 
-Run `node --test tools/mailing-list.test.mjs` for request validation, consent,
-CAPTCHA, failure handling and the duplicate-preserving write contract.
+Run `node --test tools/mailing-*.test.mjs` for request validation, consent,
+CAPTCHA, unsubscribe validation, failure handling and the duplicate-preserving
+write contract.
 
 After deploying, verify a new signup appears in Table Editor, duplicate signups
 do not create extra rows, and a previously unsubscribed test contact stays

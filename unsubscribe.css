@@ -1,0 +1,10 @@
+.unsubscribe-header{max-width:1000px;margin:auto;padding:2rem clamp(1.25rem,4vw,2.5rem)}
+.unsubscribe-card{max-width:640px;margin:clamp(2rem,8vh,6rem) auto;padding:clamp(1.5rem,5vw,3rem);background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg)}
+.unsubscribe-card h1{font-size:clamp(1.9rem,5vw,2.7rem);margin-bottom:1.25rem}
+.unsubscribe-card p{margin:1rem 0;color:var(--text-3)}
+.unsubscribe-card .btn{margin-top:.5rem}
+.unsubscribe-card .btn:disabled{opacity:.6;cursor:wait;transform:none}
+.unsubscribe-card a{color:var(--blue)}
+.unsubscribe-help,.unsubscribe-home{font-size:.9rem}
+#unsubscribe-status:not(:empty){padding:1rem;background:var(--blue-soft);border-radius:var(--radius);color:var(--text)}
+@media(max-width:680px){.unsubscribe-card{margin:1rem}}
