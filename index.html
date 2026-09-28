@@ -217,6 +217,30 @@
   <section class="ed-cta home-closing">
     <div class="container"><div class="inner reveal"><span class="eyebrow">Your next event</span><h2>Give the renewal conversation something real to start with.</h2><p>In 30 minutes, we’ll review your floor plan, exhibitor count and registration flow and show you what coverage would require.</p><div class="ed-cta-actions"><a href="https://calendly.com/contact-evential/30min" target="_blank" rel="noopener" class="btn btn-light" data-cta="closing">Plan event coverage <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="/pricing" class="tlink">See pricing first <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></div></div>
   </section>
+  <section id="mailing-list" class="mailing-list alt-bg" aria-labelledby="mailing-list-title">
+    <div class="container mailing-list-layout">
+      <div class="section-head">
+        <span class="eyebrow">Stay in the loop</span>
+        <h2 id="mailing-list-title">The next chapter of Evential, in your inbox.</h2>
+        <p>Sign up for company news, product updates and stories from the event floor. Joining is optional.</p>
+      </div>
+      <div>
+        <p id="mailing-list-fallback">Want to hear from us? <a href="mailto:contact@evential.co?subject=Evential%20mailing%20list">Email us to join the mailing list.</a></p>
+        <form id="mailing-list-form" hidden>
+          <div class="mailing-list-fields">
+            <label for="mailing-first-name">First name <span>(optional)</span><input id="mailing-first-name" name="firstName" autocomplete="given-name" maxlength="100"></label>
+            <label for="mailing-email">Email address<input id="mailing-email" name="email" type="email" autocomplete="email" maxlength="254" required></label>
+          </div>
+          <div class="mailing-list-trap" aria-hidden="true"><label>Leave this blank<input name="website" tabindex="-1" autocomplete="off"></label></div>
+          <label class="mailing-list-consent"><input type="checkbox" name="consent" required> <span>I agree to receive Evential news and product updates by email.</span></label>
+          <div id="mailing-list-challenge"></div>
+          <button type="submit" class="btn btn-primary" disabled>Join the mailing list</button>
+          <p id="mailing-list-status" role="status" aria-live="polite" aria-atomic="true"></p>
+        </form>
+        <p class="mailing-list-note">To unsubscribe, email <a href="mailto:contact@evential.co?subject=Unsubscribe">contact@evential.co</a>. Read our <a href="/privacy">privacy policy</a>.</p>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer>
@@ -225,13 +249,15 @@
       <div class="footer-brand"><a href="/" class="nav-logo">EVENTIAL</a><p>The measurement layer for real-world marketing, beginning with trade show floors.</p></div>
       <div class="footer-col"><div class="footer-col-title">Product</div><a href="#system">How it works</a><a href="/events-measured">Results</a><a href="/discovery">Sponsor Discovery</a><a href="/pricing">Pricing</a></div>
       <div class="footer-col"><div class="footer-col-title">Company</div><a href="/vision">Ten-year vision</a><a href="/method">Measurement method</a><a href="mailto:contact@evential.co">Contact</a><a href="/privacy">Privacy</a></div>
-      <div class="footer-col"><div class="footer-col-title">Connect</div><a href="https://www.linkedin.com/company/eventialco/" target="_blank" rel="noopener">LinkedIn</a><a href="https://x.com/eventialco" target="_blank" rel="noopener">X (Twitter)</a><a href="https://calendly.com/contact-evential/30min" target="_blank" rel="noopener">Plan coverage</a></div>
+      <div class="footer-col"><div class="footer-col-title">Connect</div><a href="/#mailing-list">Mailing list</a><a href="https://www.linkedin.com/company/eventialco/" target="_blank" rel="noopener">LinkedIn</a><a href="https://x.com/eventialco" target="_blank" rel="noopener">X (Twitter)</a><a href="https://calendly.com/contact-evential/30min" target="_blank" rel="noopener">Plan coverage</a></div>
     </div>
     <div class="footer-bottom"><div class="footer-copy">&copy; 2026 Evential, LLC. All rights reserved.</div><div class="footer-legal"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="mailto:contact@evential.co">contact@evential.co</a></div></div>
   </div>
 </footer>
 
 <script src="site.js" defer></script>
+<script src="mailing-list-config.js" defer></script>
+<script src="mailing-list.js" defer></script>
 <script>
 (function(){var v=document.getElementById('hero-video');if(!v)return;var s=v.querySelector('source[data-src]');if(!s)return;if(window.matchMedia('(min-width:601px)').matches&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){v.poster='images/hero-poster.jpg';s.src=s.dataset.src;v.load();var p=v.play();if(p&&p.catch)p.catch(function(){});}})();
 </script>

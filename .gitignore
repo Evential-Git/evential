@@ -2,3 +2,12 @@
 *.HEIC
 *.MOV
 NCAEC Photos*/
+.env
+.env.*
+!.env.example
+supabase/.temp/
+supabase/.branches/
+# Never commit mailing-list exports or private local databases.
+*contacts*.csv
+*.sqlite
+*.sqlite3

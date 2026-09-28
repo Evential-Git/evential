@@ -1,0 +1,4 @@
+project_id = "evential-mailing-list"
+
+[functions.mailing-list]
+verify_jwt = false
