@@ -1,4 +1,19 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+/* Optional mailing-list signup. */
+.mailing-list-layout{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.mailing-list-fields{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.mailing-list-fields label{font-size:.9rem;font-weight:600}
+.mailing-list-fields label span{font-weight:400}
+.mailing-list-fields input{display:block;width:100%;margin-top:.4rem;padding:.75rem;border:1px solid var(--border-2);border-radius:var(--radius);font:inherit;background:var(--surface);color:var(--text)}
+.mailing-list input:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.mailing-list-consent{display:flex;align-items:flex-start;gap:.6rem;margin:1rem 0;font-size:.9rem}
+.mailing-list-consent input{width:18px;height:18px;flex-shrink:0;margin-top:.2rem;accent-color:var(--blue)}
+.mailing-list-trap{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.mailing-list .btn{margin-top:1rem}
+.mailing-list .btn:disabled{opacity:.55;cursor:not-allowed;transform:none}
+.mailing-list-note,#mailing-list-status{margin-top:1rem;font-size:.85rem;color:var(--text-3)}
+.mailing-list a{color:var(--blue)}
+@media(max-width:760px){.mailing-list-layout,.mailing-list-fields{grid-template-columns:1fr}.mailing-list-layout{gap:1.5rem}}
 :root{
   --navy:#0B1B4D;--navy-2:#1C2C63;--navy-900:#07134D;
   --blue:#155EEF;--blue-hover:#004EEB;--blue-soft:#EEF4FF;--blue-soft-2:#DCE8FF;--blue-tint:#F5F8FF;
