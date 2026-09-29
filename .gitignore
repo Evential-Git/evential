@@ -11,3 +11,5 @@ supabase/.branches/
 *contacts*.csv
 *.sqlite
 *.sqlite3
+# Personal local newsletter tool; never include it in the public website.
+/newsletter-studio/

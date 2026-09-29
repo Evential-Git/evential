@@ -9,6 +9,16 @@
   var widget;
   var token = '';
   var busy = false;
+  ['firstName', 'lastName', 'company', 'position'].forEach(function (name) {
+    var field = form.elements[name];
+    function validate() {
+      var value = field.value.trim();
+      field.setCustomValidity(field.required && !value ? 'Please enter ' + (name === 'firstName' ? 'your first name.' : name === 'lastName' ? 'your last name.' : 'your company or organization.')
+        : /[\u0000-\u001f\u007f<>]/.test(value) ? 'Please use plain text without angle brackets or control characters.' : '');
+    }
+    field.addEventListener('input', validate);
+    field.addEventListener('blur', validate);
+  });
   // No active form until its backend and spam protection are configured.
   if (!config.endpoint || !config.turnstileSiteKey) return;
   try { if (new URL(config.endpoint).protocol !== 'https:') return; } catch (_) { return; }
@@ -31,6 +41,9 @@
   document.head.appendChild(script);
   form.addEventListener('submit', async function (event) {
     event.preventDefault();
+    ['firstName', 'lastName', 'company', 'position'].forEach(function (name) {
+      form.elements[name].dispatchEvent(new Event('input'));
+    });
     if (busy || !form.reportValidity() || !token) return;
     busy = true;
     button.disabled = true;
@@ -41,6 +54,7 @@
       var response = await fetch(config.endpoint, {
         method: 'POST', headers: { 'Content-Type': 'application/json' }, signal: controller.signal,
         body: JSON.stringify({ email: form.elements.email.value, firstName: form.elements.firstName.value,
+          lastName: form.elements.lastName.value, company: form.elements.company.value, position: form.elements.position.value,
           consent: form.elements.consent.checked, website: form.elements.website.value, token: token })
       });
       var result = await response.json();

@@ -228,8 +228,11 @@
         <p id="mailing-list-fallback">Want to hear from us? <a href="mailto:contact@evential.co?subject=Evential%20mailing%20list">Email us to join the mailing list.</a></p>
         <form id="mailing-list-form" hidden>
           <div class="mailing-list-fields">
-            <label for="mailing-first-name">First name <span>(optional)</span><input id="mailing-first-name" name="firstName" autocomplete="given-name" maxlength="100"></label>
+            <label for="mailing-first-name">First name<input id="mailing-first-name" name="firstName" autocomplete="given-name" maxlength="100" required></label>
+            <label for="mailing-last-name">Last name<input id="mailing-last-name" name="lastName" autocomplete="family-name" maxlength="100" required></label>
             <label for="mailing-email">Email address<input id="mailing-email" name="email" type="email" autocomplete="email" maxlength="254" required></label>
+            <label for="mailing-company">Company / organization<input id="mailing-company" name="company" autocomplete="organization" maxlength="200" required></label>
+            <label for="mailing-position">Position <span>(optional)</span><input id="mailing-position" name="position" autocomplete="organization-title" maxlength="150"></label>
           </div>
           <div class="mailing-list-trap" aria-hidden="true"><label>Leave this blank<input name="website" tabindex="-1" autocomplete="off"></label></div>
           <label class="mailing-list-consent"><input type="checkbox" name="consent" required> <span>I agree to receive Evential news and product updates by email.</span></label>

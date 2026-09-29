@@ -13,7 +13,7 @@ function fixture({ verify = {}, saveStatus = 201, missingSecret = false } = {}) 
   } });
   const send = (data = {}, method = 'POST', origin = 'https://evential.co') => handler(new Request('https://project.supabase.co/functions/v1/mailing-list', {
     method, headers: { Origin: origin, 'Content-Type': 'application/json' },
-    ...(method === 'POST' ? { body: JSON.stringify({ email: ' PERSON@Example.com ', firstName: ' Pat ', consent: true, token: 'captcha', ...data }) } : {})
+    ...(method === 'POST' ? { body: JSON.stringify({ email: ' PERSON@Example.com ', firstName: ' Pat ', lastName: ' Lee ', company: ' Evential ', position: ' Founder ', consent: true, token: 'captcha', ...data }) } : {})
   }));
   return { writes, handler, send };
 }
@@ -23,6 +23,9 @@ test('stores normalized contact and consent; never updates duplicate or unsubscr
   assert.equal((await send()).status, 200);
   assert.equal(writes[0].data.email, 'person@example.com');
   assert.equal(writes[0].data.first_name, 'Pat');
+  assert.equal(writes[0].data.last_name, 'Lee');
+  assert.equal(writes[0].data.company, 'Evential');
+  assert.equal(writes[0].data.position, 'Founder');
   assert.equal(writes[0].data.source, 'website');
   assert.ok(writes[0].data.consent_at);
   assert.match(writes[0].headers.Prefer, /ignore-duplicates/);
@@ -30,7 +33,7 @@ test('stores normalized contact and consent; never updates duplicate or unsubscr
 });
 test('requires explicit consent and valid bounded fields', async () => {
   const { send, writes } = fixture();
-  for (const invalid of [{ consent: false }, { consent: 'true' }, { email: 'bad' }, { firstName: 'a'.repeat(101) }, { token: '' }]) {
+  for (const invalid of [{ consent: false }, { consent: 'true' }, { email: 'bad' }, { firstName: 'a'.repeat(101) }, { token: '' }, { firstName: '   ' }, { lastName: '' }, { company: '' }, { company: 'a'.repeat(201) }, { position: 'a'.repeat(151) }, { lastName: '<script>' }, { position: 123 }]) {
     assert.equal((await send(invalid)).status, 400);
   }
   assert.equal(writes.length, 0);
@@ -66,7 +69,13 @@ test('malformed JSON and unexpected upstream failures return controlled errors',
   assert.equal((await handler(new Request('https://example.com', { method: 'POST', headers: { Origin: 'https://evential.co', 'Content-Type': 'application/json' }, body: '{' }))).status, 400);
   // Use the default origins through an env adapter so this reaches the upstream failure.
   const handler2 = createHandler({ env: name => name === 'ALLOWED_ORIGINS' ? undefined : 'configured', fetch: async () => { throw new Error('private details'); } });
-  const response = await handler2(new Request('https://example.com', { method: 'POST', headers: { Origin: 'https://evential.co', 'Content-Type': 'application/json' }, body: JSON.stringify({ email: 'a@example.com', consent: true, token: 'captcha' }) }));
+  const response = await handler2(new Request('https://example.com', { method: 'POST', headers: { Origin: 'https://evential.co', 'Content-Type': 'application/json' }, body: JSON.stringify({ email: 'a@example.com', firstName: 'A', lastName: 'B', company: 'Example', consent: true, token: 'captcha' }) }));
   assert.equal(response.status, 503);
   assert.doesNotMatch(await response.text(), /private details/);
+});
+
+test('accepts international names and optional empty position', async () => {
+  const { send, writes } = fixture();
+  assert.equal((await send({ firstName: '李', lastName: "O’Neill-Sánchez", position: '' })).status, 200);
+  assert.equal(writes[0].data.position, '');
 });

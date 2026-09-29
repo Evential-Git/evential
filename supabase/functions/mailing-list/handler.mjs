@@ -45,7 +45,15 @@ export function createHandler({ env, fetch: request }) {
       if (data.website) return respond(200, accepted);
       const email = typeof data.email === 'string' ? data.email.trim().toLowerCase() : '';
       const firstName = typeof data.firstName === 'string' ? data.firstName.trim() : '';
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 254 || firstName.length > 100 || data.consent !== true) {
+      const lastName = typeof data.lastName === 'string' ? data.lastName.trim() : '';
+      const company = typeof data.company === 'string' ? data.company.trim() : '';
+      const position = typeof data.position === 'string' ? data.position.trim() : '';
+      if (!firstName || !lastName || !company || firstName.length > 100 || lastName.length > 100 || company.length > 200 || position.length > 150 ||
+          (data.position != null && typeof data.position !== 'string') ||
+          [firstName, lastName, company, position].some(value => /[\u0000-\u001f\u007f<>]/.test(value))) {
+        return respond(400, { error: 'Enter your first name, last name and company or organization using plain text. Keep names under 101 characters, organization under 201 and position under 151.' });
+      }
+      if (!/^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/.test(email) || email.length > 254 || data.consent !== true) {
         return respond(400, { error: 'Enter a valid email and agree to receive updates.' });
       }
       if (typeof data.token !== 'string' || !data.token || data.token.length > 2048) {
@@ -65,7 +73,7 @@ export function createHandler({ env, fetch: request }) {
           apikey: key, Authorization: `Bearer ${key}`, 'Content-Type': 'application/json',
           Prefer: 'resolution=ignore-duplicates,return=minimal'
         },
-        body: JSON.stringify({ email, first_name: firstName, source: 'website', contact_type: 'Website',
+        body: JSON.stringify({ email, first_name: firstName, last_name: lastName, company, position, source: 'website', contact_type: 'Website',
           consent_at: new Date().toISOString(), consent_text: CONSENT_TEXT }),
         signal: AbortSignal.timeout(10000)
       });

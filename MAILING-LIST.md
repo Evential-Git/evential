@@ -1,6 +1,8 @@
 # Mailing list setup
 
-The homepage includes an optional email signup. Contacts are stored in Supabase;
+The homepage includes an optional email signup. First name, last name, email and
+company/organization are required; position is optional. Both browser and server
+validate and trim input, without restricting names to the Latin alphabet. Contacts are stored in Supabase;
 only project team members can browse them in **Table Editor → mailing_contacts**.
 There is no public contact-list endpoint or browser-held admin key.
 
