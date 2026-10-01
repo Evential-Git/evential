@@ -44,7 +44,25 @@ def frame(title,description,path,body,image='/images/og-image.jpg',schema=None):
 <link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/evential.css"><link rel="stylesheet" href="/blog/blog.css"><link rel="alternate" type="application/rss+xml" title="Evential Journal" href="/blog/feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Montserrat+Alternates:wght@800&amp;display=swap" rel="stylesheet">{structured}</head>
 <body class="blog-page"><a href="#main-content" class="skip-link">Skip to content</a>
-<nav id="main-nav"><div class="nav-inner"><a href="/" class="nav-logo">EVENTIAL</a><ul class="nav-links" id="nav-links"><li><a href="/events-measured">Results</a></li><li><a href="/discovery">Sponsor Discovery</a></li><li><a href="/pricing">Pricing</a></li><li><a href="/blog/" aria-current="page">Journal</a></li></ul><div class="nav-actions"><a class="btn btn-primary" href="/#mailing-list">Get the newsletter</a><button class="mobile-btn" id="mobile-btn" aria-label="Open menu">☰</button></div></div></nav>
+<nav id="main-nav">
+  <div class="nav-inner">
+    <div class="nav-left">
+      <a href="/" class="nav-logo">EVENTIAL</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/#system">How it works</a></li>
+        <li><a href="/events-measured" data-nav="events">Results</a></li>
+        <li><a href="/discovery" data-nav="discovery">Sponsor Discovery</a></li>
+        <li><a href="/pricing" data-nav="pricing">Pricing</a></li>
+        <li><a href="/blog/" data-nav="blog" class="active" aria-current="page">Blog</a></li>
+        <li><a href="/vision" data-nav="vision">Vision</a></li>
+      </ul>
+    </div>
+    <div class="nav-actions">
+      <a href="https://calendly.com/contact-evential/30min" target="_blank" rel="noopener" class="btn btn-primary" style="padding:.55rem 1.15rem">Plan event coverage</a>
+      <button class="mobile-btn" id="mobile-btn" aria-label="Open menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div>
+</nav>
 <main id="main-content">{body}</main>
 <footer class="journal-footer"><div class="container"><a class="nav-logo" href="/">EVENTIAL</a><p>The measurement layer for real-world marketing.</p><div><a href="/blog/">Journal</a><a href="/#mailing-list">Newsletter</a><a href="/privacy">Privacy</a><a href="mailto:contact@evential.co">Contact</a></div></div></footer><script src="/site.js" defer></script></body></html>'''
 
