@@ -5,8 +5,7 @@ root to rebuild articles, the index, RSS, and sitemap. `blog.css` supplies the
 editorial layout and Evential section colors.
 
 The initial February, April and September 2026 stories are adapted from supplied
-newsletters. Their displayed dates retain the original newsletter month; archive
-notes disclose October 1, 2026 as the date added. The duplicate February-named
+newsletters. Their public dates show the original newsletter month. The duplicate February-named
 export with an April introduction was not published as a fourth story. Email
 tracking links, recipients, greetings and unsubscribe footers are excluded.
 

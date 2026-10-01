@@ -64,7 +64,41 @@ def frame(title,description,path,body,image='/images/og-image.jpg',schema=None):
   </div>
 </nav>
 <main id="main-content">{body}</main>
-<footer class="journal-footer"><div class="container"><a class="nav-logo" href="/">EVENTIAL</a><p>The measurement layer for real-world marketing.</p><div><a href="/blog/">Journal</a><a href="/#mailing-list">Newsletter</a><a href="/privacy">Privacy</a><a href="mailto:contact@evential.co">Contact</a></div></div></footer><script src="/site.js" defer></script></body></html>'''
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo">EVENTIAL</a>
+        <p>The measurement layer for real-world marketing, beginning with trade show floors.</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Product</div>
+        <a href="/method">Method</a>
+        <a href="/events-measured">Results</a>
+        <a href="/discovery">Sponsor Discovery</a>
+        <a href="/pricing">Pricing</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Company</div>
+        <a href="/vision">Ten-year vision</a>
+        <a href="mailto:contact@evential.co">Contact</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="mailto:contact@evential.co">Investors</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Connect</div><a href="/#mailing-list">Mailing list</a>
+        <a href="https://www.linkedin.com/company/eventialco/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://x.com/eventialco" target="_blank" rel="noopener">X (Twitter)</a>
+        <a href="https://calendly.com/contact-evential/30min" target="_blank" rel="noopener">Plan event coverage</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Evential, LLC. All rights reserved.</div>
+      <div class="footer-legal"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="mailto:contact@evential.co">contact@evential.co</a></div>
+    </div>
+  </div>
+</footer><script src="/site.js" defer></script></body></html>'''
 
 def render_post(post):
     validate_post(post)
