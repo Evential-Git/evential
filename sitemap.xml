@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://evential.co/</loc><lastmod>2026-08-28</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://evential.co/method</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -11,4 +11,4 @@
   <url><loc>https://evential.co/vision</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://evential.co/privacy</loc><lastmod>2026-08-28</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://evential.co/terms</loc><lastmod>2026-08-28</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-</urlset>
+<url><loc>https://evential.co/blog/</loc><lastmod>2026-10-01</lastmod></url><url><loc>https://evential.co/blog/september-2026-ncaec-deployment/</loc><lastmod>2026-10-01</lastmod></url><url><loc>https://evential.co/blog/april-2026-first-dashboard/</loc><lastmod>2026-10-01</lastmod></url><url><loc>https://evential.co/blog/february-2026-from-prototype-to-proof/</loc><lastmod>2026-10-01</lastmod></url></urlset>

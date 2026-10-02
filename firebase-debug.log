@@ -1,0 +1,17 @@
+[debug] [2026-10-01T22:02:47.653Z] ----------------------------------------------------------------------
+[debug] [2026-10-01T22:02:47.662Z] Command:       /Users/rohan_tyagi/.nvm/versions/node/v20.19.4/bin/node /Users/rohan_tyagi/.nvm/versions/node/v20.19.4/bin/firebase functions:secrets:access SMTP_PASS --project evential-41ece --non-interactive --json
+[debug] [2026-10-01T22:02:47.662Z] CLI Version:   15.22.0
+[debug] [2026-10-01T22:02:47.662Z] Platform:      darwin
+[debug] [2026-10-01T22:02:47.662Z] Node Version:  v20.19.4
+[debug] [2026-10-01T22:02:47.662Z] Detected Agent: codex_cli
+[debug] [2026-10-01T22:02:47.662Z] Time:          Thu Oct 01 2026 18:02:47 GMT-0400 (Eastern Daylight Time)
+[debug] [2026-10-01T22:02:47.663Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-10-01T22:02:47.689Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-10-01T22:02:47.691Z] > authorizing via signed-in user (rohan.x.tyagi@gmail.com)
+[debug] [2026-10-01T22:02:47.692Z] Checked if tokens are valid: true, expires at: 1790895708137
+[debug] [2026-10-01T22:02:47.692Z] Checked if tokens are valid: true, expires at: 1790895708137
+[debug] [2026-10-01T22:02:47.693Z] >>> [apiv2][query] GET https://secretmanager.googleapis.com/v1/projects/evential-41ece/secrets/SMTP_PASS/versions/latest:access [none]
+[debug] [2026-10-01T22:02:48.013Z] <<< [apiv2][status] GET https://secretmanager.googleapis.com/v1/projects/evential-41ece/secrets/SMTP_PASS/versions/latest:access 200
+[debug] [2026-10-01T22:02:48.013Z] <<< [apiv2][body] GET https://secretmanager.googleapis.com/v1/projects/evential-41ece/secrets/SMTP_PASS/versions/latest:access {"name":"projects/680262665595/secrets/SMTP_PASS/versions/1","payload":{"data":"UHVyZHVlUGV0ZTEh","dataCrc32c":"3812899246"}}
+[info] PurduePete1!
